@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #6a40ec;
+  --secondary: #212121;
+  --ternary: #434343;
+  --lightsecondry: #16141B;
+}
+
+/* Set dynamic color according Tailwind v4 */
+/* Primary */
+.bg-primary {
+  background: var(--primary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.border-primary {
+  border: var(--primary);
+}
+
+/* Secondary */
+.bg-secondary {
+  background: var(--secondary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.border-secondary {
+  border: var(--secondary);
+}
+
+/* ternary */
+.bg-ternary {
+  background: var(--ternary);
+}
+
+.text-ternary {
+  color: var(--ternary);
+}
+
+.border-ternary {
+  border: var(--ternary);
+}
+
+/* lightsecondry */
+.bg-lightsecondry {
+  background: var(--lightsecondry);
+}
+
+.text-lightsecondry {
+  color: var(--lightsecondry);
+}
+
+.border-lightsecondry {
+  border: var(--lightsecondry);
+}
+
+/* ------------------------------------------ */
+
+.text-do {
+  color: #D0D0D0;
+}
+
+.list_text {
+  font-size: 21.67px;
+  letter-spacing: 0.4px;
+}
+
+.description_text {
+  font-size: 25px;
+  line-height: 40px;
+}
+
+.title_text {
+  font-size: 80px;
+  line-height: 98px;
+}
+
+body {
+  font-family: var(--font-mona-sans), sans-serif;
+  background: rgb(255, 255, 255);
+}
+
+.font_secondary {
+  font-family: var(--font-mona-sans-normal), sans-serif;
+}
+
+.main_outer_container {
+  max-width: 1960px;
+  margin: auto;
+}
+
+.inn_container {
+  max-width: 1660px;
+  margin: auto;
+}
+
+.sign_up_btn {
+  box-shadow: -1px -2px 3px 1px var(--primary);
+}
+
+.sign_up_btn button {
+  box-shadow: inset -1px 0px 20px 10px #3b2480;
+  transition: all 0.3s ease-in-out;
+}
+
+.sign_up_btn button:hover {
+  box-shadow: inset -1px 0px 20px 5px #3b2480;
+}
+
+.ui_btn_shadow {
+  box-shadow: 3px 4px 20px 0.5px var(--primary);
+}
+
+.gradient_text {
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgb(176 156 240 / 94%) 26%,
+      rgb(159 135 234) 55%,
+      rgba(255, 255, 255, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient_bg {
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgb(176 156 240 / 94%) 26%,
+      rgb(159 135 234) 55%,
+      rgba(255, 255, 255, 1) 100%);
+}
+
+.banner_secondary_text {
+  font-size: 64px;
+}
+
+.banner_primary_text {
+  font-size: 105px;
+  line-height: 115px;
+}
+
+
+
+@media screen and (max-width: 1700px) {
+  .inn_container {
+    padding-inline: 4%;
+  }
+
+  .banner_primary_text {
+    font-size: 95px;
+    line-height: 105px;
+  }
+
+  .banner_secondary_text {
+    font-size: 58px;
+  }
+
+  .description_text {
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+  .title_text {
+    font-size: 76px;
+    line-height: 94px;
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  .list_text {
+    font-size: 16px;
+  }
+
+  .banner_primary_text {
+    font-size: 85px;
+    line-height: 95px;
+  }
+
+  .banner_secondary_text {
+    font-size: 52px;
+  }
+
+  .description_text {
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  .title_text {
+    font-size: 68px;
+    line-height: 84px;
+  }
+}
