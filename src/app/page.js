@@ -3,6 +3,7 @@ import Banner from "./Components/Pagecomponents/Banner";
 import Homemarquee from "./Components/Pagecomponents/Homemarquee";
 import Buildtrader from "./Components/Pagecomponents/Buildtrader";
 import Nextgen from "./Components/Pagecomponents/Nextgen";
+import Exploremarket from "./Components/Pagecomponents/Exploremarket";
 
 function page() {
   return (
@@ -12,6 +13,7 @@ function page() {
       <Homemarquee />
       <Buildtrader/>
       <Nextgen/>
+      <Exploremarket/>
     </div>
   );
 }
