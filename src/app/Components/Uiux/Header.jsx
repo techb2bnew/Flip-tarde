@@ -53,7 +53,7 @@ export default function Header() {
                         border-[3px] border-[#D9D9D926] border-solid rounded-[40px]">
           <div
             ref={containerRef}
-            className="relative flex w-[90%] 2xl:w-[90%] justify-around items-center py-1 2xl:py-3 font_secondary"
+            className="relative flex w-[90%] 2xl:w-[90%] justify-around items-center py-1  font_secondary"
           >
             <div
               className="absolute top-[18%] 2xl:top-[16%] h-[65%] rounded-full bg-primary transition-all duration-500"

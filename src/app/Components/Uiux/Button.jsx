@@ -2,10 +2,11 @@ import React from "react";
 import Image from "next/image";
 const Button = ({ btn_class, icon, btn_name, text_color, shadow ,border_color }) => {
   return (
+    <div className="">
     <div
       className={`${btn_class} relative cursor-pointer ${shadow
         ? "ui_btn_shadow"
-        : null}  flex items-center gap-3 border-[3px] ${border_color} !border-solid py-[10px]  px-[32px] 2xl:py-[14px] 2xl:px-[36px] rounded-[50px] w-max`}
+        : null}  flex items-center gap-3 border-[3px] ${border_color} !border-solid py-[8px]  px-[26px] 2xl:py-[12px] 2xl:px-[32px] rounded-[50px] w-max`}
     >
       {icon
         ? <Image
@@ -17,9 +18,10 @@ const Button = ({ btn_class, icon, btn_name, text_color, shadow ,border_color })
           />
         : null}
 
-      <span className={`${text_color} text-xl 2xl:text-[23.91px] font-medium`}>
+      <span className={`${text_color} text-xl 2xl:text-[23.91px] leading-[30px]  2xl:leading-[33px] font-medium`}>
         {btn_name}
       </span>
+    </div>
     </div>
   );
 };
