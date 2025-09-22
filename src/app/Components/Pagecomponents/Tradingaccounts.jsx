@@ -34,7 +34,7 @@ const accountinfo = [
 function Tradingaccounts() {
   return (
     <div className="bg-white">
-      <div className="py-36">
+      <div className="pt-36">
         <div
           className="bg-cover"
           style={{ backgroundImage: `url(${tradingaccounts.src})` }}
@@ -47,7 +47,7 @@ function Tradingaccounts() {
               />
               <div className="flex justify-center items-center">
                 <Discription
-                  dispription={`ustomize your trading journey with accounts <br/> built to enhance your experience and <br/> strategies.`}
+                  dispription={`Ustomize your trading journey with accounts <br/> built to enhance your experience and <br/> strategies.`}
                   color="text-ternary"
                 />
               </div>
@@ -68,10 +68,10 @@ function Tradingaccounts() {
                   {accountinfo.map((data, index) =>
                     <div
                       key={index}
-                      className="max-w-[400px] border-[12px] rounded-3xl border-[#DCD0FFCC]"
+                      className="max-w-[350px] 2xl:max-w-[400px] border-[12px] rounded-3xl border-[#DCD0FFCC]"
                     >
                       <div>
-                        <div className="py-5 px-18 text-center bg-white rounded-tl-[18px] rounded-tr-[18px]">
+                        <div className="py-3 2xl:py-5 px-14 2xl:px-18 text-center bg-white rounded-tl-[18px] rounded-tr-[18px]">
                           <h5
                             className="text-3xl 2xl:text-4xl leading-[35px] font-medium text-primary max-w-[250px] text-center"
                             dangerouslySetInnerHTML={{
@@ -80,33 +80,33 @@ function Tradingaccounts() {
                           />
                         </div>
                         <div className="bg-[#DCD0FFCC] border-2 border-white rounded-bl-[14px] rounded-br-[14px] flex flex-col items-center">
-                          <li className="list-none text-center py-4 min-w-[195px] border-b-3 border-dashed border-white ">
-                            <p className="text-[22px] text-center">
+                          <li className="list-none text-center py-2 2xl:py-4 min-w-[195px] border-b-3 border-dashed border-white ">
+                            <p className="text-lg 2xl:text-[22px] text-center">
                               Min Deposit
                             </p>
-                            <span className="text-xl text-ternary ">
+                            <span className="text-base 2xl:text-xl text-ternary ">
                               {data.min_deposit}
                             </span>
                           </li>
-                          <li className="list-none text-center py-4 min-w-[195px] border-b-3 border-dashed border-white ">
-                            <p className="text-[22px] text-center">
+                          <li className="list-none text-center py-2 2xl:py-4 min-w-[195px] border-b-3 border-dashed border-white ">
+                            <p className="text-lg 2xl:text-[22px] text-center">
                               Max Leverage
                             </p>
-                            <span className="text-xl text-ternary ">
+                            <span className="text-base 2xl:text-xl text-ternary ">
                               {data.max_leverage}
                             </span>
                           </li>
-                          <li className="list-none text-center py-4 min-w-[195px] border-b-3 border-dashed border-white ">
-                            <p className="text-[22px] text-center">Spreads</p>
-                            <span className="text-xl text-ternary ">
+                          <li className="list-none text-center py-2 2xl:py-4 min-w-[195px] border-b-3 border-dashed border-white ">
+                            <p className="text-lg 2xl:text-[22px] text-center">Spreads</p>
+                            <span className="text-base 2xl:text-xl text-ternary ">
                               {data.spreads}
                             </span>
                           </li>
                           <li className="list-none text-center pt-3">
-                            <p className="text-[22px] text-center">
+                            <p className="text-lg 2xl:text-[22px] text-center">
                               Account Verified
                             </p>
-                            <span className="text-xl text-ternary ">
+                            <span className="text-base 2xl:text-xl text-ternary ">
                               {data.account_verified ? "Yes" : "No"}
                             </span>
                           </li>
@@ -115,7 +115,7 @@ function Tradingaccounts() {
                               ? <Button
                                   btn_name={"Open Account"}
                                   icon={firebtniconblue.src}
-                                  btn_class="bg-white"
+                                  btn_bg="bg-white"
                                   text_color="text-primary"
                                   border_color="border-white"
                                   shadow={true}
@@ -123,7 +123,7 @@ function Tradingaccounts() {
                               : <Button
                                   btn_name={"Open Account"}
                                   icon={firebtn.src}
-                                  btn_class="bg-primary"
+                                  btn_bg="bg-primary"
                                   text_color="text-white"
                                   border_color="border-primary"
                                   shadow={true}

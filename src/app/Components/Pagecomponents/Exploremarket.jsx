@@ -7,12 +7,36 @@ import Image from "next/image";
 import explorelower from "../../../../public/images/explorelower.webp";
 import Button from "../Uiux/Button";
 const markettype = [
-  { marketname: "Forex", sidebanner: exploremarket1 },
-  { marketname: "CFD Shares", sidebanner: exploremarket1 },
-  { marketname: "Precious Metals", sidebanner: exploremarket1 },
-  { marketname: "Energies", sidebanner: exploremarket1 },
-  { marketname: "Soft Commodities", sidebanner: exploremarket1 },
-  { marketname: "Indicies", sidebanner: exploremarket1 }
+  {
+    marketname: "Forex",
+    sidebanner: exploremarket1,
+    discription: "Trade global currency pairs in the world’s largest market"
+  },
+  {
+    marketname: "CFD Shares",
+    sidebanner: exploremarket1,
+    discription: "Trade global currency pairs in the world’s largest market"
+  },
+  {
+    marketname: "Precious Metals",
+    sidebanner: exploremarket1,
+    discription: "Trade global currency pairs in the world’s largest market"
+  },
+  {
+    marketname: "Energies",
+    sidebanner: exploremarket1,
+    discription: "Trade global currency pairs in the world’s largest market"
+  },
+  {
+    marketname: "Soft Commodities",
+    sidebanner: exploremarket1,
+    discription: "Trade global currency pairs in the world’s largest market"
+  },
+  {
+    marketname: "Indicies",
+    sidebanner: exploremarket1,
+    discription: "Trade global currency pairs in the world’s largest market"
+  }
 ];
 
 const Exploremarket = () => {
@@ -43,60 +67,38 @@ const Exploremarket = () => {
           </div>
         </div>
       </div>
-      <div className="pt-32">
-        <div className="relative">
-          {markettype.map((data, index) =>
-            <div
-              key={index}
-              className={`py-4 2xl:py-8 border-b-2 !border-solid border-[#6C6C6C] cursor-pointer ${index ===
-              0
-                ? "border-t-2"
-                : ""}`}
-              onMouseEnter={() => handleHover(index)}
-            >
-              <div className="flex items-center gap-14 inn_container cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="10"
-                  viewBox="0 0 18 10"
-                  fill="none"
-                >
-                  <path
-                    d="M0 5.42857L11.7003 0.599859C14.7021 -0.63896 18 1.56772 18 4.81506C18 7.88627 15.0255 10.0793 12.0916 9.17121L0 5.42857Z"
-                    fill="#212121"
-                  />
-                </svg>
-                <p
-                  className={`text-[40px] 2xl:text-[50px] leading-[60px] transition-colors duration-300 ${hoveredIndex ===
-                  index
-                    ? "text-secondary"
-                    : "text-primary"}`}
-                >
-                  {data.marketname}
-                </p>
+      {/* <div className="pt-32">
+        <div className="max-w-6xl m-auto bg-primary  rounded-3xl">
+          <div className="grid grid-cols-2 py-8 px-16">
+            <div className="flex items-center">
+              <div>
+                <Title title={"Forex"} color={"text-white"} />
+                <Discription
+                  dispription={
+                    "Trade global currency <br/> pairs in the world’s <br/> largest market"
+                  }
+                  color={`text-white`}
+                />
+                <Button
+                  btn_name={`Expolre More`}
+                  btn_bg="gradient_bg"
+                  text_color="text-secondary"
+                  border_color="border-transparent"
+                />
               </div>
             </div>
-          )}
-
-          <div className="absolute top-0 right-0 h-full flex justify-center items-center w-[50%]">
-            <div
-              className={`transition-opacity duration-300 flex items-center justify-center w-[60%] ${fade
-                ? "opacity-0"
-                : "opacity-100"}`}
-            >
+            <div className="flex justify-center">
               <Image
-                key={hoveredIndex}
-                src={markettype[hoveredIndex].sidebanner}
-                alt="Market Banner"
-                width={1500}
+                src={exploremarket1}
+                alt="Forex"
+                width={1000}
                 height={500}
-                className="max-w-[400px] 2xl:max-w-[575px] w-full"
+                className="w-[80%]"
               />
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="inn_container py-12">
         <div className="relative">
           <Image src={explorelower} alt="banner" width={3000} height={500} />
@@ -114,24 +116,24 @@ const Exploremarket = () => {
                 />
               </div>
               <p className="text-[60px] leading-[98px] font-[350] text-white font_ternary">
-                3  Steps
+                3 Steps
               </p>
               <div className="pt-6 flex gap-5">
                 <Button
                   btn_name={`Create profile`}
-                  btn_class="gradient_bg"
+                  btn_bg="gradient_bg"
                   text_color="text-secondary"
                   border_color="border-transparent"
                 />
-                 <Button
+                <Button
                   btn_name={`Choose size`}
-                  btn_class="gradient_bg"
+                  btn_bg="gradient_bg"
                   text_color="text-secondary"
                   border_color="border-transparent"
                 />
-                 <Button
+                <Button
                   btn_name={`Start trading`}
-                  btn_class="gradient_bg"
+                  btn_bg="gradient_bg"
                   text_color="text-secondary"
                   border_color="border-transparent"
                 />

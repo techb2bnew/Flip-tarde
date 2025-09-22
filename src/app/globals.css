@@ -2,6 +2,7 @@
 
 :root {
   --primary: #6a40ec;
+  --subprimary: #B46AFF ;
   --secondary: #212121;
   --ternary: #434343;
   --lightsecondry: #16141B;
@@ -19,6 +20,18 @@
 
 .border-primary {
   border: var(--primary);
+}
+/* Sub Primary */
+.bg-subprimary {
+  background: var(--subprimary);
+}
+
+.text-subprimary {
+  color: var(--subprimary);
+}
+
+.border-subprimary {
+  border: var(--subprimary);
 }
 
 /* Secondary */
@@ -148,8 +161,6 @@ body {
   font-size: 105px;
   line-height: 115px;
 }
-
-
 
 @media screen and (max-width: 1700px) {
   .inn_container {

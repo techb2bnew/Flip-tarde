@@ -1,27 +1,48 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-const Button = ({ btn_class, icon, btn_name, text_color, shadow ,border_color }) => {
+import "./Button.css";
+const Button = ({
+  btn_bg,
+  icon,
+  btn_name,
+  text_color,
+  shadow,
+  border_color
+}) => {
   return (
-    <div className="">
-    <div
-      className={`${btn_class} relative cursor-pointer ${shadow
-        ? "ui_btn_shadow"
-        : null}  flex items-center gap-3 border-[3px] ${border_color} !border-solid py-[8px]  px-[26px] 2xl:py-[12px] 2xl:px-[32px] rounded-[50px] w-max`}
-    >
-      {icon
-        ? <Image
-            src={icon}
-            alt="icon"
-            width={1000}
-            height={500}
-            className="max-w-8"
+    <div className="inline-block">
+      <button
+        className={`rainbow-btn cursor-pointer ${btn_bg} ${border_color} ${shadow
+          ? "ui_btn_shadow"
+          : ""}`}
+      >
+        {icon &&
+          <span className="icon-wrap">
+            <Image
+              src={icon}
+              alt=""
+              width={1000}
+              height={500}
+              className="icon min-w-6 2xl:min-w-7 max-w-7"
+            />
+          </span>}
+        <span className={`rainbow-btn__text ${text_color}`}>
+          <span
+            className="block transition-transform duration-500 before-text text-xl 2xl:text-2xl"
+            dangerouslySetInnerHTML={{ __html: btn_name }}
           />
-        : null}
-
-      <span className={`${text_color} text-xl 2xl:text-[23.91px] leading-[30px]  2xl:leading-[33px] font-medium`}>
-        {btn_name}
-      </span>
-    </div>
+          <span
+            className="block absolute top-full left-0 transition-transform duration-500 after-text text-xl 2xl:text-2xl"
+            dangerouslySetInnerHTML={{ __html: btn_name }}
+          />
+        </span>
+        <span className="rainbow-btn__layers">
+          <span className="rainbow-btn__layer first" />
+          <span className="rainbow-btn__layer second" />
+          <span className={`rainbow-btn__layer third ${btn_bg}`} />
+        </span>
+      </button>
     </div>
   );
 };

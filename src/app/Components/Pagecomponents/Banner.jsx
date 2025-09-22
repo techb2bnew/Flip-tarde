@@ -36,7 +36,7 @@ export default function Banner() {
                 <Button
                   icon={firebtnicon.src}
                   btn_name="Open Live Account"
-                  btn_class="bg-primary"
+                  btn_bg="bg-primary"
                   text_color="text-white"
                   border_color="border-primary"
                   shadow={true}
@@ -44,7 +44,7 @@ export default function Banner() {
                 <Button
                   icon={giftbtnicon.src}
                   btn_name="Try Demo"
-                  btn_class="bg-lightsecondry"
+                  btn_bg="bg-lightsecondry"
                   text_color="text-white"
                   border_color="border-ternary"
                 />

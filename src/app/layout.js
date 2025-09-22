@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./Components/Uiux/Header";
+import Fotter from "./Components/Uiux/Fotter";
 const monaSans = localFont({
   src: [
     { path: "../../public/fonts/Mona-Sans-MediumWide.ttf"},
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
            <Header/>
           </div>  
            {children}
+           <Fotter/>
         </div>
       </body>
     </html>

@@ -6,6 +6,7 @@ import Nextgen from "./Components/Pagecomponents/Nextgen";
 import Exploremarket from "./Components/Pagecomponents/Exploremarket";
 import Workprocess from "./Components/Pagecomponents/Workprocess";
 import Tradingaccounts from "./Components/Pagecomponents/Tradingaccounts";
+import Tradeyourway from "./Components/Pagecomponents/Tradeyourway";
 
 function page() {
   return (
@@ -18,6 +19,7 @@ function page() {
       <Exploremarket/>
       <Workprocess />
       <Tradingaccounts/>
+      <Tradeyourway/>
     </div>
   );
 }

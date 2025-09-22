@@ -29,7 +29,7 @@ const buildtradetagcard = [
 const Buildtrader = () => {
   return (
     <div className="bg-white">
-      <div className="inn_container pt-44">
+      <div className="inn_container pt-40">
         <div className="grid grid-col-1 xl:grid-cols-2">
           <Title
             title="Built for Traders. <br/> Backed by Trust."
@@ -86,7 +86,7 @@ const Buildtrader = () => {
                 <div className="pt-10">
                   <Button
                     btn_name={`Read More`}
-                    btn_class="gradient_bg"
+                    btn_bg="gradient_bg"
                     text_color="text-secondary"
                     border_color="border-transparent"
                   />
