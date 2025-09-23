@@ -32,9 +32,14 @@ const monaSanswidenormal = localFont({
 
   variable: "--font-mona-sans-monaSanswidenormal",
 });
+export const metadata = {
+  title: "Flip Trade",
+  description: "Flip Trade is a leading platform for trading and investment solutions.",
+};
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <title>Flip Trade</title>
       <body className={`${monaSans.variable} ${monaSansnormal.variable} ${monaSansnormallight.variable} ${monaSanswidenormal.variable} antialiased`} cz-shortcut-listen="true">
         <div className="main_outer_container">
          <div className="absolute w-full max-w-[1960px] z-[999] bg-[linear-gradient(1deg,rgba(255,255,255,0)_15%,rgb(0_0_0_/_76%)_99%)]">

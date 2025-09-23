@@ -7,7 +7,7 @@ import Logo from "../../../../public/images/Logo.webp";
 
 const navlistdata = [
   { id: 1, nav_name: "Home", nav_link: "/" },
-  { id: 2, nav_name: "Markets", nav_link: "/markes" },
+  { id: 2, nav_name: "Markets", nav_link: "/forex" },
   { id: 3, nav_name: "Account Type", nav_link: "/account" },
   { id: 4, nav_name: "Platform", nav_link: "/platform" },
   { id: 5, nav_name: "Tools", nav_link: "/tools" },

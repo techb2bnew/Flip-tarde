@@ -27,7 +27,7 @@ const Button = ({
               className="icon min-w-6 2xl:min-w-7 max-w-7"
             />
           </span>}
-        <span className={`rainbow-btn__text ${text_color}`}>
+        <span className={`rainbow-btn__text font_secondary ${text_color}`}>
           <span
             className="block transition-transform duration-500 before-text text-xl 2xl:text-2xl"
             dangerouslySetInnerHTML={{ __html: btn_name }}
