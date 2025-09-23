@@ -1,9 +1,9 @@
 import React from "react";
 
-const Title = ({ title, color }) => {
+const Title = ({ title, color,hovercolor}) => {
   return (
     <h2
-      className={`${color} font-medium title_text`}
+      className={`${color}  font-medium title_text`}
       dangerouslySetInnerHTML={{ __html: title }}
     />
   );

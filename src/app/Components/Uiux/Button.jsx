@@ -21,7 +21,7 @@ const Button = ({
           <span className="icon-wrap">
             <Image
               src={icon}
-              alt=""
+              alt="#"
               width={1000}
               height={500}
               className="icon min-w-6 2xl:min-w-7 max-w-7"

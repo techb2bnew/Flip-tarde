@@ -7,6 +7,9 @@ import Image from "next/image";
 import Button from "../Uiux/Button";
 import firebtn from "/public/icons/firebtnicon.svg";
 import firebtniconblue from "/public/icons/firebtniconblue.svg";
+import Ethereum from "../../../../public/icons/Ethereum.svg";
+import Zcash from "../../../../public/icons/Zcash.svg";
+import Bitcoin from "../../../../public/icons/Bitcoin.svg";
 const accountinfo = [
   {
     acount_title: "Classic <br/> Account",
@@ -135,7 +138,35 @@ function Tradingaccounts() {
                   )}
                 </div>
               </div>
+             
             </div>
+             <div className="absolute top-[30%] left-[2%] rotate-[340deg]">
+                <Image
+                 src={Bitcoin}
+                 alt="Bitcoin"
+                 width={1000}
+                 height={500}
+                 className="max-w-[122px]"
+                 />
+              </div>
+              <div className="absolute top-[50%] right-[2%] rotate-[340deg]">
+                <Image
+                 src={Ethereum}
+                 alt="Ethereum"
+                 width={1000}
+                 height={500}
+                 className="max-w-[180px]"
+                 />
+              </div>
+              <div className="absolute top-[2%] right-[5%] rotate-[340deg]">
+                <Image
+                 src={Zcash}
+                 alt="Zcash"
+                 width={1000}
+                 height={500}
+                 className="max-w-[71px]"
+                 />
+              </div>
           </div>
         </div>
       </div>

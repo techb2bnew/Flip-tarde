@@ -2,7 +2,7 @@
 
 :root {
   --primary: #6a40ec;
-  --subprimary: #B46AFF ;
+  --subprimary: #B46AFF;
   --secondary: #212121;
   --ternary: #434343;
   --lightsecondry: #16141B;
@@ -21,6 +21,7 @@
 .border-primary {
   border: var(--primary);
 }
+
 /* Sub Primary */
 .bg-subprimary {
   background: var(--subprimary);
@@ -102,10 +103,15 @@ body {
 .font_secondary {
   font-family: var(--font-mona-sans-normal), sans-serif;
 }
-.font_ternary 
-{
+
+.font_ternary {
   font-family: var(--font-mona-sans-normallight), sans-serif;
 }
+
+.font_ternarynormal {
+  font-family: var(----font-mona-sans-monaSanswidenormal), sans-serif;
+}
+
 .main_outer_container {
   max-width: 1960px;
   margin: auto;
@@ -153,6 +159,10 @@ body {
       rgba(255, 255, 255, 1) 100%);
 }
 
+strong {
+  font-weight: 600 !important;
+}
+
 .banner_secondary_text {
   font-size: 64px;
 }
@@ -160,6 +170,25 @@ body {
 .banner_primary_text {
   font-size: 105px;
   line-height: 115px;
+}
+
+/* For swiper slider  */
+.swiper-pagination-bullet-active {
+  background: var(--primary) !important;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 80px;
+  border-radius: 10px;
+  transition: all 0.7s ease-in-out;
+}
+
+.swiper-slide-shadow-left {
+  background-image: none !important;
+}
+
+.swiper-slide-shadow-right {
+  background-image: none !important;
 }
 
 @media screen and (max-width: 1700px) {
@@ -185,7 +214,8 @@ body {
     font-size: 76px;
     line-height: 94px;
   }
-    .list_text {
+
+  .list_text {
     font-size: 18px;
   }
 

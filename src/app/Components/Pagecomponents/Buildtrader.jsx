@@ -34,6 +34,7 @@ const Buildtrader = () => {
           <Title
             title="Built for Traders. <br/> Backed by Trust."
             color="text-secondary"
+            hovercolor='gradient_text_title'
           />
           <div className="flex justify-center items-center">
             <Discription
@@ -46,9 +47,9 @@ const Buildtrader = () => {
           {buildtradetagcard.map((data, index) =>
             <div
               key={index}
-              className={`bg-[#F3EFFF] flex flex-col items-center gap-4 2xl:gap-5 py-[46px] ${index %
-                2 ===
-              0
+              className={`bg-[#F3EFFF] flex flex-col items-center gap-4 2xl:gap-5 py-[46px] 
+                ${index %
+                2 ===  0
                 ? "[clip-path:polygon(0_0,80%_0,100%_25%,100%_100%,20%_100%,0_75%)]"
                 : "[clip-path:polygon(20%_0,100%_0,100%_75%,80%_100%,0_100%,0_25%)]"} `}
             >
@@ -56,7 +57,7 @@ const Buildtrader = () => {
                 {data.title}
               </p>
               <p
-                className="list_text font-light text-center font_secondary leading-[28px]"
+                className="list_text font-light text-center font_ternary leading-[28px]"
                 dangerouslySetInnerHTML={{ __html: data.sub_title }}
               />
             </div>
@@ -71,7 +72,7 @@ const Buildtrader = () => {
               height={500}
               className="w-full"
             />
-            <div className="absolute top-[30%] right-[5%]">
+            <div className="absolute top-[30%] right-[3.5%]">
               <div>
                 <Title
                   title={`FlipTrade. Built <br/> for Traders.`}

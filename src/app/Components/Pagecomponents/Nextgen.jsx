@@ -30,37 +30,37 @@ const Nextgen = () => {
           />
           <div className="absolute left-0 w-full h-full grid grid-cols-2">
             <div className="flex flex-col justify-evenly items-center">
-              <div className="w-max relative left-[3%] top-[3%]">
+              <div className="w-max relative right-[0%] top-[3%]">
                 <p className="text-3xl 2xl:text-4xl font-semibold text-primary min-w-[200px] text-center pb-2 2xl:pb-3 ">
                   Exclusive Insights
                 </p>
-                <p className="list_text font-light text-end font_secondary leading-[28px]">
+                <p className="list_text font-light text-end font_ternary leading-[28px]">
                   Signals & analysis.
                 </p>
               </div>
-              <div className="w-max relative top-[2%]">
+              <div className="w-max relative right-[1%] top-[2%]">
                 <p className="text-3xl 2xl:text-4xl font-semibold text-primary min-w-[200px] text-center pb-2 2xl:pb-3 ">
                   Ultra-Tight Spreads
                 </p>
-                <p className="list_text font-light text-end font_secondary leading-[28px]">
+                <p className="list_text font-light text-end font_ternary leading-[28px]">
                   From 0.0 pips.
                 </p>
               </div>
             </div>
             <div className="flex flex-col justify-evenly items-center">
-              <div className="w-max relative bottom-[3%] right-[3%]">
+              <div className="w-max relative bottom-[3%] left-[-3%]">
                 <p className="text-3xl 2xl:text-4xl font-semibold text-primary min-w-[200px] text-center pb-2 2xl:pb-3 ">
                   Fast Execution
                 </p>
-                <p className="list_text font-light text-start font_secondary leading-[28px]">
+                <p className="list_text font-light text-start font_ternary leading-[28px]">
                   Milliseconds matter.
                 </p>
               </div>
-              <div className="w-max relative top-[8%]">
+              <div className="w-max relative top-[8%] left-[2%]">
                 <p className="text-3xl 2xl:text-4xl font-semibold text-primary min-w-[200px] text-center pb-2 2xl:pb-3 ">
                   Transparent Pricing
                 </p>
-                <p className="list_text font-light text-start font_secondary leading-[28px]">
+                <p className="list_text font-light text-start font_ternary leading-[28px]">
                   No hidden costs.
                 </p>
               </div>

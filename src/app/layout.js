@@ -18,15 +18,24 @@ const monaSansnormal = localFont({
 });
 const monaSansnormallight = localFont({
   src: [
-    { path: "../../public/fonts/Mona-Sans-LightWide.ttf"},
+    { path: "../../public/fonts/Mona-Sans-LightWide.ttf" },
+    
   ],
 
   variable: "--font-mona-sans-normallight",
 });
+const monaSanswidenormal = localFont({
+  src: [
+    { path: "../../public/fonts/Mona-Sans-UltraLightWide.ttf" },
+    
+  ],
+
+  variable: "--font-mona-sans-monaSanswidenormal",
+});
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${monaSans.variable} ${monaSansnormal.variable} ${monaSansnormallight.variable} antialiased`} cz-shortcut-listen="true">
+      <body className={`${monaSans.variable} ${monaSansnormal.variable} ${monaSansnormallight.variable} ${monaSanswidenormal.variable} antialiased`} cz-shortcut-listen="true">
         <div className="main_outer_container">
          <div className="absolute w-full max-w-[1960px] z-[999] bg-[linear-gradient(1deg,rgba(255,255,255,0)_15%,rgb(0_0_0_/_76%)_99%)]">
            <Header/>

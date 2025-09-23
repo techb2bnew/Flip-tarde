@@ -16,14 +16,14 @@ export default function Banner() {
         <div className="grid grid-cols-1 xl:grid-cols-2 pt-4 2xl:pt-12">
           <div>
             <div>
-              <h5 className="font-light banner_secondary_text text-white">
+              <h5 className="font-light banner_secondary_text text-white font_ternary">
                 Tap into the
               </h5>
               <h1 className="font-medium  banner_primary_text gradient_text leading-[115px]">
                 Trillion Dollar <br />
                 Market
               </h1>
-              <h5 className="font-light banner_secondary_text text-white">
+              <h5 className="font-light banner_secondary_text text-white font_ternary">
                 with a Single Click
               </h5>
             </div>

@@ -47,23 +47,23 @@ const Tradeyourway = () => {
           <div className="relative">
             <Image
               src={tradeyouwaygraf}
-              alt=""
+              alt="#"
               width={2000}
               height={1000}
               className="w-full"
             />
             <div className="absolute top-0 w-full h-full">
               <div className="inn_container relative w-full h-full flex items-center">
-                <div className="relative flex w-full font_secondary justify-between px-[1.5%] top-[10%]">
-                  <div className="text-[35px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px] py-4 px-12 gap-3">
+                <div className="relative flex w-full font_ternary font-normal justify-between px-[1.5%] top-[10%]">
+                  <div className="text-2xl 2xl:text-[32px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-3  px-10 2xl:px-12 gap-3">
                     <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
                     Instant Deposit
                   </div>
-                  <div className="text-[35px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px] py-4 px-12 gap-3">
+                  <div className="text-2xl 2xl:text-[32px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-3  px-10 2xl:px-12 gap-3">
                     <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
                     Fast Withdrawal
                   </div>
-                  <div className="text-[35px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px] py-4 px-12 gap-3">
+                  <div className="text-2xl 2xl:text-[32px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-3  px-10 2xl:px-12 gap-3">
                     <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
                     0% Commission
                   </div>
@@ -186,7 +186,7 @@ const Tradeyourway = () => {
                 className="max-w-[144px]"
               />
             </div>
-            <div className="absolute top-[-12%] left-[50%] z-10  rotate-[45deg]">
+            <div className="absolute top-[-18%] left-[50%] z-10  rotate-[45deg]">
               <Image
                 src={Zcash}
                 alt="Zcash"

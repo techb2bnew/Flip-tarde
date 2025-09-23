@@ -23,7 +23,7 @@ export default function Header() {
   useEffect(() => {
     const active = containerRef.current?.querySelector(
       `a[data-link="${pathname}"]`
-    );
+    );  
     if (active) {
       const rect = active.getBoundingClientRect();
       const parentRect = containerRef.current.getBoundingClientRect();
@@ -47,7 +47,7 @@ export default function Header() {
           />
         </div>
 
-        <div className="w-[50%] 2xl:w-[55%] max-w-[900px] 
+        <div className="w-[52%] 2xl:w-[55%] max-w-[900px] 
                         flex justify-center
                         bg-[linear-gradient(90deg,rgba(43,38,55,1)_0%,rgba(72,56,123,1)_100%)]
                         border-[3px] border-[#D9D9D926] border-solid rounded-[40px]">
@@ -87,7 +87,7 @@ export default function Header() {
             Login
           </button>
           <div className="sign_up_btn rounded-[50px]">
-            <button className="border-primary cursor-pointer gap-2 border-[3px] border-solid py-[8px] px-[36px] 2xl:py-[13px] 2xl:px-[50px] bg-[#00000057] text-white tracking-[0.4px] text-xl 2xl:text-[23px] font-medium rounded-[50px]">
+            <button className="border-primary cursor-pointer gap-2 border-[3px] border-solid py-[8px] px-[36px] 2xl:py-[13px] 2xl:px-[50px] bg-[#00000057] text-white tracking-[0.4px] text-xl 2xl:text-[23px] font-normal rounded-[50px] font_secondary">
               Sign Up
             </button>
           </div>

@@ -31,7 +31,7 @@ const Faq = ({ faqData }) => {
               >
                 <Image
                   src={plus}
-                  alt=""
+                  alt="#"
                   width={1000}
                   height={500}
                   className="max-w-6"

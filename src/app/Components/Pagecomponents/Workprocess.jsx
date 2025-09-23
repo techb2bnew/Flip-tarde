@@ -27,7 +27,7 @@ export default function Workprocess() {
                 <div className="relative">
                   <Image
                     src={workprocessbar}
-                    alt=""
+                    alt="#"
                     width={3000}
                     height={500}
                   />
@@ -44,11 +44,10 @@ export default function Workprocess() {
                               1
                             </span>
                           </div>
-
-                          <Discription
-                            dispription={`Begin trading online with just <br/> your basic contact details`}
-                            color={"text-black"}
-                          />
+                          <p className="list_text font-light text-start font_ternary text-black leading-[28px]">
+                            Begin trading online with just <br /> your basic
+                            contact details
+                          </p>
                         </div>
                       </div>
                       <div className="flex justify-center items-end">
@@ -61,28 +60,26 @@ export default function Workprocess() {
                               2
                             </span>
                           </div>
-
-                          <Discription
-                            dispription={`Securely deposit and withdraw <br/> using convenient local <br/> solutions`}
-                            color={"text-black"}
-                          />
+                          <p className="list_text font-light text-start font_ternary text-black leading-[28px]">
+                            Securely deposit and withdraw <br /> using
+                            convenient local <br /> solutions
+                          </p>
                         </div>
                       </div>
                       <div className="flex justify-center items-end">
                         <div className="text-start w-max h-max relative bottom-[5%]">
                           <div className="flex items-end">
                             <p className="text-3xl 2xl:text-4xl font-semibold text-primary min-w-[200px] text-start pb-2 2xl:pb-4 ">
-                              Start <br/> Trading
+                              Start <br /> Trading
                             </p>
                             <span className="text-[150px] 2xl:text-[185px] leading-[140px] 2xl:leading-[170px] font_ternary bg-[linear-gradient(0deg,rgba(255,255,255,0.26)_0%,rgba(0,0,0,1)_122%)] bg-clip-text text-transparent font-bold">
                               3
                             </span>
                           </div>
-
-                          <Discription
-                            dispription={`Start trading on your live <br/> account and Access <br/> +2000 instruments`}
-                            color={"text-black"}
-                          />
+                          <p className="list_text font-light text-start font_ternary text-black leading-[28px]">
+                            Start trading on your live <br /> account and Access{" "}
+                            <br /> +2000 instruments
+                          </p>
                         </div>
                       </div>
                     </div>

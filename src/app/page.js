@@ -12,7 +12,7 @@ function page() {
   return (
     <div className="bg-black">
       <Banner />
-      <p className="pb-24" />
+      <p className="pb-12" />
       <Homemarquee />
       <Buildtrader/>
       <Nextgen/>
