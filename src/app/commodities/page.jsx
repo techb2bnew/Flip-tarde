@@ -4,12 +4,12 @@ import Marketspoints from "../Components/Pagecomponents/Markets/Marketspoints";
 import Discovertrading from "../Components/Pagecomponents/Markets/Discovertrading";
 import Title from "../Components/Uiux/Title";
 import Faq from "../Components/Pagecomponents/Faq";
-import Advanced from "/public/icons/Advanced.svg";
-import market from "/public/icons/market.svg";
-import fastexu from "/public/icons/fastexu.svg";
+import commoditiescoverleft from "/public/images/commoditiescoverleft.webp";
+import commoditiescoverright from "/public/images/commoditiescoverright.webp";
+import Diverse from "/public/icons/Diverse.svg";
+import realtime from "/public/icons/realtime.svg";
+import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
-import indicescoverleft from "/public/images/indicescoverleft.webp";
-import indicescoverright from "/public/images/indicescoverright.webp";
 const faqData = [
   {
     question: "What is FlipTrade?",
@@ -36,26 +36,27 @@ const faqData = [
 const pointdata = [
   {
     id: 1,
-    title: "Market Access",
-    description: "Trade major global <br/> indices.",
-    icon: market
+    title: "Diverse Options",
+    description:
+      "Trade energy, <br/> agriculture, and other <br/> commodities.",
+    icon: Diverse
   },
   {
     id: 2,
-    title: "Advanced Analytics",
-    description: "Real-time charts and <br/> market insights.",
-    icon: Advanced
+    title: "Real-Time Tools",
+    description: "Charts and market data <br/> for informed trading.",
+    icon: realtime
   },
   {
     id: 3,
-    title: "Fast Execution",
-    description: "Trade without delays or <br /> slippage.",
-    icon: fastexu
+    title: "Secure & Reliable",
+    description: "Fast execution with robust <br/> security.",
+    icon: Secure
   },
   {
     id: 4,
-    title: "Dedicated Support",
-    description: "Guidance from expert <br /> traders.",
+    title: "Expert Assistance",
+    description: "Support for all trading <br/> levels.",
     icon: Support
   }
 ];
@@ -63,14 +64,16 @@ export default function page() {
   return (
     <div>
       <Marketbanner
-        banner_title="For Difference (CFD) <br /> Trading  on Indices"
-        banner_discription="FlipTrade offers global cash and futures index <br/> trading with low costs."
+        banner_title="Commodities <br /> CFDs"
+        banner_discription="Trade spot and futures commodities across metals, <br /> energy, and agriculture markets."
       />
       <Marketspoints pointdata={pointdata} />
       <Discovertrading
-        discription={`Trade the world’s top stock market indices, like <br />  S&P 500, NASDAQ, and DAX, with fast <br /> execution and competitive conditions.`}
-        discoverleftimage={indicescoverleft}
-        discoverrightimage={indicescoverright}
+        discription={
+          "Trade popular commodities like Gold, Silver, and <br/> Oil with tight spreads and reliable execution."
+        }
+        discoverleftimage={commoditiescoverleft}
+        discoverrightimage={commoditiescoverright}
       />
       <div className=" bg-white">
         <div className="inn_container pt-12 pb-16">

@@ -13,43 +13,42 @@ const marketpagesdata = [
     id: 1,
     pagename: "Forex",
     pagelink: "/forex",
-    class: "menu-item w-[85%]"
+    class: "menu-item w-[85%] max-w-[360px]"
   },
   {
     id: 2,
     pagename: "Indices",
     pagelink: "/indices",
-    class: "menu-item w-[90%]"
+    class: "menu-item w-[90%] max-w-[395px]"
   },
   {
     id: 3,
     pagename: "Commodities",
     pagelink: "/commodities",
-    class: "menu-item w-full"
+    class: "menu-item w-full max-w-[435px]"
   },
   {
     id: 4,
     pagename: "Crypto Currency",
-    pagelink: "/crypto-currency",
-    class: "menu-item w-full"
+    pagelink: "/cryptocurrency",
+    class: "menu-item w-full max-w-[435px]"
   },
   {
     id: 5,
     pagename: "Metals",
     pagelink: "/metals",
-    class: "menu-item w-[90%]"
+    class: "menu-item w-[90%] max-w-[395px]"
   },
   {
     id: 6,
     pagename: "Stocks",
     pagelink: "/stocks",
-    class: "menu-item  w-[85%]"
+    class: "menu-item  w-[85%]  max-w-[360px]"
   }
 ];
 
-const Marketbanner = () => {
+const Marketbanner = ({banner_title,banner_discription}) => {
   const currentpath = usePathname();
-
   const pathname = currentpath
     .replace("/", "")
     .replace(/-/g, " ")
@@ -59,22 +58,22 @@ const Marketbanner = () => {
   return (
     <div
       style={{ backgroundImage: `url(${banner.src})` }}
-      className="h-[100vh]"
+      className="relative"
     >
-      <div className="inn_container h-full pt-[270px] ">
+      <div className="inn_container h-full pt-[180px]  2xl:pt-[270px] pb-[160px]">
         <div className="grid grid-cols-1">
           <div>
             <Title
-              title={`Forex Trading | Online <br/> FX Trading`}
+              title={banner_title}
               color="gradient_text"
             />
-            <div className="pt-4">
+            <div className="pt-2 2xl:pt-4">
               <Discription
-                dispription={`The FX market moves over $5 trillion daily, making it the <br/> world’s largest and most liquid.`}
+                dispription={banner_discription}
                 color="text-[#D0D0D0]"
               />
             </div>
-            <div className="pt-12">
+            <div className="pt-8 2xl:pt-12">
               <Button
                 icon={firebtnicon.src}
                 btn_name="Start Trading"
@@ -84,7 +83,7 @@ const Marketbanner = () => {
                 shadow={true}
               />
             </div>
-            <div className="pt-24">
+            <div className="pt-12 2xl:pt-24">
               <div className="text-[25px] text-white">
                 <Link href="/"> Home / </Link>{" "}
                 <span className="gradient_text cursor-pointer">{`${pathname}`}</span>
@@ -92,11 +91,11 @@ const Marketbanner = () => {
             </div>
           </div>
         </div>
-        <div className="absolute top-[34%] right-0 w-[25%]">
-          <div className="relative flex flex-col items-end gap-4">
+        <div className="absolute top-[28%] 2xl:top-[30%] right-0 w-[25%]">
+          <div className="relative flex flex-col items-end gap-2 2xl:gap-4">
             {marketpagesdata.map(data =>
               <div
-                className={`py-3 rounded-tl-[50px] rounded-bl-[50px] mt-3 ${data.pagelink ===
+                className={`py-1.5 2xl:py-3 rounded-tl-[50px] rounded-bl-[50px] mt-3 ${data.pagelink ===
                 currentpath
                   ? "gradient_bg"
                   : "bg-[#4d4d4db0]"} ${data.class}`}
@@ -104,7 +103,7 @@ const Marketbanner = () => {
               >
                 <Link href={data.pagelink}>
                   <p
-                    className={`text-2xl  relative left-[12%] w-max ${data.pagelink ===
+                    className={`text-xl 2xl:text-2xl  relative left-[12%] w-max ${data.pagelink ===
                     currentpath
                       ? "text-black "
                       : "text-white"}`}

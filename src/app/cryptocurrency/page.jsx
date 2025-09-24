@@ -4,12 +4,12 @@ import Marketspoints from "../Components/Pagecomponents/Markets/Marketspoints";
 import Discovertrading from "../Components/Pagecomponents/Markets/Discovertrading";
 import Title from "../Components/Uiux/Title";
 import Faq from "../Components/Pagecomponents/Faq";
-import Advanced from "/public/icons/Advanced.svg";
-import market from "/public/icons/market.svg";
-import fastexu from "/public/icons/fastexu.svg";
+import cryptocoverleft from "/public/images/cryptocoverleft.webp";
+import cryptocoverright from "/public/images/cryptocoverright.webp";
+import cryptoicon from "/public/icons/cryptoicon.svg";
+import realtime from "/public/icons/realtime.svg";
+import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
-import indicescoverleft from "/public/images/indicescoverleft.webp";
-import indicescoverright from "/public/images/indicescoverright.webp";
 const faqData = [
   {
     question: "What is FlipTrade?",
@@ -36,26 +36,27 @@ const faqData = [
 const pointdata = [
   {
     id: 1,
-    title: "Market Access",
-    description: "Trade major global <br/> indices.",
-    icon: market
+    title: "Multiple Cryptos",
+    description:
+      "Trade top digital  <br/>  currencies.",
+    icon: cryptoicon
   },
   {
     id: 2,
-    title: "Advanced Analytics",
-    description: "Real-time charts and <br/> market insights.",
-    icon: Advanced
+    title: "Live Market Data",
+    description: "Charts and indicators for <br/> precise trading.",
+    icon: realtime
   },
   {
     id: 3,
-    title: "Fast Execution",
-    description: "Trade without delays or <br /> slippage.",
-    icon: fastexu
+    title: "Fast & Secure",
+    description: "Trade safely with advanced <br/> platform security.",
+    icon: Secure
   },
   {
     id: 4,
-    title: "Dedicated Support",
-    description: "Guidance from expert <br /> traders.",
+    title: "24/7 Support",
+    description: "Assistance whenever <br/> you need it.",
     icon: Support
   }
 ];
@@ -63,14 +64,16 @@ export default function page() {
   return (
     <div>
       <Marketbanner
-        banner_title="For Difference (CFD) <br /> Trading  on Indices"
-        banner_discription="FlipTrade offers global cash and futures index <br/> trading with low costs."
+        banner_title="Cryptocurrency Trading | <br/>  Buy & Sell Digital Assets"
+        banner_discription="Trade top cryptos like Bitcoin and Ethereum with <br /> low spreads and high security."
       />
       <Marketspoints pointdata={pointdata} />
       <Discovertrading
-        discription={`Trade the world’s top stock market indices, like <br />  S&P 500, NASDAQ, and DAX, with fast <br /> execution and competitive conditions.`}
-        discoverleftimage={indicescoverleft}
-        discoverrightimage={indicescoverright}
+        discription={
+          "Trade popular commodities like Gold, Silver, and <br/> Oil with tight spreads and reliable execution."
+        }
+        discoverleftimage={cryptocoverleft}
+        discoverrightimage={cryptocoverright}
       />
       <div className=" bg-white">
         <div className="inn_container pt-12 pb-16">

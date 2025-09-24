@@ -151,6 +151,14 @@ body {
   color: transparent;
 }
 
+.gradient_text_secondary {
+  background: radial-gradient(circle, rgba(226, 164, 255, 1) 0%, rgba(146, 39, 255, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 .gradient_bg {
   background: linear-gradient(90deg,
       rgba(255, 255, 255, 1) 0%,
@@ -245,3 +253,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     line-height: 84px;
   }
 }
+
+/* 
+@theme  {
+   --breakpoint-2xl: 1680px;
+} */

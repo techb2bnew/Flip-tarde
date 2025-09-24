@@ -4,27 +4,42 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
 import Logo from "../../../../public/images/Logo.webp";
-
+import Button from "./Button";
+import firebtnicon from "../../../../public/icons/firebtnicon.svg";
+import giftbtnicon from "../../../../public/icons/giftbtnicon.svg";
 const navlistdata = [
   { id: 1, nav_name: "Home", nav_link: "/" },
-  { id: 2, nav_name: "Markets", nav_link: "/forex" },
+  {
+    id: 2,
+    nav_name: "Markets",
+    nav_link: "/forex",
+    dropdown: [
+      { id: "forex", name: "Forex", link: "/forex" },
+      { id: "stocks", name: "Stocks", link: "/stocks" },
+      { id: "crypto", name: "Crypto", link: "/crypto" },
+      { id: "indices", name: "Indices", link: "/indices" },
+      { id: "commodities", name: "Commodities", link: "/commodities" },
+      { id: "metals", name: "Metals", link: "/metals" },
+    ],
+  },
   { id: 3, nav_name: "Account Type", nav_link: "/account" },
   { id: 4, nav_name: "Platform", nav_link: "/platform" },
   { id: 5, nav_name: "Tools", nav_link: "/tools" },
-  { id: 6, nav_name: "Contact", nav_link: "/contact" }
+  { id: 6, nav_name: "Contact", nav_link: "/contact" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [hoverPos, setHoverPos] = useState({ left: 0, width: 0 });
   const [activePos, setActivePos] = useState({ left: 0, width: 0 });
+  const [isMarketsOpen, setIsMarketsOpen] = useState(false); // <-- new
   const containerRef = useRef(null);
 
   useEffect(() => {
     const active = containerRef.current?.querySelector(
       `a[data-link="${pathname}"]`
-    );  
-    if (active) {
+    );
+    if (active && containerRef.current) {
       const rect = active.getBoundingClientRect();
       const parentRect = containerRef.current.getBoundingClientRect();
       setActivePos({ left: rect.left - parentRect.left, width: rect.width });
@@ -33,8 +48,15 @@ export default function Header() {
 
   const showPos = hoverPos.width ? hoverPos : activePos;
 
+  const moveHighlightTo = (el) => {
+    if (!el || !containerRef.current) return;
+    const rect = el.getBoundingClientRect();
+    const parentRect = containerRef.current.getBoundingClientRect();
+    setHoverPos({ left: rect.left - parentRect.left, width: rect.width });
+  };
+
   return (
-    <div className="pt-12 pb-6">
+    <div className="pt-12 pb-6 relative">
       <div className="inn_container flex justify-between">
         {/* Logo */}
         <div className="flex items-center">
@@ -44,41 +66,53 @@ export default function Header() {
             width={2000}
             height={500}
             className="max-w-44 2xl:max-w-56"
+            priority
           />
         </div>
 
-        <div className="w-[52%] 2xl:w-[55%] max-w-[900px] 
-                        flex justify-center
-                        bg-[linear-gradient(90deg,rgba(43,38,55,1)_0%,rgba(72,56,123,1)_100%)]
-                        border-[3px] border-[#D9D9D926] border-solid rounded-[40px]">
+        {/* NAV WRAPPER */}
+        <div
+          className="w-[52%] 2xl:w-[55%] max-w-[900px] 
+                     flex justify-center
+                     bg-[linear-gradient(90deg,rgba(43,38,55,1)_0%,rgba(72,56,123,1)_100%)]
+                     border-[3px] border-[#D9D9D926] border-solid rounded-[40px]"
+        >
           <div
             ref={containerRef}
-            className="relative flex w-[90%] 2xl:w-[90%] justify-around items-center py-1  font_secondary"
+            className="relative flex w-[90%] 2xl:w-[90%] justify-around items-center py-1 font_secondary "
           >
+            {/* moving pill */}
             <div
-              className="absolute top-[18%] 2xl:top-[16%] h-[65%] rounded-full bg-primary transition-all duration-500"
-              style={{ left: showPos.left -5, width: showPos.width + 10 }}
-            ></div>
+              className="absolute top-[18%] 2xl:top-[16%] h-[65%] rounded-full bg-primary transition-all duration-500 ui_btn_shadow"
+              style={{ left: showPos.left - 5, width: showPos.width + 10 }}
+            />
 
-            {navlistdata.map(data => (
-              <Link
-                key={data.id}
-                data-link={data.nav_link}
-                href={data.nav_link}
-                onMouseEnter={e => {
-                  const rect = e.currentTarget.getBoundingClientRect();
-                  const parentRect = containerRef.current.getBoundingClientRect();
-                  setHoverPos({
-                    left: rect.left - parentRect.left,
-                    width: rect.width
-                  });
-                }}
-                onMouseLeave={() => setHoverPos({ left: 0, width: 0 })}
-                className="relative z-10 text-white list_text font-medium py-2 px-3"
-              >
-                {data.nav_name}
-              </Link>
-            ))}
+            {navlistdata.map((data) => {
+              const isMarkets = !!data.dropdown; // only Markets has dropdown
+              return (
+                <div
+                  key={data.id}
+                  className="relative group"
+                  onMouseEnter={(e) => {
+                    const anchor = e.currentTarget.querySelector("a[data-link]");
+                    moveHighlightTo(anchor);
+                    if (isMarkets) setIsMarketsOpen(true); // open dropdown
+                  }}
+                  onMouseLeave={() => {
+                    setHoverPos({ left: 0, width: 0 });
+                    if (isMarkets) setIsMarketsOpen(false); // close dropdown
+                  }}
+                >
+                  <Link
+                    data-link={data.nav_link}
+                    href={data.nav_link}
+                    className="relative z-10 text-white list_text font-medium py-2 px-3 block"
+                  >
+                    {data.nav_name}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -93,6 +127,75 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      <div
+        onMouseEnter={() => setIsMarketsOpen(true)}
+        onMouseLeave={() => setIsMarketsOpen(false)}
+        className={
+          `
+          absolute left-0 top-[100px] z-20 origin-top
+          transition-all duration-500 ease-in-out w-full 
+          ` +
+          (isMarketsOpen
+            ? " scale-100 opacity-100 pointer-events-auto"
+            : " scale-0 opacity-0 pointer-events-none")
+        }
+      >
+        <div className="pt-8 h-full">
+          <div className="bg-[#ffffff] border border-[#75757526] rounded-[8px] shadow-lg overflow-hidden h-full">
+          <div className="inn_container grid grid-cols-[2fr_3fr_1fr] gap-4 py-16 px-6">
+             <div className="flex items-start">
+                <div className="text-secondary text-5xl leading-16">
+                   Start Your Trading <br/>
+                   Journey With <br/>
+                   Flip Trade
+                </div>
+             
+             </div>
+             <div className="grid grid-cols-3 gap-1 py-4 px-6 h-max">
+                {navlistdata
+              .find((n) => n.nav_name === "Markets")
+              ?.dropdown.map((item) => (
+                <div key={item.id} className="text-start">
+                  <Link
+                    href={item.link}
+                    className="relative z-10 text-black font_secondary py-2 px-3 block  rounded-lg text-base 2xl:text-xl pt-8  font-medium text-primary" 
+                    onMouseEnter={(e) =>
+                      moveHighlightTo(
+                        document.querySelector('a[data-link="/forex"]') 
+                      )
+                    }
+                  >
+                    {item.name}
+                  </Link>
+                </div>
+              ))}
+             </div>
+             <div>
+                 <div className="flex flex-col gap-8">
+                <Button
+                  icon={firebtnicon.src}
+                  btn_name="Start Trading"
+                  btn_bg="bg-primary"
+                  text_color="text-white"
+                  border_color="border-primary"
+                  shadow={true}
+                />
+                <Button
+                  icon={giftbtnicon.src}
+                  btn_name="Try Demo"
+                  btn_bg="bg-lightsecondry"
+                  text_color="text-white"
+                  border_color="border-ternary"
+                />
+              </div>
+             </div>
+          </div>
+        </div>
+        </div>
+        
+      </div>
+   
     </div>
   );
 }

@@ -22,16 +22,16 @@ const markettype = [
     sidebanner: exploremarket2
   },
   {
-    marketname: "Commodities",
-    sidebanner: exploremarket3
-  },
-  {
     marketname: "Cryptocurrency",
     sidebanner: exploremarket4
   },
   {
     marketname: "Metals",
     sidebanner: exploremarket5
+  },
+    {
+    marketname: "Commodities",
+    sidebanner: exploremarket3
   },
   {
     marketname: "Stocks",
