@@ -10,6 +10,7 @@ import setp1 from "/public/icons/Advanced.svg";
 import setp2 from "/public/icons/forexpoint2.svg";
 import setp3 from "/public/icons/forexpoint3.svg";
 import setp4 from "/public/icons/Support.svg";
+import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
 const faqData = [
   {
     question: "What is FlipTrade?",
@@ -66,6 +67,11 @@ export default function page() {
       <Marketbanner
         banner_title="Forex Trading | Online <br/> FX Trading"
         banner_discription="The FX market moves over $5 trillion daily, making it the <br/> world’s largest and most liquid."
+      />
+      <Graphhome 
+        title={`What is Forex?`} 
+        discription={`Forex (Foreign Exchange) is the global market for trading currencies. <br/> Traders buy and sell currency pairs, like EUR/USD and GBP/JPY, to <br/> profit from exchange rate movements. It is the largest financial <br/> market, operating 24 hours a day, 5 days a week.`}
+        pagepath={'/forex'} 
       />
       <Marketspoints pointdata={pointdata} />
       <Discovertrading

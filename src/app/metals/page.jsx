@@ -10,6 +10,7 @@ import globlemetals from "/public/icons/globlemetals.svg";
 import Advanced from "/public/icons/Advanced.svg";
 import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
+import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
 const faqData = [
   {
     question: "What is FlipTrade?",
@@ -65,6 +66,11 @@ export default function page() {
       <Marketbanner
         banner_title="Precious Metals Trading <br/> Gold & Silver"
         banner_discription="Trade Gold, Silver, and Platinum with tight <br/> spreads and high liquidity."
+      />
+      <Graphhome
+        title={`What are <br/> Metals?`}
+        discription={`Metals trading includes precious metals like gold, silver, and <br /> platinum. Investors trade metals to hedge risk or capitalize on <br/> price movements.`}
+        pagepath={"/metals"}
       />
       <Marketspoints pointdata={pointdata} />
       <Discovertrading

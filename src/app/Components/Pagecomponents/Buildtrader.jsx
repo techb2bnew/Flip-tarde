@@ -29,8 +29,8 @@ const buildtradetagcard = [
 const Buildtrader = () => {
   return (
     <div className="bg-white">
-      <div className="inn_container pt-40">
-        <div className="grid grid-col-1 xl:grid-cols-2">
+      <div className="inn_container pt-16 md:pt-20 lg:pt-40">
+        <div className="grid grid-col-1 text-center lg:text-start lg:grid-cols-2">
           <Title
             title="Built for Traders. <br/> Backed by Trust."
             color="text-secondary"
@@ -43,27 +43,27 @@ const Buildtrader = () => {
             />
           </div>
         </div>
-        <div className="py-16 grid grid-cols-5  gap-7">
+        <div className="py-10 md:py-12 lg:py-16 grid grid-cols-2 lg:grid-cols-5  gap-4 md:gap-7">
           {buildtradetagcard.map((data, index) =>
             <div
               key={index}
-              className={`bg-[#F3EFFF] flex flex-col items-center gap-4 2xl:gap-5 py-[46px] 
+              className={`bg-[#F3EFFF] flex flex-col items-center gap-2 lg:gap-4 2xl:gap-5 py-[24px] md:py-[30px] lg:py-[46px] 
                 ${index %
                 2 ===  0
                 ? "[clip-path:polygon(0_0,80%_0,100%_25%,100%_100%,20%_100%,0_75%)]"
                 : "[clip-path:polygon(20%_0,100%_0,100%_75%,80%_100%,0_100%,0_25%)]"} `}
             >
-              <p className="text-3xl 2xl:text-4xl font-semibold text-primary min-w-[200px] text-center pb-4 2xl:pb-5 border-b-[3px] !border-solid border-[#BCC1FF]">
+              <p className="text-lg md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-primary md:min-w-[200px] text-center pb-4 2xl:pb-5 border-b-[3px] !border-solid border-[#BCC1FF]">
                 {data.title}
               </p>
               <p
-                className="list_text font-light text-center font_ternary leading-[28px]"
+                className="list_text font-light text-center font_ternary leading-6 xl:leading-[28px] px-3 md:px-0"
                 dangerouslySetInnerHTML={{ __html: data.sub_title }}
               />
             </div>
           )}
         </div>
-        <div className="pt-16">
+        {/* <div className="pt-16">
           <div className="relative">
             <Image
               src={buildtraderimage.src}
@@ -95,7 +95,7 @@ const Buildtrader = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ function Worldbroker() {
   return (
     <div className="bg-white">
       <div className="inn_container py-24">
-        <div className="grid grid-cols-[2fr_5fr_2fr] relative h-[390px] z-[5px]">
+        <div className="grid grid-cols-[2fr_5fr_2fr] relative h-[340px] md:h-[280px] xl:h-[390px] z-[5px]">
           <div className="bg-[#EAE3FF] rounded-br-[60px]" />
           <div className="bg-[#EAE3FF] rounded-bl-[60px] rounded-tr-[60px] relative z-20" />
           <div className="bg-[#EAE3FF] rounded-tl-[60px]" />
@@ -40,13 +40,13 @@ function Worldbroker() {
               border_color="border-[#FFFFFF87]"
             />
           </div>
-          <div className="absolute top-[12%] right-[10%] z-30  rotate-[335deg]">
+          <div className="absolute top-[12%] right-[2%] xl:right-[6%] 2xl:right-[10%] z-30  rotate-[335deg]">
             <Image
               src={Ethereum}
               alt="Ethereum"
               width={1000}
               height={500}
-              className="max-w-[144px]"
+              className="max-w-[60px] lg:max-w-[100px] xl:max-w-[144px]"
             />
           </div>
           <div className="absolute top-[-18%] left-[50%] z-10  rotate-[45deg]">
@@ -55,7 +55,7 @@ function Worldbroker() {
               alt="Zcash"
               width={1000}
               height={500}
-              className="max-w-[117px]"
+              className="max-w-[50px] lg:max-w-[80px] xl:max-w-[117px]"
             />
           </div>
           <div className="absolute bottom-[12%] left-[-4%] rotate-[45deg]">
@@ -64,7 +64,7 @@ function Worldbroker() {
               alt="Bitcoin"
               width={1000}
               height={500}
-              className="max-w-[172px]"
+              className="max-w-[80px] lg:max-w-[120px] xl:max-w-[172px]"
             />
           </div>
         </div>

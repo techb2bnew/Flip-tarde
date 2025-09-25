@@ -180,6 +180,10 @@ strong {
   line-height: 115px;
 }
 
+.main_banner {
+  background-image: url(../../public/banners/Homebanner.webp);
+}
+
 /* For swiper slider  */
 .swiper-pagination-bullet-active {
   background: var(--primary) !important;
@@ -251,6 +255,88 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   .title_text {
     font-size: 68px;
     line-height: 84px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .banner_primary_text {
+    font-size: 70px;
+    line-height: 83px;
+  }
+
+  .banner_secondary_text {
+    font-size: 46px;
+  }
+
+  .rainbow-btn {
+    max-height: 55px !important;
+    min-height: 54px !important;
+    padding: 0 20px !important;
+  }
+
+  .title_text {
+    font-size: 55px;
+    line-height: 75px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  br {
+    display: none;
+  }
+
+  .banner_primary_text {
+    font-size: 58px;
+    line-height: 83px;
+  }
+
+  .banner_secondary_text {
+    font-size: 40px;
+  }
+
+  .description_text {
+    max-width: 90%;
+    margin: auto;
+    width: 100%;
+  }
+
+  .rainbow-btn {
+    max-height: 45px !important;
+    min-height: 45px !important;
+    padding: 0 14px !important;
+  }
+
+  .title_text {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner_primary_text {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  .banner_secondary_text {
+    font-size: 18px;
+  }
+
+  .description_text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .main_banner {
+    background-image: url(../../public/banners/Homebannerph.webp);
+  }
+    .title_text {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .list_text
+  {
+    font-size: 14px;
   }
 }
 

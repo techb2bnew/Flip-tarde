@@ -3,7 +3,7 @@ import React from 'react'
 
 const Fotterlinks = ({title,linklist}) => {
   return (
-    <div className='w-max m-auto'>
+    <div className='w-max md:m-auto'>
       <p className='text-xl 2xl:text-2xl font-semibold w-max gradient_text'>
        {title}
       </p> 

@@ -24,16 +24,16 @@ const Button = ({
               alt="#"
               width={1000}
               height={500}
-              className="icon min-w-6 2xl:min-w-7 max-w-7"
+              className="icon min-w-6 2xl:min-w-7 max-w-4 lg:max-w-7"
             />
           </span>}
         <span className={`rainbow-btn__text font_secondary ${text_color}`}>
           <span
-            className="block transition-transform duration-500 before-text text-xl 2xl:text-2xl"
+            className="block transition-transform duration-500 before-text text-[14px] lg:text-xl 2xl:text-2xl"
             dangerouslySetInnerHTML={{ __html: btn_name }}
           />
           <span
-            className="block absolute top-full left-0 transition-transform duration-500 after-text text-xl 2xl:text-2xl"
+            className="block absolute top-full left-0 transition-transform duration-500 after-text text-[14px] lg:text-xl 2xl:text-2xl"
             dangerouslySetInnerHTML={{ __html: btn_name }}
           />
         </span>

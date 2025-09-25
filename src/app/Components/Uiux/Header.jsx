@@ -7,6 +7,7 @@ import Logo from "../../../../public/images/Logo.webp";
 import Button from "./Button";
 import firebtnicon from "../../../../public/icons/firebtnicon.svg";
 import giftbtnicon from "../../../../public/icons/giftbtnicon.svg";
+import menuicon from "../../../../public/icons/menuicon.svg"
 const navlistdata = [
   { id: 1, nav_name: "Home", nav_link: "/" },
   {
@@ -58,7 +59,6 @@ export default function Header() {
   return (
     <div className="pt-12 pb-6 relative">
       <div className="inn_container flex justify-between">
-        {/* Logo */}
         <div className="flex items-center">
           <Image
             src={Logo}
@@ -70,25 +70,18 @@ export default function Header() {
           />
         </div>
 
-        {/* NAV WRAPPER */}
-        <div
-          className="w-[52%] 2xl:w-[55%] max-w-[900px] 
-                     flex justify-center
-                     bg-[linear-gradient(90deg,rgba(43,38,55,1)_0%,rgba(72,56,123,1)_100%)]
-                     border-[3px] border-[#D9D9D926] border-solid rounded-[40px]"
-        >
+        <div className="hidden  w-[52%] 2xl:w-[55%] max-w-[900px] xl:flex justify-center bg-[linear-gradient(90deg,rgba(43,38,55,1)_0%,rgba(72,56,123,1)_100%)] border-[3px] border-[#D9D9D926] border-solid rounded-[40px]">
           <div
             ref={containerRef}
             className="relative flex w-[90%] 2xl:w-[90%] justify-around items-center py-1 font_secondary "
           >
-            {/* moving pill */}
             <div
               className="absolute top-[18%] 2xl:top-[16%] h-[65%] rounded-full bg-primary transition-all duration-500 ui_btn_shadow"
               style={{ left: showPos.left - 5, width: showPos.width + 10 }}
             />
 
             {navlistdata.map((data) => {
-              const isMarkets = !!data.dropdown; // only Markets has dropdown
+              const isMarkets = !!data.dropdown; 
               return (
                 <div
                   key={data.id}
@@ -96,11 +89,11 @@ export default function Header() {
                   onMouseEnter={(e) => {
                     const anchor = e.currentTarget.querySelector("a[data-link]");
                     moveHighlightTo(anchor);
-                    if (isMarkets) setIsMarketsOpen(true); // open dropdown
+                    if (isMarkets) setIsMarketsOpen(true); 
                   }}
                   onMouseLeave={() => {
                     setHoverPos({ left: 0, width: 0 });
-                    if (isMarkets) setIsMarketsOpen(false); // close dropdown
+                    if (isMarkets) setIsMarketsOpen(false); 
                   }}
                 >
                   <Link
@@ -115,8 +108,8 @@ export default function Header() {
             })}
           </div>
         </div>
-
-        <div className="flex items-center gap-6">
+        
+        <div className="hidden xl:flex items-center gap-6">
           <button className="text-white list_text font-medium px-8 cursor-pointer">
             Login
           </button>
@@ -126,6 +119,29 @@ export default function Header() {
             </button>
           </div>
         </div>
+
+        <div className="flex xl:hidden gap-6">
+          <div className="hidden lg:flex items-center gap-8">
+          <button className="text-white list_text font-medium px-8 cursor-pointer">
+            Login
+          </button>
+          <div className="sign_up_btn rounded-[50px]">
+            <button className="border-primary cursor-pointer gap-2 border-[3px] border-solid py-[8px] px-[36px] 2xl:py-[13px] 2xl:px-[50px] bg-[#00000057] text-white tracking-[0.4px] text-xl 2xl:text-[23px] font-normal rounded-[50px] font_secondary">
+              Sign Up
+            </button>
+          </div>
+          </div>
+          <div>
+          <Image 
+           src={menuicon}
+           alt="menu" 
+           width={1000}
+           height={500}
+           className="max-w-10 cursor-pointer"
+           />
+          </div>
+        </div>
+        
       </div>
 
       <div

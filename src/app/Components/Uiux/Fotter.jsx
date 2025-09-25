@@ -90,14 +90,14 @@ const Fotter = () => {
         >
           <div className="inn_container relative top-[170px]">
             <div className="2xl:px-[3%]">
-              <div className="grid grid-cols-4">
+              <div className="hidden md:grid grid-cols-4">
                 <div>
                   <Image
                     src={logo}
                     alt="Logo"
                     width={1000}
                     height={500}
-                    className="max-w-[240px] 2xl:max-w-[295px]"
+                    className="max-w-[190px] xl:max-w-[240px] 2xl:max-w-[295px]"
                   />
                 </div>
                 {footerdata.linkingdata.map((data, index) =>
@@ -111,8 +111,51 @@ const Fotter = () => {
                   </div>
                 )}
               </div>
-              <div className="pt-16">
-                <div className="grid grid-cols-5 bg-primary p-12 rounded-3xl">
+
+              <div className="flex md:hidden flex-col-reverse">
+                <div className="grid grid-cols-2 py-6">
+                  {footerdata.linkingdata.slice(0, 1).map((data, index) =>
+                    <div
+                      className={`${index === 2
+                        ? null
+                        : "border-r-[3px] border-dashed border-[#72727250]"}`}
+                      key={index}
+                    >
+                      <Fotterlinks
+                        title={data.title}
+                        linklist={data.pagelinks}
+                      />
+                    </div>
+                  )}
+                  <div className="flex items-start flex-col gap-4">
+                    {footerdata.linkingdata.slice(1, 3).map((data, index) =>
+                      <div
+                        className={`${index === 2
+                          ? null
+                          : "border-r-[3px] border-dashed border-[#72727250]"}`}
+                        key={index}
+                      >
+                        <Fotterlinks
+                          title={data.title}
+                          linklist={data.pagelinks}
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <div className="flex justify-center items-center py-6">
+                  <Image
+                    src={logo}
+                    alt="Logo"
+                    width={1000}
+                    height={500}
+                    className="max-w-[180px]"
+                  />
+                </div>
+              </div>
+
+              <div className="pt-10 md:pt-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 bg-primary p-8 md:p-12 rounded-3xl">
                   {footerdata.carddata.map((data, index) =>
                     <div
                       className={`font_secondary ${index === 4
@@ -120,21 +163,21 @@ const Fotter = () => {
                         : "border-r-[3px] border-dashed border-[#C5C6FF80]"}`}
                       key={index}
                     >
-                      <div className="w-max m-auto">
+                      <div className="w-auto xl:w-max md:m-auto pt-3 md:px-2">
                         <p className="text-lg 2xl:text-2xl font-semibold w-max text-white">
                           {data.title}
                         </p>
                         {data.link !== false
                           ? <Link href={data.link}>
                               <p
-                                className="text-[13px] 2xl:text-base pt-3 2xl:pt-4 font-light text-white leading-6"
+                                className="text-[16px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6"
                                 dangerouslySetInnerHTML={{
                                   __html: data.discription
                                 }}
                               />
                             </Link>
                           : <p
-                              className="text-[13px] 2xl:text-base pt-3 2xl:pt-4 font-light text-white leading-6"
+                              className="text-[16px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6 max-w-[90%] lg:max-w-max"
                               dangerouslySetInnerHTML={{
                                 __html: data.discription
                               }}
@@ -164,8 +207,8 @@ const Fotter = () => {
                 </div>
               </div>
               <div className="pt-12">
-                <div className="border-t-[1px] py-6 border-solid border-[#ffffff57] font_secondary flex justify-between">
-                  <div className="flex gap-5">
+                <div className="border-t-[1px] py-6 border-solid border-[#ffffff57] font_secondary flex flex-col-reverse gap-5 lg:gap-0 lg:flex-row items-center lg:justify-between">
+                  <div className="flex flex-col lg:flex-row items-center gap-1.5 lg:gap-5">
                     <p className="text-[14px] 2xl:text-base font-light text-[#AAAAAA]">
                       © FlipTrade Group Limited 2024 | All Rights Reserved |
                     </p>

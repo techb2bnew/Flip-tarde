@@ -10,6 +10,7 @@ import fastexu from "/public/icons/fastexu.svg";
 import Support from "/public/icons/Support.svg";
 import indicescoverleft from "/public/images/indicescoverleft.webp";
 import indicescoverright from "/public/images/indicescoverright.webp";
+import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
 const faqData = [
   {
     question: "What is FlipTrade?",
@@ -65,6 +66,11 @@ export default function page() {
       <Marketbanner
         banner_title="For Difference (CFD) <br /> Trading  on Indices"
         banner_discription="FlipTrade offers global cash and futures index <br/> trading with low costs."
+      />
+       <Graphhome 
+        title="What are Indices?"
+        discription={`Indices track the performance of a group of stocks, representing an <br /> overall market or sector, such as the S&P 500 or NASDAQ. Trading <br /> indices allows you to gain exposure to the broader market without <br /> buying individual stocks.`}
+        pagepath={'/indices'} 
       />
       <Marketspoints pointdata={pointdata} />
       <Discovertrading

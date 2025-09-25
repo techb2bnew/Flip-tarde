@@ -10,6 +10,7 @@ import worldwide from "/public/icons/worldwide.svg";
 import realtime from "/public/icons/realtime.svg";
 import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
+import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
 const faqData = [
   {
     question: "What is FlipTrade?",
@@ -65,6 +66,11 @@ export default function page() {
       <Marketbanner
         banner_title="Stock Trading | Global <br /> Equities"
         banner_discription="Trade global company shares with low costs, real-time <br/> data, and easy portfolio diversification."
+      />
+      <Graphhome
+        title={`What are <br/> Stocks?`}
+        discription={`Stocks represent ownership in a company. Trading stocks <br/> allows you to profit from share price movements and potential <br/> dividends.`}
+        pagepath={"/stocks"}
       />
       <Marketspoints pointdata={pointdata} />
       <Discovertrading

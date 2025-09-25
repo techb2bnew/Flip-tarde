@@ -12,14 +12,16 @@ function page() {
   return (
     <div className="bg-black">
       <Banner />
-      <p className="pb-12" />
       <Homemarquee />
-      <Buildtrader/>
-      <Nextgen/>
-      <Exploremarket/>
-      <Workprocess />
-      <Tradingaccounts/>
-      <Tradeyourway/>
+      <Buildtrader />
+      <div className="hidden lg:block">
+        <Nextgen />
+        <Exploremarket />
+        <Workprocess />
+        <Tradingaccounts />
+        <Tradeyourway />
+      </div>
+
     </div>
   );
 }

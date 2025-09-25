@@ -10,6 +10,7 @@ import cryptoicon from "/public/icons/cryptoicon.svg";
 import realtime from "/public/icons/realtime.svg";
 import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
+import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
 const faqData = [
   {
     question: "What is FlipTrade?",
@@ -66,6 +67,11 @@ export default function page() {
       <Marketbanner
         banner_title="Cryptocurrency Trading | <br/>  Buy & Sell Digital Assets"
         banner_discription="Trade top cryptos like Bitcoin and Ethereum with <br /> low spreads and high security."
+      />
+             <Graphhome 
+        title={`What is <br/> Cryptocurrency?`} 
+        discription={`Cryptocurrency trading involves buying and selling digital <br/> currencies like Bitcoin, Ethereum, and others, aiming to profit <br/> from price changes in a decentralized market.`}
+        pagepath={'/cryptocurrency'} 
       />
       <Marketspoints pointdata={pointdata} />
       <Discovertrading

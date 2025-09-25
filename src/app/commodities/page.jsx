@@ -10,6 +10,7 @@ import Diverse from "/public/icons/Diverse.svg";
 import realtime from "/public/icons/realtime.svg";
 import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
+import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
 const faqData = [
   {
     question: "What is FlipTrade?",
@@ -66,6 +67,11 @@ export default function page() {
       <Marketbanner
         banner_title="Commodities <br /> CFDs"
         banner_discription="Trade spot and futures commodities across metals, <br /> energy, and agriculture markets."
+      />
+      <Graphhome
+        title={`What are Commodities?`}
+        discription={`Commodities are raw materials like oil, wheat, and coffee. <br /> Trading commodities allows you to profit from price <br />  movements in essential resources.`}
+        pagepath={"/commodities"}
       />
       <Marketspoints pointdata={pointdata} />
       <Discovertrading
