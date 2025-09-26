@@ -7,7 +7,9 @@ import Logo from "../../../../public/images/Logo.webp";
 import Button from "./Button";
 import firebtnicon from "../../../../public/icons/firebtnicon.svg";
 import giftbtnicon from "../../../../public/icons/giftbtnicon.svg";
-import menuicon from "../../../../public/icons/menuicon.svg"
+import menuicon from "../../../../public/icons/menuicon.svg";
+import menucross from "../../../../public/icons/menucross.svg";
+import downarrow from "../../../../public/icons/downarrow.svg";
 const navlistdata = [
   { id: 1, nav_name: "Home", nav_link: "/" },
   {
@@ -33,9 +35,11 @@ export default function Header() {
   const pathname = usePathname();
   const [hoverPos, setHoverPos] = useState({ left: 0, width: 0 });
   const [activePos, setActivePos] = useState({ left: 0, width: 0 });
-  const [isMarketsOpen, setIsMarketsOpen] = useState(false); // <-- new
+  const [isMarketsOpen, setIsMarketsOpen] = useState(false); 
+  const [isMenu , setIsMenu] = useState(false);
+  const [isMarket , setisMarket] = useState(false);
   const containerRef = useRef(null);
-
+   
   useEffect(() => {
     const active = containerRef.current?.querySelector(
       `a[data-link="${pathname}"]`
@@ -59,7 +63,7 @@ export default function Header() {
   return (
     <div className="pt-12 pb-6 relative">
       <div className="inn_container flex justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center relative z-[999]">
           <Image
             src={Logo}
             alt="Logo"
@@ -131,19 +135,98 @@ export default function Header() {
             </button>
           </div>
           </div>
-          <div>
-          <Image 
-           src={menuicon}
-           alt="menu" 
-           width={1000}
-           height={500}
-           className="max-w-10 cursor-pointer"
+          <div className={` relative z-[999] duration-700 transition-all ${isMenu ? 'rotate-0' : 'rotate-[225deg]'}`} onClick={()=>setIsMenu(!isMenu)}>
+           <Image 
+            src={!isMenu ?  menuicon : menucross}
+            alt="menu" 
+            width={1000}
+            height={500}
+            className="max-w-10 cursor-pointer"
            />
           </div>
         </div>
+         {/* Menu for mobile */}
+         {/* {
+          isMenu ? */}
+      
+         {/* :
+         null
+         } */}
         
       </div>
+      <div>
+        
+      </div>
+            <div className={`absolute  bg-white h-[100vh] w-[100vw] duration-700 transition-all ${!isMenu ? 'right-[-300%] scale-0 top-[-300%]' : 'right-0 top-0 scale-[1]'} `}>
+           <div
+            className="relative flex flex-col w-[80%] m-auto justify-around items-start pt-[110px] py-1 font_secondary "
+          >
 
+
+            {navlistdata.map((data) => {
+              return (
+                <div
+                  key={data.id}
+                  className="relative group"
+                  
+                >
+                  {
+                     data.id === 2 ?
+                     <div className="">
+                        <p className="relative z-10 flex items-center gap-2 text-secondary text-base font-medium py-2 px-3 " onClick={()=>setisMarket(!isMarket)}>
+                          {data.nav_name} 
+                          <Image
+                           src={downarrow}
+                           alt="downarrow"
+                           width={1000}
+                           height={500}
+                           className={`max-w-6 duration-500 transition-all ease-in-out  ${isMarket ? 'rotate-180': 'rotate-0'}`}
+                           />
+                        </p> 
+                        <div className={` ${isMarket ? 'scale-[1] h-auto' : 'scale-[0] h-0'} w-[250px] duration-500 transition-all ease-in-out rounded-2xl bg-primary`}>
+                            {navlistdata
+                             .find((n) => n.nav_name === "Markets")
+                               ?.dropdown.map((item) => (
+                                 <div key={item.id} className="text-start">
+                                   <Link
+                                     href={item.link}
+                                     className="relative z-10 text-white font_secondary py-2 px-3 block  rounded-lg text-base 2xl:text-xl   font-medium" 
+                                     onClick={()=>setIsMenu(!isMenu)}
+                                   >
+                                     {item.name}
+                                  </Link>
+                                 </div>
+                               ))}
+                        </div>
+                     </div>
+                     :
+                  <Link
+                   onClick={()=>setIsMenu(!isMenu)}
+                    data-link={data.nav_link}
+                    href={data.nav_link}
+                    className="relative z-10 text-secondary text-base font-medium py-2 px-3 block"
+                  >
+                    {data.nav_name}
+                  </Link>
+                  }
+                
+                </div>
+              );
+            })}
+          </div>  
+            <div className="lg:hidden flex items-center w-[80%] pt-5 m-auto gap-8">
+             <Button
+                      btn_name={`Sign Up`}
+                      btn_bg={`gradient_bg`}
+                      text_color="text-secondary"
+                      border_color="border-primary"
+                      shadow={true}
+                    />
+              <button className="text-primary text-base font-medium px-8 cursor-pointer">
+               Login
+          </button>
+          </div>
+         </div>
       <div
         onMouseEnter={() => setIsMarketsOpen(true)}
         onMouseLeave={() => setIsMarketsOpen(false)}

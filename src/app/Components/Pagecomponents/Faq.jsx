@@ -10,7 +10,7 @@ const Faq = ({ faqData }) => {
   };
 
   return (
-    <div className="max-w-[900px] 2xl:max-w-7xl m-auto pt-16">
+    <div className="max-w-[900px] 2xl:max-w-7xl m-auto pt-6 md:pt-12 xl:pt-16">
       <div className="flex flex-col gap-5 font_secondary">
         {faqData.map((faq, index) =>
           <div
@@ -20,7 +20,7 @@ const Faq = ({ faqData }) => {
             {/* Question */}
             <div
               onClick={() => toggleAnswer(index)}
-              className={` cursor-pointer text-primary font-normal text-xl 2xl:text-[25px] flex justify-between items-center transition-all duration-500   ease-in-out`}
+              className={` cursor-pointer text-primary font-normal text-[17px] md:text-xl 2xl:text-[25px] flex justify-between items-center transition-all duration-500   ease-in-out`}
             >
               {index + 1}. {faq.question}
               <span

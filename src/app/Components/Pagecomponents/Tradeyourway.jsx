@@ -11,7 +11,8 @@ import Faq from "./Faq";
 const faqData = [
   {
     question: "What is FlipTrade?",
-    answer: "A secure trading platform for Forex, stocks, commodities, indices, and crypto."
+    answer:
+      "A secure trading platform for Forex, stocks, commodities, indices, and crypto."
   },
   {
     question: "How do I start trading?",
@@ -34,7 +35,7 @@ const faqData = [
 const Tradeyourway = () => {
   return (
     <div className="bg-white">
-      <div className="py-32">
+      <div className="xl:py-32">
         <div className="text-center">
           <Title title={"Trade It Your Way"} color="text-secondary" />
         </div>
@@ -49,7 +50,7 @@ const Tradeyourway = () => {
             />
             <div className="absolute top-0 w-full h-full">
               <div className="inn_container relative w-full h-full flex items-center">
-                <div className="relative flex w-full font_ternary font-normal justify-between px-[1.5%] top-[10%]">
+                <div className="relative hidden lg:flex w-full font_ternary font-normal justify-between px-[1.5%] top-[10%]">
                   <div className="text-2xl 2xl:text-[32px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-3  px-10 2xl:px-12 gap-3">
                     <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
                     Instant Deposit
@@ -63,33 +64,53 @@ const Tradeyourway = () => {
                     0% Commission
                   </div>
                 </div>
+
+                <div className="relative pt-24 gap-3 flex flex-col lg:hidden w-full font_ternary font-normal items-center justify-between px-[1.5%] top-[10%]">
+                  <div className="flex gap-3 w-full justify-center">
+                    <div className="text-[13px] 2xl:text-[32px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-2  px-4 2xl:px-12 gap-3">
+                      <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
+                      Instant Deposit
+                    </div>
+                    <div className="text-[13px] 2xl:text-[32px] font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-2  px-4 2xl:px-12 gap-3">
+                      <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
+                      Fast Withdrawal
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-[13px] 2xl:text-[32px] w-max font-normal flex items-center bg-white border-[3px] border-dashed border-[#979797] rounded-[60px]  2xl:py-4 py-2  px-4 2xl:px-12 gap-3">
+                      <span className="w-[11px] h-[11px] bg-primary flex rounded-[50%]" />{" "}
+                      0% Commission
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="inn_container pt-32">
+          <div className="inn_container pt-28 xl:pt-32">
             <div className="text-center">
               <Title
                 title={`Frequently Asked <br/> Questions`}
                 color="text-secondary"
               />
             </div>
-            <Faq faqData={faqData}/>
+            <Faq faqData={faqData} />
           </div>
           <div
             className="bg-cover bg-center inn_container"
             style={{ backgroundImage: `url(${tradeyouwayback.src})` }}
           >
-            <div className="grid grid-cols-[2fr_3fr]">
+            <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr]">
               <div>
                 <Image
                   src={tradeyouwaysideimage}
                   alt="Side banner"
                   width={2000}
                   height={500}
+                  className="max-w-[550px] md:max-w-[unset] m-auto w-full"
                 />
               </div>
               <div className="flex flex-col justify-center items-center">
-                <div>
+                <div className="text-center pt-12 md:pt-0 px-5 md:px-0">
                   <Title
                     title={`Trade on the Go <br/> Anytime and <br/> Anywhere`}
                     color="text-secondary"
@@ -100,8 +121,9 @@ const Tradeyourway = () => {
                     color="text-ternary"
                   />
                 </div>
-                <div className="pt-14 flex w-full flex-col items-center">
-                  <div className="flex gap-8">
+
+                <div className="pt-14 hidden md:flex w-full flex-col items-center">
+                  <div className="flex gap-4 lg:gap-8">
                     <Button
                       btn_name={`Download on <strong> iOS </strong>`}
                       icon={downloadicon.src}
@@ -119,7 +141,7 @@ const Tradeyourway = () => {
                       shadow={true}
                     />
                   </div>
-                  <div className="flex pt-6 gap-8 ps-[15%]">
+                  <div className="flex pt-6 gap-4 lg:gap-8 lg:ps-[15%]">
                     <Button
                       btn_name={`Download on <strong> iOS </strong>`}
                       icon={downloadicon.src}
@@ -128,6 +150,49 @@ const Tradeyourway = () => {
                       border_color="border-primary"
                       shadow={true}
                     />
+                    <Button
+                      btn_name={`Download on <strong> Android </strong>`}
+                      icon={downloadicon.src}
+                      btn_bg={`bg-primary`}
+                      text_color="text-white"
+                      border_color="border-primary"
+                      shadow={true}
+                    />
+                  </div>
+                </div>
+                {/* Button section for mobile  */}
+                <div className="pt-6 flex md:hidden gap-4 w-full flex-col items-center max-w-[300px] m-auto">
+                  <div className="flex w-full justify-start">
+                    <Button
+                      btn_name={`Download on <strong> iOS </strong>`}
+                      icon={downloadicon.src}
+                      btn_bg={`bg-primary`}
+                      text_color="text-white"
+                      border_color="border-primary"
+                      shadow={true}
+                    />
+                  </div>
+                  <div className="flex w-full justify-end">
+                    <Button
+                      btn_name={`Download on <strong> Android </strong>`}
+                      icon={downloadicon.src}
+                      btn_bg={`bg-primary`}
+                      text_color="text-white"
+                      border_color="border-primary"
+                      shadow={true}
+                    />
+                  </div>
+                  <div className="flex w-full justify-start">
+                    <Button
+                      btn_name={`Download on <strong> iOS </strong>`}
+                      icon={downloadicon.src}
+                      btn_bg={`bg-primary`}
+                      text_color="text-white"
+                      border_color="border-primary"
+                      shadow={true}
+                    />
+                  </div>
+                  <div className="flex w-full justify-end">
                     <Button
                       btn_name={`Download on <strong> Android </strong>`}
                       icon={downloadicon.src}
@@ -142,7 +207,6 @@ const Tradeyourway = () => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

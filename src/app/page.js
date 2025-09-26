@@ -16,10 +16,10 @@ function page() {
       <Buildtrader />
       <Nextgen />
       <Exploremarket />
-      <div className="hidden lg:block">
       <Workprocess />
-        <Tradingaccounts />
-        <Tradeyourway />
+      <Tradingaccounts />
+      <Tradeyourway />
+      <div className="hidden lg:block">
       </div>
 
     </div>
