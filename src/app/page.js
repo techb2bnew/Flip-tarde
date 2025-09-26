@@ -14,10 +14,10 @@ function page() {
       <Banner />
       <Homemarquee />
       <Buildtrader />
+      <Nextgen />
+      <Exploremarket />
       <div className="hidden lg:block">
-        <Nextgen />
-        <Exploremarket />
-        <Workprocess />
+      <Workprocess />
         <Tradingaccounts />
         <Tradeyourway />
       </div>

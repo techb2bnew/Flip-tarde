@@ -3,7 +3,6 @@ import workprocessbanner from "../../../../public/banners/workprocess.webp";
 import Title from "../Uiux/Title";
 import workprocessbar from "../../../../public/banners/workprocessbar.webp";
 import Image from "next/image";
-import Discription from "../Uiux/Discription";
 export default function Workprocess() {
   return (
     <div className="bg-white">

@@ -3,6 +3,10 @@ import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import Image from "next/image";
 import buildtraderimage from "../../../../public/images/buildtraderimage.webp";
+import buildtraderimageloerph from "../../../../public/images/buildtraderimagelowerph.webp";
+import buildtraderimageuppervrph from "../../../../public/images/buildtraderimageuppervrph.webp";
+import buildtraderimageupperhzph from "../../../../public/images/buildtraderimageupperhzph.webp";
+import coinph from "../../../../public/images/coinph.webp";
 import Button from "../Uiux/Button";
 const buildtradetagcard = [
   {
@@ -34,7 +38,7 @@ const Buildtrader = () => {
           <Title
             title="Built for Traders. <br/> Backed by Trust."
             color="text-secondary"
-            hovercolor='gradient_text_title'
+            hovercolor="gradient_text_title"
           />
           <div className="flex justify-center items-center">
             <Discription
@@ -48,10 +52,9 @@ const Buildtrader = () => {
             <div
               key={index}
               className={`bg-[#F3EFFF] flex flex-col items-center gap-2 lg:gap-4 2xl:gap-5 py-[24px] md:py-[30px] lg:py-[46px] 
-                ${index %
-                2 ===  0
-                ? "[clip-path:polygon(0_0,80%_0,100%_25%,100%_100%,20%_100%,0_75%)]"
-                : "[clip-path:polygon(20%_0,100%_0,100%_75%,80%_100%,0_100%,0_25%)]"} `}
+                ${index % 2 === 0
+                  ? "[clip-path:polygon(0_0,80%_0,100%_25%,100%_100%,20%_100%,0_75%)]"
+                  : "[clip-path:polygon(20%_0,100%_0,100%_75%,80%_100%,0_100%,0_25%)]"} `}
             >
               <p className="text-lg md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-primary md:min-w-[200px] text-center pb-4 2xl:pb-5 border-b-[3px] !border-solid border-[#BCC1FF]">
                 {data.title}
@@ -63,7 +66,7 @@ const Buildtrader = () => {
             </div>
           )}
         </div>
-        {/* <div className="pt-16">
+        <div className="pt-16 hidden xl:block">
           <div className="relative">
             <Image
               src={buildtraderimage.src}
@@ -72,8 +75,8 @@ const Buildtrader = () => {
               height={500}
               className="w-full"
             />
-            <div className="absolute top-[30%] right-[3.5%]">
-              <div>
+            <div className="absolute top-[30%] right-[2.5%]  2xl:right-[3.5%]">
+              <div className="">
                 <Title
                   title={`FlipTrade. Built <br/> for Traders.`}
                   color="gradient_text"
@@ -95,7 +98,101 @@ const Buildtrader = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
+
+        <div className="block xl:hidden relative">
+          <div className="absolute right-0 top-[-25%] block md:hidden">
+            <Image
+              src={coinph}
+              alt="coin"
+              width={1000}
+              height={500}
+              className="max-w-[150px]"
+            />
+          </div>
+          <div className="grid grid-cols-1 gap-2 md:grid-cols-[2fr_4fr]">
+            <div className="hidden md:block">
+              <Image
+                src={buildtraderimageuppervrph}
+                alt=""
+                width={1000}
+                height={500}
+                className="max-h-[575px]"
+              />
+            </div>
+            <div className="block md:hidden">
+              <Image
+                src={buildtraderimageupperhzph}
+                alt=""
+                width={1000}
+                height={500}
+                className="max-h-[330px]"
+              />
+            </div>
+            <div
+              className=" relative bg-cover   bg-no-repeat hidden md:block"
+              style={{ backgroundImage: `url(${buildtraderimageloerph.src})` }}
+            >
+              <div className="md:w-[80%] m-auto flex items-center justify-center h-full">
+                <div className="relative top-8 lg:top-6 lg:left-2">
+                  <Title
+                    title={`FlipTrade. Built <br/> for Traders.`}
+                    color="gradient_text"
+                  />
+                  <div className="pt-4">
+                    <Discription
+                      dispription={`Seamless trading across Forex, CFDs, metals, and <br/> more. Real-time insights, advanced tools, and <br/> reliable support — everything you need to grow.`}
+                      color="text-white"
+                    />
+                  </div>
+                  <div className="pt-10">
+                    <Button
+                      btn_name={`Read More`}
+                      btn_bg="gradient_bg"
+                      text_color="text-secondary"
+                      border_color="border-transparent"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="pt-5 block md:hidden">
+              <div className="relative">
+                <Image
+                  src={buildtraderimageloerph.src}
+                  alt="banner"
+                  width={3000}
+                  height={500}
+                  className="w-full"
+                />
+                <div className="absolute  w-full h-full flex items-center justify-center top-0">
+                  <div className=" top-[15%] right-0 px-5 2xl:right-[3.5%]">
+                    <div className="relative top-3">
+                      <Title
+                        title={`FlipTrade. Built <br/> for Traders.`}
+                        color="gradient_text"
+                      />
+                      <div className="pt-4">
+                        <Discription
+                          dispription={`Seamless trading across Forex, CFDs, metals, and <br/> more. Real-time insights, advanced tools, and <br/> reliable support — everything you need to grow.`}
+                          color="text-white"
+                        />
+                      </div>
+                      <div className="pt-4">
+                        <Button
+                          btn_name={`Read More`}
+                          btn_bg="gradient_bg"
+                          text_color="text-secondary"
+                          border_color="border-transparent"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

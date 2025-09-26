@@ -275,7 +275,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
 
   .title_text {
-    font-size: 55px;
+    font-size: 51px;
     line-height: 75px;
   }
 }
@@ -295,7 +295,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
 
   .description_text {
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
     width: 100%;
   }
@@ -330,13 +330,20 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   .main_banner {
     background-image: url(../../public/banners/Homebannerph.webp);
   }
-    .title_text {
+
+  .title_text {
     font-size: 24px;
     line-height: 32px;
   }
-  .list_text
-  {
+
+  .list_text {
     font-size: 14px;
+  }
+
+  .rainbow-btn {
+    max-height: 36px !important;
+    min-height: 36px !important;
+    padding: 0 14px !important;
   }
 }
 
