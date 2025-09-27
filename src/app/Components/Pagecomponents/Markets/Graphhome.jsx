@@ -17,18 +17,18 @@ const Graphhome = ({ title, discription, pagepath }) => {
   };
 
   return (
-    <div className={`py-32 bg-white`}>
+    <div className={`py-12 md:py-18 lg:py-24 xl:py-32 bg-white`}>
       <div className="inn_container">
-        <div className="grid grid-cols-2">
-          <div>
+        <div className="grid  text-center xl:text-start xl:grid-cols-2 max-w-[700px] md:max-w-[unset]">
+          <div className="flex justify-center xl:justify-start">
             <Title title={title} color={"text-secondary"} />
           </div>
-          <div>
+          <div className="flex justify-center xl:justify-start">
             <Discription dispription={discription} color={"text-ternary"} />
           </div>
         </div>
 
-        <div className="pt-12 max-w-[1380px] m-auto relative">
+        <div className="pt-12 2xl:max-w-[1380px] m-auto relative">
           {
             pagepath === "/forex" ? <Forexgraph darkMode={darkMode} />
             : pagepath === "/indices" ? <Indicesgraph darkMode={darkMode} /> 

@@ -56,7 +56,6 @@ function Metalgraph({ darkMode }) {
       fontSize: "10",
       headerFontSize: "medium",
       autosize: true,
-      width: "100%",
       noTimeScale: false,
       hideDateRanges: false,
       hideMarketStatus: false,

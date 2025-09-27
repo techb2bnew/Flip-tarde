@@ -80,7 +80,7 @@ function Commoditiesgraph({ darkMode }) {
       ],
       support_host: "https://www.tradingview.com",
       backgroundColor: darkMode === "dark" ? "#0f0f0f" : "#ffffff",
-      width: 1280,
+    
       height: "550",
       showSymbolLogo: true,
       showChart: true

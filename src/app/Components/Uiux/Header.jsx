@@ -6,7 +6,6 @@ import React, { useState, useRef, useEffect } from "react";
 import Logo from "../../../../public/images/Logo.webp";
 import Button from "./Button";
 import firebtnicon from "../../../../public/icons/firebtnicon.svg";
-import giftbtnicon from "../../../../public/icons/giftbtnicon.svg";
 import menuicon from "../../../../public/icons/menuicon.svg";
 import menucross from "../../../../public/icons/menucross.svg";
 import downarrow from "../../../../public/icons/downarrow.svg";
@@ -153,14 +152,6 @@ export default function Header() {
            />
           </div>
         </div>
-         {/* Menu for mobile */}
-         {/* {
-          isMenu ? */}
-      
-         {/* :
-         null
-         } */}
-        
       </div>
       <div>
         
@@ -253,24 +244,43 @@ export default function Header() {
         }
       >
         <div className="pt-8 h-full">
-          <div className="bg-[#ffffff] border border-[#75757526] rounded-[8px] shadow-lg overflow-hidden h-full">
-          <div className="inn_container grid grid-cols-[2fr_3fr_1fr] gap-4 py-16 px-6">
-             <div className="flex items-start">
+          <div className="max-w-[1280px] m-auto  bg-[#ffffff] border border-[#75757526] rounded-[40px] shadow-lg overflow-hidden h-full">
+          <div className="grid grid-cols-2 gap-4 py-16 ps-32">
+             <div className="flex flex-col items-start">
                 <div className="text-secondary text-5xl leading-16">
                    Start Your Trading <br/>
                    Journey With <br/>
                    Flip Trade
                 </div>
-             
+                <div className="pt-8">
+                 <div className="flex flex-col gap-8">
+                <Button
+                  icon={firebtnicon.src}
+                  btn_name="Start Trading"
+                  btn_bg="bg-primary"
+                  text_color="text-white"
+                  border_color="border-primary"
+                  shadow={true}
+                />
+                {/* <Button
+                  icon={giftbtnicon.src}
+                  btn_name="Try Demo"
+                  btn_bg="bg-lightsecondry"
+                  text_color="text-white"
+                  border_color="border-ternary"
+                /> */}
+              </div>
+               </div>
              </div>
-             <div className="grid grid-cols-3 gap-1 py-4 px-6 h-max">
+             <div>
+               <div className=" grid grid-cols-2 gap-1 py-4 px-6 h-max">
                 {navlistdata
               .find((n) => n.nav_name === "Markets")
               ?.dropdown.map((item) => (
                 <div key={item.id} className="text-start">
                   <Link
                     href={item.link}
-                    className="relative z-10 text-black font_secondary py-2 px-3 block  rounded-lg text-base 2xl:text-xl pt-8  font-medium text-primary" 
+                    className="relative z-10 text-black font_secondary py-2 px-3 block  rounded-lg text-base 2xl:text-xl pt-8  font-medium hover:text-primary" 
                     onMouseEnter={(e) =>
                       moveHighlightTo(
                         document.querySelector('a[data-link="/forex"]') 
@@ -281,26 +291,10 @@ export default function Header() {
                   </Link>
                 </div>
               ))}
+               </div>
+              
              </div>
-             <div>
-                 <div className="flex flex-col gap-8">
-                <Button
-                  icon={firebtnicon.src}
-                  btn_name="Start Trading"
-                  btn_bg="bg-primary"
-                  text_color="text-white"
-                  border_color="border-primary"
-                  shadow={true}
-                />
-                <Button
-                  icon={giftbtnicon.src}
-                  btn_name="Try Demo"
-                  btn_bg="bg-lightsecondry"
-                  text_color="text-white"
-                  border_color="border-ternary"
-                />
-              </div>
-             </div>
+            
           </div>
         </div>
         </div>

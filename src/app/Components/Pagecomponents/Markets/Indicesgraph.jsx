@@ -65,7 +65,6 @@ const Indicesgraph = ({ darkMode }) => {
           }
         ],
         support_host: "https://www.tradingview.com",
-        width: 1280,
         height: "550",
         showSymbolLogo: true,
         showChart: true

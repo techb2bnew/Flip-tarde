@@ -20,7 +20,6 @@ function TradingViewWidget({ darkMode }) {
       colorTheme: darkMode, 
       isTransparent: false,
       locale: "en",
-      width: "100%",
       height: 550,
     });
 

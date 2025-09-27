@@ -62,7 +62,7 @@ const Marketbanner = ({banner_title,banner_discription}) => {
     >
       <div className="inn_container h-full pt-[180px]  2xl:pt-[270px] pb-[160px]">
         <div className="grid grid-cols-1">
-          <div>
+          <div className="text-center lg:text-start max-w-[700px] px-0 md:px-[12] lg:px-0 lg:max-w-[unset] m-auto lg:m-0">
             <Title
               title={banner_title}
               color="gradient_text"
@@ -91,7 +91,7 @@ const Marketbanner = ({banner_title,banner_discription}) => {
             </div>
           </div>
         </div>
-        <div className="absolute top-[28%] 2xl:top-[30%] right-0 w-[25%]">
+        <div className="hidden lg:block absolute top-[28%] 2xl:top-[30%] right-0 w-[25%]">
           <div className="relative flex flex-col items-end gap-2 2xl:gap-4">
             {marketpagesdata.map(data =>
               <div
