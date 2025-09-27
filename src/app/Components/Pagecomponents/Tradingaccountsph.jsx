@@ -45,10 +45,10 @@ const Tradingaccountsph = ({ accountinfo }) => {
         <Swiper
           effect={"coverflow"}
           loop={true}
-          // autoplay={{
-          //   delay: 2000,
-          //   disableOnInteraction: false
-          // }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false
+          }}
           speed={1000}
           slidesPerView={slideitem}
           pagination={{ clickable: true }}
@@ -81,7 +81,7 @@ const Tradingaccountsph = ({ accountinfo }) => {
           className="max-w-[51px]"
         />
       </div>
-      <div className="block md:hidden absolute bottom-[10%] right-0 rotate-[340deg]">
+      <div className="block md:hidden absolute bottom-[10%] right-[5%] rotate-[340deg]">
         <Image
           src={Ethereum}
           alt="Ethereum"

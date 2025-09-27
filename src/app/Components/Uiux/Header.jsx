@@ -28,7 +28,7 @@ const navlistdata = [
   { id: 3, nav_name: "Account Type", nav_link: "/account" },
   { id: 4, nav_name: "Platform", nav_link: "/platform" },
   { id: 5, nav_name: "Tools", nav_link: "/tools" },
-  { id: 6, nav_name: "Contact", nav_link: "/contact" },
+  { id: 6, nav_name: "Contact", nav_link: "/contact-us" },
 ];
 
 export default function Header() {
@@ -114,25 +114,33 @@ export default function Header() {
         </div>
         
         <div className="hidden xl:flex items-center gap-6">
+          <Link href={'https://client.fliptradegroup.com/trader'} >
           <button className="text-white list_text font-medium px-8 cursor-pointer">
             Login
           </button>
+          </Link>
           <div className="sign_up_btn rounded-[50px]">
-            <button className="border-primary cursor-pointer gap-2 border-[3px] border-solid py-[8px] px-[36px] 2xl:py-[13px] 2xl:px-[50px] bg-[#00000057] text-white tracking-[0.4px] text-xl 2xl:text-[23px] font-normal rounded-[50px] font_secondary">
-              Sign Up
-            </button>
+              <Link href={'https://client.fliptradegroup.com/trader/registration'}>
+               <button className="border-primary cursor-pointer gap-2 border-[3px] border-solid py-[8px] px-[36px] 2xl:py-[13px] 2xl:px-[50px] bg-[#00000057] text-white tracking-[0.4px] text-xl 2xl:text-[23px] font-normal rounded-[50px] font_secondary">
+                 Sign Up
+               </button>
+            </Link>
           </div>
         </div>
 
         <div className="flex xl:hidden gap-6">
           <div className="hidden lg:flex items-center gap-8">
+            <Link href={'https://client.fliptradegroup.com/trader'} >
           <button className="text-white list_text font-medium px-8 cursor-pointer">
             Login
           </button>
+          </Link>
           <div className="sign_up_btn rounded-[50px]">
-            <button className="border-primary cursor-pointer gap-2 border-[3px] border-solid py-[8px] px-[36px] 2xl:py-[13px] 2xl:px-[50px] bg-[#00000057] text-white tracking-[0.4px] text-xl 2xl:text-[23px] font-normal rounded-[50px] font_secondary">
-              Sign Up
-            </button>
+              <Link href={'https://client.fliptradegroup.com/trader/registration'}>
+                <button className="border-primary cursor-pointer gap-2 border-[3px] border-solid py-[8px] px-[36px] 2xl:py-[13px] 2xl:px-[50px] bg-[#00000057] text-white tracking-[0.4px] text-xl 2xl:text-[23px] font-normal rounded-[50px] font_secondary">
+                  Sign Up
+               </button>
+            </Link>
           </div>
           </div>
           <div className={` relative z-[999] duration-700 transition-all ${isMenu ? 'rotate-0' : 'rotate-[225deg]'}`} onClick={()=>setIsMenu(!isMenu)}>
@@ -157,7 +165,7 @@ export default function Header() {
       <div>
         
       </div>
-            <div className={`absolute  bg-white h-[100vh] w-[100vw] duration-700 transition-all ${!isMenu ? 'right-[-300%] scale-0 top-[-300%]' : 'right-0 top-0 scale-[1]'} `}>
+            <div className={`fixed  bg-white h-[100vh] w-[100vw] duration-700 transition-all ${!isMenu ? 'right-[-300%] scale-0 top-[-300%]' : 'right-0 top-0 scale-[1]'} `}>
            <div
             className="relative flex flex-col w-[80%] m-auto justify-around items-start pt-[110px] py-1 font_secondary "
           >
@@ -215,16 +223,20 @@ export default function Header() {
             })}
           </div>  
             <div className="lg:hidden flex items-center w-[80%] pt-5 m-auto gap-8">
-             <Button
+                <Link href={'https://client.fliptradegroup.com/trader/registration'}>
+                    <Button
                       btn_name={`Sign Up`}
                       btn_bg={`gradient_bg`}
                       text_color="text-secondary"
                       border_color="border-primary"
                       shadow={true}
                     />
-              <button className="text-primary text-base font-medium px-8 cursor-pointer">
-               Login
-          </button>
+                 </Link>
+             <Link href={'https://client.fliptradegroup.com/trader'} >
+               <button className="text-primary text-base font-medium px-8 cursor-pointer">
+                 Login
+               </button>
+             </Link>      
           </div>
          </div>
       <div

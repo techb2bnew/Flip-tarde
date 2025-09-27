@@ -188,7 +188,7 @@ const Fotter = () => {
                     </div>
                   )}
                 </div>
-                <div className="grid md:hidden grid-cols-1 bg-contain md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 p-8 md:p-12 rounded-3xl" 
+                <div className="grid md:hidden grid-cols-1 bg-no-repeat bg-center bg-contain md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 p-8 md:p-12 rounded-3xl" 
                 style={{ backgroundImage: `url(${fottercardph.src})` }} >
                   {footerdata.carddata.map((data, index) =>
                     <div
