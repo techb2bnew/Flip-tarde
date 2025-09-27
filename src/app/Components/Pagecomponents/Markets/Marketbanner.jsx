@@ -60,7 +60,7 @@ const Marketbanner = ({banner_title,banner_discription}) => {
       style={{ backgroundImage: `url(${banner.src})` }}
       className="relative"
     >
-      <div className="inn_container h-full pt-[180px]  2xl:pt-[270px] pb-[160px]">
+      <div className="inn_container h-full pt-[180px]  2xl:pt-[270px] pb-[110px] lg:pb-[160px]">
         <div className="grid grid-cols-1">
           <div className="text-center lg:text-start max-w-[700px] px-0 md:px-[12] lg:px-0 lg:max-w-[unset] m-auto lg:m-0">
             <Title

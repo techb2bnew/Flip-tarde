@@ -177,7 +177,7 @@ const Marketspoints = ({ pointdata }) => {
         </div>
         {/* for mobile */}
         <div className="py-12 block md:hidden">
-          <div className={`flex flex-col gap-2 justify-between bg-white `}>
+          <div className={`flex flex-col gap-4 justify-between bg-white `}>
             {pointdata.map(data =>
               <div key={data.id}>
                 <div>

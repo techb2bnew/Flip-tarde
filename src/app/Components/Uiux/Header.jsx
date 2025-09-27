@@ -18,7 +18,7 @@ const navlistdata = [
     dropdown: [
       { id: "forex", name: "Forex", link: "/forex" },
       { id: "stocks", name: "Stocks", link: "/stocks" },
-      { id: "crypto", name: "Crypto", link: "/crypto" },
+      { id: "crypto", name: "Crypto", link: "/cryptocurrency" },
       { id: "indices", name: "Indices", link: "/indices" },
       { id: "commodities", name: "Commodities", link: "/commodities" },
       { id: "metals", name: "Metals", link: "/metals" },

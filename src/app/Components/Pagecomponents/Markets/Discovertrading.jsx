@@ -69,10 +69,10 @@ const Discovertrading = ({
               alt="banner"
               width={1000}
               height={500}
-              className="max-w-[140px] 2xl:max-w-[288px] blur-[2px]"
+              className="max-w-[140px] 2xl:max-w-[288px] blur-[3px]"
             />
           </div>
-          <div className=" py-36 px-8 max-w-[700px] m-auto">
+          <div className="py-24 lg:py-36 px-8 max-w-[700px] m-auto">
             <div className="text-center relative z-[2]">
 
             <Title
@@ -100,7 +100,7 @@ const Discovertrading = ({
               alt="banner"
               width={1000}
               height={500}
-              className="max-w-[140px] 2xl:max-w-[288px] blur-[2px]"
+              className="max-w-[140px] 2xl:max-w-[288px] blur-[3px]"
             />
           </div>
         </div>
