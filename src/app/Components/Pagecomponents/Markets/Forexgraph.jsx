@@ -29,7 +29,7 @@ function TradingViewWidget({ darkMode }) {
           "CNY"
         ],
         "backgroundColor": "${darkMode}",
-        "width": 1390,
+        "width": 340,
         "height": 600
       }`;
 
