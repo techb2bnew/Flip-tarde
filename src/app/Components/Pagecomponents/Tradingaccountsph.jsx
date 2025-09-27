@@ -22,7 +22,7 @@ const Tradingaccountsph = ({ accountinfo }) => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 660) {
-        setSlideItem(1);
+        setSlideItem(1.3);
       } else if (window.innerWidth < 1025) {
         setSlideItem(2);
       } else if (window.innerWidth < 1400) {
@@ -45,10 +45,10 @@ const Tradingaccountsph = ({ accountinfo }) => {
         <Swiper
           effect={"coverflow"}
           loop={true}
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: false
-          }}
+          // autoplay={{
+          //   delay: 2000,
+          //   disableOnInteraction: false
+          // }}
           speed={1000}
           slidesPerView={slideitem}
           pagination={{ clickable: true }}

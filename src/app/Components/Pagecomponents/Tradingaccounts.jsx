@@ -213,7 +213,7 @@ function Tradingaccounts() {
               />
             </div>
           </div>
-          {/* <Tradingaccountsph accountinfo={accountinfoph} /> */}
+          <Tradingaccountsph accountinfo={accountinfoph} />
         </div>
       </div>
     </div>
