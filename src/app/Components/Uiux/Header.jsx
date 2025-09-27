@@ -17,11 +17,11 @@ const navlistdata = [
     nav_link: "/forex",
     dropdown: [
       { id: "forex", name: "Forex", link: "/forex" },
-      { id: "stocks", name: "Stocks", link: "/stocks" },
-      { id: "crypto", name: "Crypto", link: "/cryptocurrency" },
-      { id: "indices", name: "Indices", link: "/indices" },
-      { id: "commodities", name: "Commodities", link: "/commodities" },
-      { id: "metals", name: "Metals", link: "/metals" },
+      { id: "stocks", name: "Indices", link: "/indices" },
+      { id: "crypto", name: "Commodities", link: "/commodities" },
+      { id: "indices", name: "Crypto Currency", link: "/cryptocurrency" },
+      { id: "commodities", name: "Metals", link: "/metals" },
+      { id: "metals", name: "Stocks", link: "/stocks" },
     ],
   },
   { id: 3, nav_name: "Account Type", nav_link: "/account" },
@@ -179,7 +179,7 @@ export default function Header() {
                            alt="downarrow"
                            width={1000}
                            height={500}
-                           className={`max-w-6 duration-500 transition-all ease-in-out  ${isMarket ? 'rotate-180': 'rotate-0'}`}
+                           className={`max-w-[18px] duration-500 transition-all ease-in-out  ${isMarket ? 'rotate-180': 'rotate-0'}`}
                            />
                         </p> 
                         <div className={` ${isMarket ? 'scale-[1] h-auto' : 'scale-[0] h-0'} w-[250px] duration-500 transition-all ease-in-out rounded-2xl bg-primary`}>
