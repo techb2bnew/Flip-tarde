@@ -39,7 +39,7 @@ const Graphhome = ({ title, discription, pagepath }) => {
             : null 
           } 
 
-          <div className="absolute top-[16px] right-3">
+          <div className="absolute top-[10px] right-3">
             <button
               onClick={toggleDarkMode}
               className="relative w-16 h-8 rounded-full bg-gray-300 transition-colors duration-500 p-1"

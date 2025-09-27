@@ -205,16 +205,16 @@ const Marketspoints = ({ pointdata }) => {
                       className="max-w-[80px]"
                     />
                   </div>
-                  <div>
+                  <div className="">
                     <div
-                      className={`text-3xl 2xl:text-4xl ${data.id % 2 === 0
+                      className={`text-2xl 2xl:text-4xl ${data.id % 2 === 0
                         ? null
                         : "pt-8"}  font-medium text-primary text-center`}
                     >
                       {data.title}
                     </div>
                     <p
-                      className="list_text font-light text-center  pt-6 font_ternary leading-[28px] max-w[330px]"
+                      className="list_text font-light text-center  pt-6 font_ternary leading-[28px] m-auto max-w-[300px]"
                       dangerouslySetInnerHTML={{ __html: data.description }}
                     />
                   </div>

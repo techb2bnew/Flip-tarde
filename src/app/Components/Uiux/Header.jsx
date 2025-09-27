@@ -190,7 +190,7 @@ export default function Header() {
                                    <Link
                                      href={item.link}
                                      className="relative z-10 text-white font_secondary py-2 px-3 block  rounded-lg text-base 2xl:text-xl   font-medium" 
-                                     onClick={()=>setIsMenu(!isMenu)}
+                                     onClick={()=>setIsMenu(!isMenu)  }
                                    >
                                      {item.name}
                                   </Link>
