@@ -12,16 +12,17 @@ export default function Workprocess() {
           className="bg-cover"
           style={{ backgroundImage: `url(${workprocessbanner.src})` }}
         >
-          <div className="inn_container pb-18 lg:pb-26 xl:pb-32 2xl:pb-40">
+          <div className="inn_container md:pb-18 lg:pb-26 xl:pb-32 2xl:pb-40">
             <div className="text-center">
-              <h5 className="text-primary text-5xl font-medium pb-5">
+              <h5 className="text-primary text-xl md:text-2xl lg:text-3xl xl:text-5xl font-medium pb-5">
                 How It’s Work
               </h5>
-
+              <div className="px-8 md:px-0"> 
               <Title
                 title={`Start Trading with FlipTrade <br/> in Minutes`}
                 color={"text-secondary"}
               />
+              </div>
 
               <div className="hidden md:block py-18">
                 <div className="relative">

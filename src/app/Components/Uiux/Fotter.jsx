@@ -1,5 +1,6 @@
 import React from "react";
 import fotterbackground from "../../../../public/banners/fotterbackground.webp";
+import fottercardph from "../../../../public/images/fottercardph.webp";
 import logo from "../../../../public/images/Logo.webp";
 import Image from "next/image";
 import Fotterlinks from "../Pagecomponents/Fotterlinks";
@@ -15,9 +16,9 @@ const footerdata = {
       pagelinks: [
         { pagelink: "/", pagename: "About us" },
         { pagelink: "/", pagename: "Contact Us" },
-        { pagelink: "/", pagename: "Forex" },
-        { pagelink: "/", pagename: "Indices" },
-        { pagelink: "/", pagename: "Commodities" }
+        { pagelink: "/forex", pagename: "Forex" },
+        { pagelink: "/indices", pagename: "Indices" },
+        { pagelink: "/commodities", pagename: "Commodities" }
       ]
     },
     {
@@ -118,12 +119,13 @@ const Fotter = () => {
                     <div
                       className={`${index === 2
                         ? null
-                        : "border-r-[3px] border-dashed border-[#72727250]"}`}
+                        : "border-r-[3px] w-full border-dashed"}`}
                       key={index}
                     >
                       <Fotterlinks
                         title={data.title}
                         linklist={data.pagelinks}
+                        border={true}
                       />
                     </div>
                   )}
@@ -132,7 +134,7 @@ const Fotter = () => {
                       <div
                         className={`${index === 2
                           ? null
-                          : "border-r-[3px] border-dashed border-[#72727250]"}`}
+                          : "border-r-[3px] w-full border-dashed"}`}
                         key={index}
                       >
                         <Fotterlinks
@@ -155,12 +157,12 @@ const Fotter = () => {
               </div>
 
               <div className="pt-10 md:pt-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 bg-primary p-8 md:p-12 rounded-3xl">
+                <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 bg-primary p-8 md:p-12 rounded-3xl">
                   {footerdata.carddata.map((data, index) =>
                     <div
                       className={`font_secondary ${index === 4
                         ? null
-                        : "border-r-[3px] border-dashed border-[#C5C6FF80]"}`}
+                        : " md:border-r-[3px] border-dashed md:border-[#C5C6FF80]"}`}
                       key={index}
                     >
                       <div className="w-auto xl:w-max md:m-auto pt-3 md:px-2">
@@ -170,14 +172,46 @@ const Fotter = () => {
                         {data.link !== false
                           ? <Link href={data.link}>
                               <p
-                                className="text-[16px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6"
+                                className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6"
                                 dangerouslySetInnerHTML={{
                                   __html: data.discription
                                 }}
                               />
                             </Link>
                           : <p
-                              className="text-[16px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6 max-w-[90%] lg:max-w-max"
+                              className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6 max-w-[90%] lg:max-w-max"
+                              dangerouslySetInnerHTML={{
+                                __html: data.discription
+                              }}
+                            />}
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div className="grid md:hidden grid-cols-1 bg-contain md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 p-8 md:p-12 rounded-3xl" 
+                style={{ backgroundImage: `url(${fottercardph.src})` }} >
+                  {footerdata.carddata.map((data, index) =>
+                    <div
+                      className={`font_secondary ${index === 4
+                        ? null
+                        : " md:border-r-[3px] border-dashed md:border-[#C5C6FF80]"}`}
+                      key={index}
+                    >
+                      <div className="w-auto xl:w-max md:m-auto pt-3 md:px-2">
+                        <p className="text-lg 2xl:text-2xl font-semibold w-max text-white">
+                          {data.title}
+                        </p>
+                        {data.link !== false
+                          ? <Link href={data.link}>
+                              <p
+                                className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6"
+                                dangerouslySetInnerHTML={{
+                                  __html: data.discription
+                                }}
+                              />
+                            </Link>
+                          : <p
+                              className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6 max-w-[90%] lg:max-w-max"
                               dangerouslySetInnerHTML={{
                                 __html: data.discription
                               }}

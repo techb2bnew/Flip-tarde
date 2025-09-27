@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, memo } from "react";
 
-const TradingViewWidget = ({ darkMode }) => {
+function TradingViewWidget({ darkMode }) {
   const container = useRef();
 
   useEffect(() => {
@@ -9,29 +9,38 @@ const TradingViewWidget = ({ darkMode }) => {
 
     const script = document.createElement("script");
     script.src =
-      "https://s3.tradingview.com/external-embedding/embed-widget-screener.js";
+      "https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js";
     script.type = "text/javascript";
     script.async = true;
-    script.innerHTML = JSON.stringify({
-      market: "forex",
-      showToolbar: true,
-      defaultColumn: "overview",
-      defaultScreen: "general",
-      isTransparent: false,
-      locale: "en",
-      colorTheme: darkMode, 
-      width: "100%",
-      height: 643,
-    });
+    script.innerHTML = `
+      {
+        "colorTheme": "${darkMode}",
+        "isTransparent": false,
+        "locale": "en",
+        "currencies": [
+          "EUR",
+          "USD",
+          "JPY",
+          "GBP",
+          "CHF",
+          "AUD",
+          "CAD",
+          "NZD",
+          "CNY"
+        ],
+        "backgroundColor": "${darkMode}",
+        "width": 1390,
+        "height": 600
+      }`;
 
     container.current.appendChild(script);
   }, [darkMode]);
 
   return (
     <div className="tradingview-widget-container" ref={container}>
-      <div className="tradingview-widget-container__widget" />
+      <div className="tradingview-widget-container__widget"></div>
     </div>
   );
-};
+}
 
 export default memo(TradingViewWidget);

@@ -7,6 +7,7 @@ import buildtraderimageloerph from "../../../../public/images/buildtraderimagelo
 import buildtraderimageuppervrph from "../../../../public/images/buildtraderimageuppervrph.webp";
 import buildtraderimageupperhzph from "../../../../public/images/buildtraderimageupperhzph.webp";
 import coinph from "../../../../public/images/coinph.webp";
+import gradient from "../../../../public/images/gradient.webp";
 import Button from "../Uiux/Button";
 const buildtradetagcard = [
   {
@@ -110,6 +111,15 @@ const Buildtrader = () => {
               className="max-w-[150px]"
             />
           </div>
+              <div className="absolute right-0 top-[-20%] block md:hidden">
+            <Image
+              src={gradient}
+              alt="coin"
+              width={1000}
+              height={500}
+              className="max-w-[150px]"
+            />
+          </div>
           <div className="grid grid-cols-1 gap-2 md:grid-cols-[2fr_4fr]">
             <div className="hidden md:block">
               <Image
@@ -158,16 +168,17 @@ const Buildtrader = () => {
             </div>
             <div className="pt-5 block md:hidden">
               <div className="relative">
-                <Image
+                {/* <Image
                   src={buildtraderimageloerph.src}
                   alt="banner"
                   width={3000}
                   height={500}
                   className="w-full"
-                />
-                <div className="absolute  w-full h-full flex items-center justify-center top-0">
-                  <div className=" top-[15%] right-0 px-5 2xl:right-[3.5%]">
-                    <div className="relative top-3">
+                /> */}
+                <div className="relative  bg-cover w-full h-full flex items-center justify-center top-0" 
+                     style={{ backgroundImage: `url(${buildtraderimageloerph.src})` }}>
+                  <div className=" top-[15%] py-12 right-0 px-5 2xl:right-[3.5%]">
+                    <div className="relative top-3 text-center px-4 md:px-0">
                       <Title
                         title={`FlipTrade. Built <br/> for Traders.`}
                         color="gradient_text"

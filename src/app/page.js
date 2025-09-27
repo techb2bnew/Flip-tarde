@@ -19,9 +19,6 @@ function page() {
       <Workprocess />
       <Tradingaccounts />
       <Tradeyourway />
-      <div className="hidden lg:block">
-      </div>
-
     </div>
   );
 }

@@ -345,6 +345,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     min-height: 36px !important;
     padding: 0 14px !important;
   }
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 30px;
+}
+
 }
 
 /* 

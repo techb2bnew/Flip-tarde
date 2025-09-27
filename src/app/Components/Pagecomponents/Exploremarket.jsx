@@ -31,7 +31,7 @@ const markettype = [
     marketname: "Metals",
     sidebanner: exploremarket5
   },
-    {
+  {
     marketname: "Commodities",
     sidebanner: exploremarket3
   },
@@ -74,7 +74,7 @@ const Exploremarket = () => {
                   color="text-white"
                 />
               </div>
-              <p className="text-4xl xl:text-[60px] pt-3 xl:pt-6 xl:leading-[98px] font-[350] font_ternary bg-[linear-gradient(180deg,rgb(255_255_255/90%)_51%,rgb(0_0_0)_95%)] bg-clip-text text-transparent" >
+              <p className="text-4xl xl:text-[60px] pt-3 xl:pt-6 xl:leading-[98px] font-[350] font_ternary bg-[linear-gradient(180deg,rgb(255_255_255/90%)_51%,rgb(0_0_0)_95%)] bg-clip-text text-transparent">
                 3 Steps
               </p>
               <div className="pt-4 xl:pt-2 flex gap-2 xl:gap-5">
@@ -101,58 +101,58 @@ const Exploremarket = () => {
           </div>
         </div>
       </div>
-      
-      <div className="block lg:hidden inn_container">
+
+      <div className="block lg:hidden inn_container pt-8">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_4fr] gap-3">
           <div>
-            <Image 
+            <Image
               src={explorelowerph}
               alt="explorelowerph"
               width={1000}
               height={500}
               className=""
-              />
+            />
           </div>
-            <div
-              className=" relative bg-cover h-[400px]   bg-no-repeat rounded-[20px]"
-              style={{ backgroundImage: `url(${buildtraderimagelowerph.src})` }}
-            >
-              <div className="md:w-[90%] m-auto flex items-center justify-center h-full">
-                <div className="relative top-[7%] p-4 md:left-[6%] xl:left-[10%] text-center">
-               <Title
-                title={`Practice Trading, <br/> Risk-Free`}
-                color="gradient_text"
-              />
-              <div className="xl:pt-4">
-                <Discription
-                  dispription={`Get $100,000 virtual funds. Learn, test, <br/> and trade with zero risk.`}
-                  color="text-white"
+          <div
+            className=" relative bg-cover h-[400px]   bg-no-repeat rounded-[20px]"
+            style={{ backgroundImage: `url(${buildtraderimagelowerph.src})` }}
+          >
+            <div className="md:w-[90%] m-auto flex items-center justify-center h-full">
+              <div className="relative top-[7%] p-4 md:left-[6%] xl:left-[10%] text-center px-8 md:px-0">
+                <Title
+                  title={`Practice Trading, <br/> Risk-Free`}
+                  color="gradient_text"
                 />
-              </div>
-              <p className="text-4xl xl:text-[60px] pt-3 xl:pt-6 xl:leading-[98px] font-[350] font_ternary bg-[linear-gradient(180deg,rgb(255_255_255/90%)_51%,rgb(0_0_0)_95%)] bg-clip-text text-transparent" >
-                3 Steps
-              </p>
-              <div className="pt-4 xl:pt-2 hidden md:flex  gap-2 xl:gap-5">
-                <Button
-                  btn_name={`Create profile`}
-                  btn_bg="gradient_bg"
-                  text_color="text-secondary"
-                  border_color="border-transparent"
-                />
-                <Button
-                  btn_name={`Choose size`}
-                  btn_bg="gradient_bg"
-                  text_color="text-secondary"
-                  border_color="border-transparent"
-                />
-                <Button
-                  btn_name={`Start trading`}
-                  btn_bg="gradient_bg"
-                  text_color="text-secondary"
-                  border_color="border-transparent"
-                />
-              </div>
-              <div className="pt-4 xl:pt-2 grid md:hidden grid-cols-1 gap-2 xl:gap-5">
+                <div className="xl:pt-4">
+                  <Discription
+                    dispription={`Get $100,000 virtual funds. Learn, test, <br/> and trade with zero risk.`}
+                    color="text-white"
+                  />
+                </div>
+                <p className="text-4xl xl:text-[60px] pt-3 xl:pt-6 xl:leading-[98px] font-[350] font_ternary bg-[linear-gradient(180deg,rgb(255_255_255/90%)_51%,rgb(0_0_0)_95%)] bg-clip-text text-transparent">
+                  3 Steps
+                </p>
+                <div className="pt-4 xl:pt-2 hidden md:flex  gap-2 xl:gap-5">
+                  <Button
+                    btn_name={`Create profile`}
+                    btn_bg="gradient_bg"
+                    text_color="text-secondary"
+                    border_color="border-transparent"
+                  />
+                  <Button
+                    btn_name={`Choose size`}
+                    btn_bg="gradient_bg"
+                    text_color="text-secondary"
+                    border_color="border-transparent"
+                  />
+                  <Button
+                    btn_name={`Start trading`}
+                    btn_bg="gradient_bg"
+                    text_color="text-secondary"
+                    border_color="border-transparent"
+                  />
+                </div>
+                <div className="pt-4 xl:pt-2 grid md:hidden grid-cols-1 gap-2 xl:gap-5">
                   <div className="gap-2 flex justify-center">
                     <Button
                       btn_name={`Create profile`}
@@ -176,9 +176,9 @@ const Exploremarket = () => {
                     />
                   </div>
                 </div>
-            </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>

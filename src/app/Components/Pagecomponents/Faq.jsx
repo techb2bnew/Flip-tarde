@@ -11,11 +11,11 @@ const Faq = ({ faqData }) => {
 
   return (
     <div className="max-w-[900px] 2xl:max-w-7xl m-auto pt-6 md:pt-12 xl:pt-16">
-      <div className="flex flex-col gap-5 font_secondary">
+      <div className="flex flex-col gap-4 md:gap-5 font_secondary">
         {faqData.map((faq, index) =>
           <div
             key={index}
-            className="bg-[#F3EFFF] px-6 2xl:px-8 py-3 2xl:py-4  border-[2px] border-solid border-[#2962FF40] rounded-[20px] 2xl:rounded-3xl  transition-all duration-500 ease-in-out"
+            className="bg-[#F3EFFF] px-6 2xl:px-8 py-3 2xl:py-4  border-[2px] border-solid border-[#2962FF40] rounded-[10px] md:rounded-[20px] 2xl:rounded-3xl  transition-all duration-500 ease-in-out"
           >
             {/* Question */}
             <div
@@ -34,7 +34,7 @@ const Faq = ({ faqData }) => {
                   alt="#"
                   width={1000}
                   height={500}
-                  className="max-w-6"
+                  className="max-w-[18px] md:max-w-6"
                 />
               </span>
             </div>

@@ -8,15 +8,15 @@ import {
   EffectCoverflow
 } from "swiper/modules";
 import "swiper/css";
-import Image from "next/image";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
+import Image from "next/image";
 const Exploreslider = ({ sliderdata }) => {
   const [slideitem, setSlideItem] = useState(3);
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 660) {
-        setSlideItem(2);
+        setSlideItem(1.5);
       } else if (window.innerWidth < 1025) {
         setSlideItem(2);
       } else if (window.innerWidth < 1400) {
@@ -69,10 +69,10 @@ const Exploreslider = ({ sliderdata }) => {
                     height={500}
                     className="max-w-[250px] md:max-w-[410px] rounded-[20px]"
                   />
-                  <div className="absolute text-[30px] font-normal text-white w-full h-[15%] flex items-center justify-center bottom-0 bg-[#000000c3] rounded-[20px] font_ternary">
+                  <div className="absolute text-xl lg:text-[30px] font-normal text-white w-full h-[15%] flex items-center justify-center bottom-0 bg-[#000000c3] rounded-[10px] lg:rounded-[20px] font_ternary">
                     {data.marketname}
                   </div>
-                </div>
+                </div> 
               </SwiperSlide>
             )}
           </Swiper>

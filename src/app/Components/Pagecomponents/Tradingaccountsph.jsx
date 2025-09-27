@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,31 +13,58 @@ import {
 import Button from "../Uiux/Button";
 import firebtn from "/public/icons/firebtnicon.svg";
 import firebtniconblue from "/public/icons/firebtniconblue.svg";
+import Ethereum from "../../../../public/icons/Ethereum.svg";
+import Litecoin from "../../../../public/icons/Litecoin.svg";
+import Bitcoin from "../../../../public/icons/Bitcoin.svg";
+import Image from "next/image";
 const Tradingaccountsph = ({ accountinfo }) => {
+  const [slideitem, setSlideItem] = useState(3);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 660) {
+        setSlideItem(1);
+      } else if (window.innerWidth < 1025) {
+        setSlideItem(2);
+      } else if (window.innerWidth < 1400) {
+        setSlideItem(2);
+      } else {
+        setSlideItem(3);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
-    <div className="pb-16 relative">
+    <div className="pb-16 md:pb-0 relative">
       <div className="block md:hidden">
         <Swiper
-          effect="coverflow"
+          effect={"coverflow"}
           loop={true}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false
           }}
+          speed={1000}
+          slidesPerView={slideitem}
+          pagination={{ clickable: true }}
+          grabCursor={true}
           centeredSlides={true}
-          slidesPerView={1.3}
-          spaceBetween={20}
           coverflowEffect={{
             rotate: 10,
             stretch: 5,
             depth: 200,
             modifier: 2
           }}
+          className="tradewith_slider h-[450px] md:h-[520px]"
           modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
-          className="min-h-[450px]"
         >
           {accountinfo.map((data, index) =>
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="overflow-hidden">
               <div className="max-w-[300px] mx-auto xl:max-w-[350px] 2xl:max-w-[400px] border-[12px] rounded-3xl border-[#DCD0FFCC]">
                 <CardContent data={data} index={index} />
               </div>
@@ -45,15 +72,42 @@ const Tradingaccountsph = ({ accountinfo }) => {
           )}
         </Swiper>
       </div>
+      <div className="block md:hidden absolute top-[-3%] left-[-5%] rotate-[340deg]">
+        <Image
+          src={Bitcoin}
+          alt="Bitcoin"
+          width={1000}
+          height={500}
+          className="max-w-[51px]"
+        />
+      </div>
+      <div className="block md:hidden absolute bottom-[10%] right-0 rotate-[340deg]">
+        <Image
+          src={Ethereum}
+          alt="Ethereum"
+          width={1000}
+          height={500}
+          className="max-w-[80px] lg:max-w-[110px] xl:max-w-[150px] 2xl:max-w-[180px]"
+        />
+      </div>
+      <div className="block md:hidden absolute top-[-14%] right-[5%] rotate-[340deg] z-[1]">
+        <Image
+          src={Litecoin}
+          alt="Litecoin"
+          width={1000}
+          height={500}
+          className="max-w-[47px]"
+        />
+      </div>
     </div>
   );
 };
 
 const CardContent = ({ data, index }) =>
   <div>
-    <div className="py-1 xl:py-3 2xl:py-5 px-16 lg:px-14 2xl:px-18 text-center bg-white rounded-tl-[18px] rounded-tr-[18px]">
+    <div className="py-1 xl:py-3 2xl:py-5 px-14 lg:px-14 2xl:px-18 text-center bg-white rounded-tl-[18px] rounded-tr-[18px]">
       <h5
-        className="text-2xl xl:text-3xl min-h-16 2xl:text-4xl lg:leading-[35px] font-medium text-primary lg:max-w-[250px] text-center"
+        className="text-[21px] xl:text-3xl min-h-16 2xl:text-4xl text-primary text-center"
         dangerouslySetInnerHTML={{ __html: data.acount_title }}
       />
     </div>
@@ -68,17 +122,17 @@ const CardContent = ({ data, index }) =>
           key={i}
           className="list-none text-center py-2 2xl:py-4 min-w-[195px] border-b-3 border-dashed border-white "
         >
-          <p className="text-base lg:text-lg 2xl:text-[22px]">
+          <p className="text-[13.7px] lg:text-lg 2xl:text-[22px] ">
             {item.label}
           </p>
-          <span className="text-[15px] lg:text-base 2xl:text-xl text-ternary ">
+          <span className="text-[12.5px] lg:text-base 2xl:text-xl text-ternary  ">
             {item.value}
           </span>
         </li>
       )}
       <li className="list-none text-center pt-3">
-        <p className="text-base lg:text-lg 2xl:text-[22px]">Account Verified</p>
-        <span className="text-[15px] lg:text-base 2xl:text-xl text-ternary ">
+        <p className="text-[13.7px] lg:text-lg 2xl:text-[22px]">Account Verified</p>
+        <span className="text-[12.5px] lg:text-base 2xl:text-xl text-ternary ">
           {data.account_verified ? "Yes" : "No"}
         </span>
       </li>
