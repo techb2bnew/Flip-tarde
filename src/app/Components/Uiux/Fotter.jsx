@@ -14,7 +14,7 @@ const footerdata = {
     {
       title: "Quick Links",
       pagelinks: [
-        { pagelink: "/", pagename: "About us" },
+        // { pagelink: "/", pagename: "About us" },
         { pagelink: "/contact-us", pagename: "Contact Us" },
         { pagelink: "/forex", pagename: "Forex" },
         { pagelink: "/indices", pagename: "Indices" },
@@ -104,7 +104,7 @@ const Fotter = () => {
                     className="max-w-[190px] xl:max-w-[240px] 2xl:max-w-[295px]"
                   />
                 </div>
-                {footerdata.linkingdata.map((data, index) =>
+                {footerdata.linkingdata.slice(0,1).map((data, index) =>
                   <div
                     className={`${index === 2
                       ? null
@@ -117,7 +117,7 @@ const Fotter = () => {
               </div>
 
               <div className="flex md:hidden flex-col-reverse">
-                <div className="grid grid-cols-2 py-6">
+                <div className="grid grid-cols-1 py-6">
                   {footerdata.linkingdata.slice(0, 1).map((data, index) =>
                     <div
                       className={`${index === 2
@@ -132,7 +132,7 @@ const Fotter = () => {
                       />
                     </div>
                   )}
-                  <div className="flex items-start flex-col gap-4">
+                  {/* <div className="flex items-start flex-col gap-4">
                     {footerdata.linkingdata.slice(1, 3).map((data, index) =>
                       <div
                         className={`${index === 2
@@ -146,7 +146,7 @@ const Fotter = () => {
                         />
                       </div>
                     )}
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex justify-center items-center py-6">
                   <Image
@@ -253,14 +253,6 @@ const Fotter = () => {
                     <p className="text-[14px] 2xl:text-base font-light text-[#AAAAAA]">
                       © FlipTrade Group Limited 2024 | All Rights Reserved |
                     </p>
-                    <div className="text-[14px] 2xl:text-base font-light text-[#AAAAAA]">
-                      <Link
-                        href={"https://www.base2brand.com/"}
-                        target="_blank"
-                      >
-                        Designed by Base2Brand Infotech Pvt. Ltd.
-                      </Link>
-                    </div>
                   </div>
 
                   <div className="flex gap-2">

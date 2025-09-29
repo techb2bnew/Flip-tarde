@@ -4,14 +4,14 @@ import Header from "./Components/Uiux/Header";
 import Fotter from "./Components/Uiux/Fotter";
 const monaSans = localFont({
   src: [
-    { path: "../../public/fonts/Mona-Sans-MediumWide.ttf"},
+    { path: "../../public/fonts/Mona-Sans-MediumWide.ttf" },
   ],
 
   variable: "--font-mona-sans",
 });
 const monaSansnormal = localFont({
   src: [
-    { path: "../../public/fonts/Mona-Sans.ttf"},
+    { path: "../../public/fonts/Mona-Sans.ttf" },
   ],
 
   variable: "--font-mona-sans-normal",
@@ -19,7 +19,7 @@ const monaSansnormal = localFont({
 const monaSansnormallight = localFont({
   src: [
     { path: "../../public/fonts/Mona-Sans-LightWide.ttf" },
-    
+
   ],
 
   variable: "--font-mona-sans-normallight",
@@ -27,7 +27,7 @@ const monaSansnormallight = localFont({
 const monaSanswidenormal = localFont({
   src: [
     { path: "../../public/fonts/Mona-Sans-UltraLightWide.ttf" },
-    
+
   ],
 
   variable: "--font-mona-sans-monaSanswidenormal",
@@ -35,18 +35,20 @@ const monaSanswidenormal = localFont({
 export const metadata = {
   title: "Flip Trade",
   description: "Flip Trade is a leading platform for trading and investment solutions.",
+  icons: {
+    icon: "../../public/icons/favicon.ico",
+  },
 };
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <title>Flip Trade</title>
       <body className={`${monaSans.variable} ${monaSansnormal.variable} ${monaSansnormallight.variable} ${monaSanswidenormal.variable} antialiased`} cz-shortcut-listen="true">
         <div className="main_outer_container">
-         <div className="absolute w-full max-w-[1960px] z-[999] bg-[linear-gradient(1deg,rgba(255,255,255,0)_15%,rgb(0_0_0_/_76%)_99%)]">
-           <Header/>
-          </div>  
-           {children}
-           <Fotter/>
+          <div className="absolute w-full max-w-[1960px] z-[999] bg-[linear-gradient(1deg,rgba(255,255,255,0)_15%,rgb(0_0_0_/_76%)_99%)]">
+            <Header />
+          </div>
+          {children}
+          <Fotter />
         </div>
       </body>
     </html>

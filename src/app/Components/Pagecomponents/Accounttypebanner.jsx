@@ -4,6 +4,7 @@ import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
 import firebtnicon from "../../../../public/icons/firebtnicon.svg";
+import Link from "next/link";
 const Accounttypebanner = () => {
   return (
     <div
@@ -26,14 +27,16 @@ const Accounttypebanner = () => {
               color={"text-[#D0D0D0]"}
             />
           </div>
-          <Button
-            icon={firebtnicon.src}
-            text_color={"text-white"}
-            btn_name={"Start Trading"}
-            border_color="border-primary"
-            btn_bg={"bg-primary"}
-            shadow={true}
-          />
+          <Link href={"https://client.fliptradegroup.com/trader/registration"}>
+            <Button
+              icon={firebtnicon.src}
+              text_color={"text-white"}
+              btn_name={"Start Trading"}
+              border_color="border-primary"
+              btn_bg={"bg-primary"}
+              shadow={true}
+            />
+          </Link>
         </div>
       </div>
     </div>

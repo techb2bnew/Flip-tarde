@@ -96,7 +96,7 @@ const Buildtrader = () => {
                     }
                   >
                     <Button
-                      btn_name={`Read More`}
+                      btn_name={`Join Now`}
                       btn_bg="gradient_bg"
                       text_color="text-secondary"
                       border_color="border-transparent"
@@ -169,7 +169,7 @@ const Buildtrader = () => {
                       }
                     >
                       <Button
-                        btn_name={`Read More`}
+                        btn_name={`Join Now`}
                         btn_bg="gradient_bg"
                         text_color="text-secondary"
                         border_color="border-transparent"
@@ -213,7 +213,7 @@ const Buildtrader = () => {
                           }
                         >
                           <Button
-                            btn_name={`Read More`}
+                            btn_name={`Join Now`}
                             btn_bg="gradient_bg"
                             text_color="text-secondary"
                             border_color="border-transparent"

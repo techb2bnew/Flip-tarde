@@ -6,6 +6,7 @@ import Button from "../Uiux/Button";
 import firebtnicon from "../../../../public/icons/firebtnicon.svg";
 import contactusright from "../../../../public/images/contactusright.webp";
 import Image from "next/image";
+import Link from "next/link";
 function Conractusbanner() {
   return (
     <div
@@ -26,14 +27,18 @@ function Conractusbanner() {
                 />
               </div>
               <div className="pt-12">
-                <Button
-                  btn_name={"Get in Touch Today"}
-                  border_color={"border-primary"}
-                  btn_bg={"bg-primary"}
-                  shadow={true}
-                  icon={firebtnicon.src}
-                  text_color={"text-white"}
-                />
+                <Link
+                  href={"https://client.fliptradegroup.com/trader/registration"}
+                >
+                  <Button
+                    btn_name={"Get in Touch Today"}
+                    border_color={"border-primary"}
+                    btn_bg={"bg-primary"}
+                    shadow={true}
+                    icon={firebtnicon.src}
+                    text_color={"text-white"}
+                  />
+                </Link>
               </div>
             </div>
           </div>

@@ -63,6 +63,7 @@ export default function Header() {
     <div className="pt-12 pb-6 relative">
       <div className="inn_container flex justify-between">
         <div className="flex items-center relative z-[999]">
+          <Link href="/">
           <Image
             src={Logo}
             alt="Logo"
@@ -71,6 +72,7 @@ export default function Header() {
             className="max-w-44 2xl:max-w-56"
             priority
           />
+          </Link>
         </div>
 
         <div className="hidden  w-[52%] 2xl:w-[55%] max-w-[700px] xl:flex justify-center bg-[linear-gradient(90deg,rgba(43,38,55,1)_0%,rgba(72,56,123,1)_100%)] border-[3px] border-[#D9D9D926] border-solid rounded-[40px]">
@@ -254,6 +256,9 @@ export default function Header() {
                 </div>
                 <div className="pt-8">
                  <div className="flex flex-col gap-8">
+                    <Link
+                  href={"https://client.fliptradegroup.com/trader/registration"}
+                >
                 <Button
                   icon={firebtnicon.src}
                   btn_name="Start Trading"
@@ -262,6 +267,7 @@ export default function Header() {
                   border_color="border-primary"
                   shadow={true}
                 />
+                </Link>
                 {/* <Button
                   icon={giftbtnicon.src}
                   btn_name="Try Demo"

@@ -47,7 +47,7 @@ const marketpagesdata = [
   }
 ];
 
-const Marketbanner = ({banner_title,banner_discription}) => {
+const Marketbanner = ({ banner_title, banner_discription }) => {
   const currentpath = usePathname();
   const pathname = currentpath
     .replace("/", "")
@@ -56,17 +56,11 @@ const Marketbanner = ({banner_title,banner_discription}) => {
   console.log(pathname);
 
   return (
-    <div
-      style={{ backgroundImage: `url(${banner.src})` }}
-      className="relative"
-    >
+    <div style={{ backgroundImage: `url(${banner.src})` }} className="relative">
       <div className="inn_container h-full pt-[180px]  2xl:pt-[270px] pb-[110px] lg:pb-[160px]">
         <div className="grid grid-cols-1">
           <div className="text-center lg:text-start max-w-[700px] px-0 md:px-[12] lg:px-0 lg:max-w-[unset] m-auto lg:m-0">
-            <Title
-              title={banner_title}
-              color="gradient_text"
-            />
+            <Title title={banner_title} color="gradient_text" />
             <div className="pt-2 2xl:pt-4">
               <Discription
                 dispription={banner_discription}
@@ -74,14 +68,18 @@ const Marketbanner = ({banner_title,banner_discription}) => {
               />
             </div>
             <div className="pt-8 2xl:pt-12">
-              <Button
-                icon={firebtnicon.src}
-                btn_name="Start Trading"
-                btn_bg="bg-primary"
-                text_color="text-white"
-                border_color="border-primary"
-                shadow={true}
-              />
+              <Link
+                href={"https://client.fliptradegroup.com/trader/registration"}
+              >
+                <Button
+                  icon={firebtnicon.src}
+                  btn_name="Start Trading"
+                  btn_bg="bg-primary"
+                  text_color="text-white"
+                  border_color="border-primary"
+                  shadow={true}
+                />
+              </Link>
             </div>
             <div className="pt-12 2xl:pt-24">
               <div className="text-[25px] text-white">
