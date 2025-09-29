@@ -3,7 +3,7 @@ import React from 'react'
 
 const Fotterlinks = ({title,linklist,border}) => {
   return (
-    <div className={`w-[85%] md:w-max md:m-auto border-r-[3px] md:border-r-[3px] ${border ? 'md:border-r-0 border-dashed border-[#b3b3b350] md:border-none' : '' } `}>
+    <div className={`w-[85%] md:w-max md:m-auto  ${border ? 'border-none' : '' } `}>
       <p className='text-base md:text-xl 2xl:text-2xl font-semibold w-max gradient_text'>
        {title}
       </p> 

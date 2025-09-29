@@ -6,7 +6,7 @@ import Image from "next/image";
 import Fotterlinks from "../Pagecomponents/Fotterlinks";
 import facebookicon from "../../../../public/icons/facebook.svg";
 import Instaicon from "../../../../public/icons/Insta.svg";
-import xicon from "../../../../public/icons/X.svg";
+import youtue from "../../../../public/icons/youtube.svg";
 import Link from "next/link";
 import Worldbroker from "../Pagecomponents/Worldbroker";
 const footerdata = {
@@ -68,18 +68,18 @@ const footerdata = {
   social_links: [
     {
       alt: "Facebook",
-      pagelink: "",
+      pagelink: "https://www.facebook.com/profile.php?id=61580314210503",
       icon: facebookicon
     },
     {
       alt: "Instagram",
-      pagelink: "",
+      pagelink: "https://www.instagram.com/fliptradegroup/",
       icon: Instaicon
     },
     {
-      alt: "X",
-      pagelink: "",
-      icon: xicon
+      alt: "You Tube",
+      pagelink: "https://www.youtube.com/@fliptradegroup",
+      icon: youtue
     }
   ]
 };
@@ -265,7 +265,7 @@ const Fotter = () => {
 
                   <div className="flex gap-2">
                     {footerdata.social_links.map((data, index) =>
-                      <Link href={data.pagelink} key={index}>
+                      <Link href={data.pagelink} target="_blank" key={index}>
                         <div className="w-[33px] h-[33px] flex rounded-[50%] items-center justify-center bg-primary">
                           <Image
                             src={data.icon}
