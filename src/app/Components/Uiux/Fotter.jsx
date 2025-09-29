@@ -15,7 +15,7 @@ const footerdata = {
       title: "Quick Links",
       pagelinks: [
         { pagelink: "/", pagename: "About us" },
-        { pagelink: "/", pagename: "Contact Us" },
+        { pagelink: "/contact-us", pagename: "Contact Us" },
         { pagelink: "/forex", pagename: "Forex" },
         { pagelink: "/indices", pagename: "Indices" },
         { pagelink: "/commodities", pagename: "Commodities" },

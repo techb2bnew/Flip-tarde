@@ -11,6 +11,7 @@ import Ethereum from "../../../../public/icons/Ethereum.svg";
 import Zcash from "../../../../public/icons/Zcash.svg";
 import Bitcoin from "../../../../public/icons/Bitcoin.svg";
 import Tradingaccountsph from "./Tradingaccountsph";
+import Link from "next/link";
 const accountinfo = [
   {
     acount_title: "Classic <br/> Account",
@@ -115,7 +116,7 @@ function Tradingaccounts() {
                   {accountinfo.map((data, index) =>
                     <div
                       key={index}
-                      className="max-w-[300px] xl:max-w-[350px] 2xl:max-w-[400px] border-[12px] rounded-3xl border-[#DCD0FFCC]"
+                      className="max-w-[300px] xl:max-w-[350px] 2xl:max-w-[400px] border-[12px] rounded-3xl border-[#DCD0FFCC] relative z-[2]"
                     >
                       <div>
                         <div className="py-1 xl:py-3 2xl:py-5 px-16 lg:px-14 2xl:px-18 text-center bg-white rounded-tl-[18px] rounded-tr-[18px]">
@@ -161,22 +162,34 @@ function Tradingaccounts() {
                           </li>
                           <div className="relative top-8">
                             {index === 1
-                              ? <Button
-                                  btn_name={"Open Account"}
-                                  icon={firebtniconblue.src}
-                                  btn_bg="bg-white"
-                                  text_color="text-primary"
-                                  border_color="border-white"
-                                  shadow={true}
-                                />
-                              : <Button
-                                  btn_name={"Open Account"}
-                                  icon={firebtn.src}
-                                  btn_bg="bg-primary"
-                                  text_color="text-white"
-                                  border_color="border-primary"
-                                  shadow={true}
-                                />}
+                              ? <Link
+                                  href={
+                                    "https://client.fliptradegroup.com/trader/registration"
+                                  }
+                                >
+                                  <Button
+                                    btn_name={"Open Account"}
+                                    icon={firebtniconblue.src}
+                                    btn_bg="bg-white"
+                                    text_color="text-primary"
+                                    border_color="border-white"
+                                    shadow={true}
+                                  />
+                                </Link>
+                              : <Link
+                                  href={
+                                    "https://client.fliptradegroup.com/trader/registration"
+                                  }
+                                >
+                                  <Button
+                                    btn_name={"Open Account"}
+                                    icon={firebtn.src}
+                                    btn_bg="bg-primary"
+                                    text_color="text-white"
+                                    border_color="border-primary"
+                                    shadow={true}
+                                  />
+                                </Link>}
                           </div>
                         </div>
                       </div>
@@ -185,7 +198,7 @@ function Tradingaccounts() {
                 </div>
               </div>
             </div>
-            <div className="absolute top-[30%] left-[2%] rotate-[340deg]">
+            <div className="absolute top-[30%] left-[2%] rotate-[340deg] z-[1]">
               <Image
                 src={Bitcoin}
                 alt="Bitcoin"
@@ -194,7 +207,7 @@ function Tradingaccounts() {
                 className="max-w-[122px]"
               />
             </div>
-            <div className="absolute top-[50%] right-0 lg:right-[2%] rotate-[340deg]">
+            <div className="absolute top-[50%] right-0 lg:right-[2%] rotate-[340deg] z-[1]">
               <Image
                 src={Ethereum}
                 alt="Ethereum"
@@ -203,7 +216,7 @@ function Tradingaccounts() {
                 className="max-w-[80px] lg:max-w-[110px] xl:max-w-[150px] 2xl:max-w-[180px]"
               />
             </div>
-            <div className="absolute top-[2%] right-[5%] rotate-[340deg]">
+            <div className="absolute top-[2%] right-[5%] rotate-[340deg] z-[1]">
               <Image
                 src={Zcash}
                 alt="Zcash"

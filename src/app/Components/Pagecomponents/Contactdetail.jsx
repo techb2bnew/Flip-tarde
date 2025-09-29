@@ -28,7 +28,7 @@ export default function Contactdetail() {
     {
       id: 3,
       cardtitle: "Phone Support",
-      cardsubtitleb: '+41 265 006 818',
+      cardsubtitleb: "+41 265 006 818",
       subtitlelink: `tel:+41265006818`,
       cardicon: call
     }
@@ -52,12 +52,19 @@ export default function Contactdetail() {
                 <p className="text-2xl md:text-4xl lg:text-3xl 2xl:text-4xl null  font-medium text-primary">
                   {data.cardtitle}
                 </p>
-                <Link href={data.subtitlelink} target="_blank">
-                  <span
-                    className="list_text font-light text-center lg:text-start  max-w-[350px] md:max-w-[unset] m-auto  pt-4 font_ternary leading-[28px] max-w[330px] min-h-[65px] h-full flex"
-                    dangerouslySetInnerHTML={{ __html: data.cardsubtitleb }}
-                  />
-                </Link>
+                {data.id === 1
+                  ? <Link href={data.subtitlelink} target="_blank">
+                      <span
+                        className="list_text font-light text-center lg:text-start  max-w-[350px] md:max-w-[unset] m-auto  pt-4 font_ternary leading-[28px] max-w[330px] min-h-[65px] h-full flex"
+                        dangerouslySetInnerHTML={{ __html: data.cardsubtitleb }}
+                      />
+                    </Link>
+                  : <a href={data.subtitlelink}>
+                      <span
+                        className="list_text font-light text-center lg:text-start  max-w-[350px] md:max-w-[unset] m-auto  pt-4 font_ternary leading-[28px] max-w[330px] min-h-[65px] h-full flex"
+                        dangerouslySetInnerHTML={{ __html: data.cardsubtitleb }}
+                      />
+                    </a>}
               </div>
               <div>
                 <Image

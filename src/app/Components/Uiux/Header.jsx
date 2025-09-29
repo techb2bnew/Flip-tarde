@@ -24,9 +24,9 @@ const navlistdata = [
       { id: "metals", name: "Stocks", link: "/stocks" },
     ],
   },
-  { id: 3, nav_name: "Account Type", nav_link: "/account" },
-  { id: 4, nav_name: "Platform", nav_link: "/platform" },
-  { id: 5, nav_name: "Tools", nav_link: "/tools" },
+  { id: 3, nav_name: "Account Type", nav_link: "/accounts-types" },
+  // { id: 4, nav_name: "Platform", nav_link: "/platform" },
+  // { id: 5, nav_name: "Tools", nav_link: "/tools" },
   { id: 6, nav_name: "Contact", nav_link: "/contact-us" },
 ];
 
@@ -73,7 +73,7 @@ export default function Header() {
           />
         </div>
 
-        <div className="hidden  w-[52%] 2xl:w-[55%] max-w-[900px] xl:flex justify-center bg-[linear-gradient(90deg,rgba(43,38,55,1)_0%,rgba(72,56,123,1)_100%)] border-[3px] border-[#D9D9D926] border-solid rounded-[40px]">
+        <div className="hidden  w-[52%] 2xl:w-[55%] max-w-[700px] xl:flex justify-center bg-[linear-gradient(90deg,rgba(43,38,55,1)_0%,rgba(72,56,123,1)_100%)] border-[3px] border-[#D9D9D926] border-solid rounded-[40px]">
           <div
             ref={containerRef}
             className="relative flex w-[90%] 2xl:w-[90%] justify-around items-center py-1 font_secondary "

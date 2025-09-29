@@ -14,6 +14,7 @@ import explorelowerph from "../../../../public/images/explorelowerph.webp";
 import buildtraderimagelowerph from "../../../../public/images/buildtraderimagelowerph.webp";
 import Button from "../Uiux/Button";
 import Exploreslider from "./Exploreslider";
+import Link from "next/link";
 const markettype = [
   {
     marketname: "Forex",
@@ -32,13 +33,29 @@ const markettype = [
     sidebanner: exploremarket5
   },
   {
-    marketname: "Commodities",
-    sidebanner: exploremarket3
+    marketname: "Forex",
+    sidebanner: exploremarket1
   },
   {
-    marketname: "Stocks",
-    sidebanner: exploremarket6
+    marketname: "Indices",
+    sidebanner: exploremarket2
+  },
+  {
+    marketname: "Cryptocurrency",
+    sidebanner: exploremarket4
+  },
+  {
+    marketname: "Metals",
+    sidebanner: exploremarket5
   }
+  // {
+  //   marketname: "Commodities",
+  //   sidebanner: exploremarket3
+  // },
+  // {
+  //   marketname: "Stocks",
+  //   sidebanner: exploremarket6
+  // }
 ];
 
 const Exploremarket = () => {
@@ -78,24 +95,36 @@ const Exploremarket = () => {
                 3 Steps
               </p>
               <div className="pt-4 xl:pt-2 flex gap-2 xl:gap-5">
-                <Button
-                  btn_name={`Create profile`}
-                  btn_bg="gradient_bg"
-                  text_color="text-secondary"
-                  border_color="border-transparent"
-                />
-                <Button
-                  btn_name={`Choose size`}
-                  btn_bg="gradient_bg"
-                  text_color="text-secondary"
-                  border_color="border-transparent"
-                />
-                <Button
-                  btn_name={`Start trading`}
-                  btn_bg="gradient_bg"
-                  text_color="text-secondary"
-                  border_color="border-transparent"
-                />
+                <Link
+                  href={"https://client.fliptradegroup.com/trader/registration"}
+                >
+                  <Button
+                    btn_name={`Create profile`}
+                    btn_bg="gradient_bg"
+                    text_color="text-secondary"
+                    border_color="border-transparent"
+                  />
+                </Link>
+                <Link
+                  href={"https://client.fliptradegroup.com/trader/registration"}
+                >
+                  <Button
+                    btn_name={`Choose size`}
+                    btn_bg="gradient_bg"
+                    text_color="text-secondary"
+                    border_color="border-transparent"
+                  />
+                </Link>
+                <Link
+                  href={"https://client.fliptradegroup.com/trader/registration"}
+                >
+                  <Button
+                    btn_name={`Start trading`}
+                    btn_bg="gradient_bg"
+                    text_color="text-secondary"
+                    border_color="border-transparent"
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -132,48 +161,84 @@ const Exploremarket = () => {
                 <p className="text-4xl xl:text-[60px] pt-3 xl:pt-6 xl:leading-[98px] font-[350] font_ternary bg-[linear-gradient(180deg,rgb(255_255_255/90%)_51%,rgb(0_0_0)_95%)] bg-clip-text text-transparent">
                   3 Steps
                 </p>
-                <div className="pt-4 xl:pt-2 hidden md:flex  gap-2 xl:gap-5">
-                  <Button
-                    btn_name={`Create profile`}
-                    btn_bg="gradient_bg"
-                    text_color="text-secondary"
-                    border_color="border-transparent"
-                  />
-                  <Button
-                    btn_name={`Choose size`}
-                    btn_bg="gradient_bg"
-                    text_color="text-secondary"
-                    border_color="border-transparent"
-                  />
-                  <Button
-                    btn_name={`Start trading`}
-                    btn_bg="gradient_bg"
-                    text_color="text-secondary"
-                    border_color="border-transparent"
-                  />
-                </div>
-                <div className="pt-4 xl:pt-2 grid md:hidden grid-cols-1 gap-2 xl:gap-5">
-                  <div className="gap-2 flex justify-center">
+                <div className="pt-4 xl:pt-2 hidden md:flex  justify-center gap-2 xl:gap-5">
+                  <Link
+                    href={
+                      "https://client.fliptradegroup.com/trader/registration"
+                    }
+                  >
                     <Button
                       btn_name={`Create profile`}
                       btn_bg="gradient_bg"
                       text_color="text-secondary"
                       border_color="border-transparent"
                     />
+                  </Link>
+                  <Link
+                    href={
+                      "https://client.fliptradegroup.com/trader/registration"
+                    }
+                  >
                     <Button
                       btn_name={`Choose size`}
                       btn_bg="gradient_bg"
                       text_color="text-secondary"
                       border_color="border-transparent"
                     />
-                  </div>
-                  <div className="">
+                  </Link>
+                  <Link
+                    href={
+                      "https://client.fliptradegroup.com/trader/registration"
+                    }
+                  >
                     <Button
                       btn_name={`Start trading`}
                       btn_bg="gradient_bg"
                       text_color="text-secondary"
                       border_color="border-transparent"
                     />
+                  </Link>
+                </div>
+                <div className="pt-4 xl:pt-2 grid md:hidden grid-cols-1 gap-2 xl:gap-5">
+                  <div className="gap-2 flex justify-center">
+                    <Link
+                      href={
+                        "https://client.fliptradegroup.com/trader/registration"
+                      }
+                    >
+                      <Button
+                        btn_name={`Create profile`}
+                        btn_bg="gradient_bg"
+                        text_color="text-secondary"
+                        border_color="border-transparent"
+                      />
+                    </Link>
+                    <Link
+                      href={
+                        "https://client.fliptradegroup.com/trader/registration"
+                      }
+                    >
+                      <Button
+                        btn_name={`Choose size`}
+                        btn_bg="gradient_bg"
+                        text_color="text-secondary"
+                        border_color="border-transparent"
+                      />
+                    </Link>
+                  </div>
+                  <div className="">
+                    <Link
+                      href={
+                        "https://client.fliptradegroup.com/trader/registration"
+                      }
+                    >
+                      <Button
+                        btn_name={`Start trading`}
+                        btn_bg="gradient_bg"
+                        text_color="text-secondary"
+                        border_color="border-transparent"
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>

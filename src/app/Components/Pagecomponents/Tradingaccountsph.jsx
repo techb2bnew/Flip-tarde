@@ -17,6 +17,7 @@ import Ethereum from "../../../../public/icons/Ethereum.svg";
 import Litecoin from "../../../../public/icons/Litecoin.svg";
 import Bitcoin from "../../../../public/icons/Bitcoin.svg";
 import Image from "next/image";
+import Link from "next/link";
 const Tradingaccountsph = ({ accountinfo }) => {
   const [slideitem, setSlideItem] = useState(3);
   useEffect(() => {
@@ -131,29 +132,39 @@ const CardContent = ({ data, index }) =>
         </li>
       )}
       <li className="list-none text-center pt-3">
-        <p className="text-[13.7px] lg:text-lg 2xl:text-[22px]">Account Verified</p>
+        <p className="text-[13.7px] lg:text-lg 2xl:text-[22px]">
+          Account Verified
+        </p>
         <span className="text-[12.5px] lg:text-base 2xl:text-xl text-ternary ">
           {data.account_verified ? "Yes" : "No"}
         </span>
       </li>
       <div className="relative top-8">
         {index === 1
-          ? <Button
-              btn_name={"Open Account"}
-              icon={firebtniconblue.src}
-              btn_bg="bg-white"
-              text_color="text-primary"
-              border_color="border-white"
-              shadow={true}
-            />
-          : <Button
-              btn_name={"Open Account"}
-              icon={firebtn.src}
-              btn_bg="bg-primary"
-              text_color="text-white"
-              border_color="border-primary"
-              shadow={true}
-            />}
+          ? <Link
+              href={"https://client.fliptradegroup.com/trader/registration"}
+            >
+              <Button
+                btn_name={"Open Account"}
+                icon={firebtniconblue.src}
+                btn_bg="bg-white"
+                text_color="text-primary"
+                border_color="border-white"
+                shadow={true}
+              />
+            </Link>
+          : <Link
+              href={"https://client.fliptradegroup.com/trader/registration"}
+            >
+              <Button
+                btn_name={"Open Account"}
+                icon={firebtn.src}
+                btn_bg="bg-primary"
+                text_color="text-white"
+                border_color="border-primary"
+                shadow={true}
+              />
+            </Link>}
       </div>
     </div>
   </div>;

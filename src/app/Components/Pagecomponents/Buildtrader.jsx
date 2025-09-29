@@ -9,6 +9,7 @@ import buildtraderimageupperhzph from "../../../../public/images/buildtraderimag
 import coinph from "../../../../public/images/coinph.webp";
 import gradient from "../../../../public/images/gradient.webp";
 import Button from "../Uiux/Button";
+import Link from "next/link";
 const buildtradetagcard = [
   {
     title: "20,000 +",
@@ -89,12 +90,18 @@ const Buildtrader = () => {
                   />
                 </div>
                 <div className="pt-10">
-                  <Button
-                    btn_name={`Read More`}
-                    btn_bg="gradient_bg"
-                    text_color="text-secondary"
-                    border_color="border-transparent"
-                  />
+                  <Link
+                    href={
+                      "https://client.fliptradegroup.com/trader/registration"
+                    }
+                  >
+                    <Button
+                      btn_name={`Read More`}
+                      btn_bg="gradient_bg"
+                      text_color="text-secondary"
+                      border_color="border-transparent"
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -111,7 +118,7 @@ const Buildtrader = () => {
               className="max-w-[150px]"
             />
           </div>
-              <div className="absolute right-0 top-[-20%] block md:hidden">
+          <div className="absolute right-0 top-[-20%] block md:hidden">
             <Image
               src={gradient}
               alt="coin"
@@ -156,12 +163,18 @@ const Buildtrader = () => {
                     />
                   </div>
                   <div className="pt-10">
-                    <Button
-                      btn_name={`Read More`}
-                      btn_bg="gradient_bg"
-                      text_color="text-secondary"
-                      border_color="border-transparent"
-                    />
+                    <Link
+                      href={
+                        "https://client.fliptradegroup.com/trader/registration"
+                      }
+                    >
+                      <Button
+                        btn_name={`Read More`}
+                        btn_bg="gradient_bg"
+                        text_color="text-secondary"
+                        border_color="border-transparent"
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -175,8 +188,12 @@ const Buildtrader = () => {
                   height={500}
                   className="w-full"
                 /> */}
-                <div className="relative  bg-cover w-full h-full flex items-center justify-center top-0" 
-                     style={{ backgroundImage: `url(${buildtraderimageloerph.src})` }}>
+                <div
+                  className="relative  bg-cover w-full h-full flex items-center justify-center top-0"
+                  style={{
+                    backgroundImage: `url(${buildtraderimageloerph.src})`
+                  }}
+                >
                   <div className=" top-[15%] py-12 right-0 px-5 2xl:right-[3.5%]">
                     <div className="relative top-3 text-center px-4 md:px-0">
                       <Title
@@ -190,12 +207,18 @@ const Buildtrader = () => {
                         />
                       </div>
                       <div className="pt-4">
-                        <Button
-                          btn_name={`Read More`}
-                          btn_bg="gradient_bg"
-                          text_color="text-secondary"
-                          border_color="border-transparent"
-                        />
+                        <Link
+                          href={
+                            "https://client.fliptradegroup.com/trader/registration"
+                          }
+                        >
+                          <Button
+                            btn_name={`Read More`}
+                            btn_bg="gradient_bg"
+                            text_color="text-secondary"
+                            border_color="border-transparent"
+                          />
+                        </Link>
                       </div>
                     </div>
                   </div>
