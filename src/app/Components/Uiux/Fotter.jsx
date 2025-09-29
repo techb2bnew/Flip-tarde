@@ -19,7 +19,7 @@ const footerdata = {
         { pagelink: "/forex", pagename: "Forex" },
         { pagelink: "/indices", pagename: "Indices" },
         { pagelink: "/commodities", pagename: "Commodities" },
-         { pagelink: "/cryptocurrency", pagename: "Crypto Currency" },
+        { pagelink: "/cryptocurrency", pagename: "Crypto Currency" },
         { pagelink: "/metals", pagename: "Metals" },
         { pagelink: "/stocks", pagename: "Stocks" }
       ]
@@ -191,37 +191,41 @@ const Fotter = () => {
                     </div>
                   )}
                 </div>
-                <div className="grid md:hidden grid-cols-1 bg-no-repeat bg-center bg-contain md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 p-8 md:p-12 rounded-3xl" 
-                style={{ backgroundImage: `url(${fottercardph.src})` }} >
-                  {footerdata.carddata.map((data, index) =>
-                    <div
-                      className={`font_secondary ${index === 4
-                        ? null
-                        : " md:border-r-[3px] border-dashed md:border-[#C5C6FF80]"}`}
-                      key={index}
-                    >
-                      <div className="w-auto xl:w-max md:m-auto pt-3 md:px-2">
-                        <p className="text-lg 2xl:text-2xl font-semibold w-max text-white">
-                          {data.title}
-                        </p>
-                        {data.link !== false
-                          ? <Link href={data.link}>
-                              <p
-                                className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6"
+                <div
+                  className="grid md:hidden grid-cols-1 bg-no-repeat bg-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 bg-cover md:p-12 rounded-3xl"
+                  style={{ backgroundImage: `url(${fottercardph.src})` }}
+                >
+                  <div className="p-6">
+                    {footerdata.carddata.map((data, index) =>
+                      <div
+                        className={`font_secondary ${index === 4
+                          ? null
+                          : " md:border-r-[3px] border-dashed md:border-[#C5C6FF80]"}`}
+                        key={index}
+                      >
+                        <div className="w-auto xl:w-max md:m-auto pt-3 md:px-2">
+                          <p className="text-lg 2xl:text-2xl font-semibold w-max text-white">
+                            {data.title}
+                          </p>
+                          {data.link !== false
+                            ? <Link href={data.link}>
+                                <p
+                                  className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6"
+                                  dangerouslySetInnerHTML={{
+                                    __html: data.discription
+                                  }}
+                                />
+                              </Link>
+                            : <p
+                                className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6 max-w-[90%] lg:max-w-max"
                                 dangerouslySetInnerHTML={{
                                   __html: data.discription
                                 }}
-                              />
-                            </Link>
-                          : <p
-                              className="text-[15px] md:text-[13px] 2xl:text-base pt-1 md:pt-3 2xl:pt-4 font-light text-white leading-6 max-w-[90%] lg:max-w-max"
-                              dangerouslySetInnerHTML={{
-                                __html: data.discription
-                              }}
-                            />}
+                              />}
+                        </div>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="pt-12">

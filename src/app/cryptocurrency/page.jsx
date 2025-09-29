@@ -38,8 +38,7 @@ const pointdata = [
   {
     id: 1,
     title: "Multiple Cryptos",
-    description:
-      "Trade top digital  <br/>  currencies.",
+    description: "Trade top digital  <br/>  currencies.",
     icon: cryptoicon
   },
   {
@@ -68,10 +67,10 @@ export default function page() {
         banner_title="Cryptocurrency Trading | <br/>  Buy & Sell Digital Assets"
         banner_discription="Trade top cryptos like Bitcoin and Ethereum with <br /> low spreads and high security."
       />
-             <Graphhome 
-        title={`What is <br/> Cryptocurrency?`} 
+      <Graphhome
+        title={`What is <br/> Cryptocurrency?`}
         discription={`Cryptocurrency trading involves buying and selling digital <br/> currencies like Bitcoin, Ethereum, and others, aiming to profit <br/> from price changes in a decentralized market.`}
-        pagepath={'/cryptocurrency'} 
+        pagepath={"/cryptocurrency"}
       />
       <Marketspoints pointdata={pointdata} />
       <Discovertrading

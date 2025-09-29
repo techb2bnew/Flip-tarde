@@ -12,38 +12,38 @@ function Conractusbanner() {
       className="bg-no-repeat bg-center bg-cover"
       style={{ backgroundImage: `url(${contactus.src})` }}
     >
-      <div className="inn_container py-40">
-        <div className="grid grid-cols-2">
+      <div className="inn_container pt-40 pb-20 lg:py-40">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="flex items-center">
-            <div>
-                <Title title={"Contact Us"} color={"gradient_text"} />
-            <div className="pt-4">
-              <Discription
-                dispription={
-                  "We’re here to assist you. Whether you have questions, <br/> need support, or want to learn more about our <br/> services, feel free to reach out."
-                }
-                color={"text-[#D0D0D0]"}
-              />
-            </div>
-            <div className="pt-12">
-              <Button
-                btn_name={"Get in Touch Today"}
-                border_color={"border-primary"}
-                btn_bg={"bg-primary"}
-                shadow={true}
-                icon={firebtnicon.src}
-                text_color={'text-white'}
-              />
-            </div>
+            <div className="text-center lg:text-start">
+              <Title title={"Contact Us"} color={"gradient_text"} />
+              <div className="pt-4">
+                <Discription
+                  dispription={
+                    "We’re here to assist you. Whether you have questions, <br/> need support, or want to learn more about our <br/> services, feel free to reach out."
+                  }
+                  color={"text-[#D0D0D0]"}
+                />
+              </div>
+              <div className="pt-12">
+                <Button
+                  btn_name={"Get in Touch Today"}
+                  border_color={"border-primary"}
+                  btn_bg={"bg-primary"}
+                  shadow={true}
+                  icon={firebtnicon.src}
+                  text_color={"text-white"}
+                />
+              </div>
             </div>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center pt-8 lg:pt-0">
             <Image
               src={contactusright}
               alt="contactusright"
               width={1500}
               height={500}
-              className="max-w-[670px]"
+              className="max-w-[320px] md:max-w-[450px] lg:max-w-[550px] 2xl:max-w-[670px]"
             />
           </div>
         </div>

@@ -109,7 +109,7 @@ body {
 }
 
 .font_ternarynormal {
-  font-family: var(----font-mona-sans-monaSanswidenormal), sans-serif;
+  font-family: var(--font-mona-sans-monaSanswidenormal), sans-serif;
 }
 
 .main_outer_container {
