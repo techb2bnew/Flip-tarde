@@ -6,9 +6,9 @@ import email from "../../../../public/images/email.webp";
 import Image from "next/image";
 import Link from "next/link";
 export default function Contactdetail() {
-  const contactnumber = process.env.NEXT_CONTACT_NUMBER;
-  contactnumber.toString();
-  const noSpacesnumber = contactnumber.split(" ").join("");
+  // const contactnumber = process.env.NEXT_CONTACT_NUMBER;
+  // contactnumber.toString();
+  // const noSpacesnumber = contactnumber.split(" ").join("");
   const contactdetail = [
     {
       id: 1,
@@ -28,8 +28,8 @@ export default function Contactdetail() {
     {
       id: 3,
       cardtitle: "Phone Support",
-      cardsubtitleb: contactnumber,
-      subtitlelink: `tel:${noSpacesnumber}`,
+      cardsubtitleb: '+41 265 006 818',
+      subtitlelink: `tel:+41265006818`,
       cardicon: call
     }
   ];
