@@ -15,12 +15,12 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: Number(process.env.EMAIL_PORT),
-      secure: false, // true if using 465
+      secure: true, // true if using 465
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
+        pass: process.env.EMAIL_PASSWORD
       },
-      tls: { rejectUnauthorized: false },
+      tls: { rejectUnauthorized: false }
     });
 
     // 1) Send to Admin (your email)
@@ -46,7 +46,7 @@ export async function POST(req) {
            </h3>
         </div>
         </div>
-      `,
+      `
     });
 
     // 2) Send Thank You email to User
@@ -57,7 +57,7 @@ export async function POST(req) {
     //   text: `Hi ${name},`,
     //   html: `
     //   <div>
-    //    <h3> 
+    //    <h3>
     //       Hi <strong> ${name} </strong> Thank you for reaching out to <strong> Flip Trade Group </strong>
     //     </h3>
     //     <h3>
@@ -66,7 +66,7 @@ export async function POST(req) {
     //     <h3>
     //     At FlipTrade, we value transparency, security, and support — so you can feel confident that you’re in safe hands.
     //     </h3?
-      
+
     //       <div>
     //          <h3>
     //            Best regards,
@@ -82,6 +82,9 @@ export async function POST(req) {
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error("Email send error:", error);
-    return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to send email" },
+      { status: 500 }
+    );
   }
 }
