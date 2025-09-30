@@ -33,29 +33,13 @@ const markettype = [
     sidebanner: exploremarket5
   },
   {
-    marketname: "Forex",
-    sidebanner: exploremarket1
+    marketname: "Commodities",
+    sidebanner: exploremarket3
   },
   {
-    marketname: "Indices",
-    sidebanner: exploremarket2
-  },
-  {
-    marketname: "Cryptocurrency",
-    sidebanner: exploremarket4
-  },
-  {
-    marketname: "Metals",
-    sidebanner: exploremarket5
+    marketname: "Stocks",
+    sidebanner: exploremarket6
   }
-  // {
-  //   marketname: "Commodities",
-  //   sidebanner: exploremarket3
-  // },
-  // {
-  //   marketname: "Stocks",
-  //   sidebanner: exploremarket6
-  // }
 ];
 
 const Exploremarket = () => {

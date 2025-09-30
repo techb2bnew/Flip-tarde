@@ -45,7 +45,7 @@ const Faq = ({ faqData }) => {
                 maxHeight: activeIndex === index ? "200px" : "0px"
               }}
             >
-              <div className=" text-secondary text-base 2xl:text-xl font-light py-2 ps-[2%]">
+              <div className=" text-secondary text-base 2xl:text-xl font-light py-2 ps-[2%] text-start">
                 {faq.answer}
               </div>
             </div>

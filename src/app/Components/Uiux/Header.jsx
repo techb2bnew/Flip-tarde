@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
 import Logo from "../../../../public/images/Logo.webp";
+import Logoblack from "../../../../public/images/Logoblack.webp";
 import Button from "./Button";
 import firebtnicon from "../../../../public/icons/firebtnicon.svg";
 import menuicon from "../../../../public/icons/menuicon.svg";
@@ -68,18 +69,18 @@ useEffect(() => {
   };
 
   return (
-    <div className="pt-12 pb-6 relative">
+    <div className={`pt-10 md:pt-12 pb-6 w-full ${isMenu ? 'fixed' : 'relative'}`}>
       <div className="inn_container flex justify-between">
         <div className="flex items-center relative z-[999]">
           <Link href="/">
-          <Image
-            src={Logo}
+           <Image
+            src={Logo }
             alt="Logo"
             width={2000}
             height={500}
-            className="max-w-44 2xl:max-w-56"
+            className="max-w-44 2xl:max-w-56 "
             priority
-          />
+           />
           </Link>
         </div>
 
@@ -176,7 +177,7 @@ useEffect(() => {
       <div>
         
       </div>
-            <div className={`fixed  bg-white h-[100vh] w-[100vw] duration-700 transition-all ${!isMenu ? 'right-[-300%] scale-0 top-[-300%]' : 'right-0 top-0 scale-[1]'} `}>
+        <div className={`fixed  bg-white h-[120vh] w-[100vw] duration-700 transition-all ${!isMenu ? 'right-[-300%] scale-0 top-[-300%]' : 'right-0 top-0 scale-[1]'} `}>
            <div
             className="relative flex flex-col w-[80%] m-auto justify-around items-start pt-[110px] py-1 font_secondary "
           >

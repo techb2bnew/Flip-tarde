@@ -116,7 +116,7 @@ const CardContent = ({ data, index }) =>
     <div className="bg-[#DCD0FFCC] border-2 border-white rounded-bl-[14px] rounded-br-[14px] flex flex-col items-center">
       {[
         { label: "Min Deposit", value: data.min_deposit },
-        { label: "Max Leverage", value: data.max_leverage },
+        { label: "Swap Free", value: data.Swap_Free },
         { label: "Spreads", value: data.spreads }
       ].map((item, i) =>
         <li
@@ -133,14 +133,14 @@ const CardContent = ({ data, index }) =>
       )}
       <li className="list-none text-center pt-3">
         <p className="text-[13.7px] lg:text-lg 2xl:text-[22px]">
-          Account Verified
+          Commission
         </p>
         <span className="text-[12.5px] lg:text-base 2xl:text-xl text-ternary ">
-          {data.account_verified ? "Yes" : "No"}
+          {data.Commission ? "Yes" : "No"}
         </span>
       </li>
       <div className="relative top-8">
-        {index === 1
+        {index % 2 === 0
           ? <Link
               href={"https://client.fliptradegroup.com/trader/registration"}
             >

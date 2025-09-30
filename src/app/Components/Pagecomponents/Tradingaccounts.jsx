@@ -15,68 +15,73 @@ import Link from "next/link";
 const accountinfo = [
   {
     acount_title: "Classic <br/> Account",
-    min_deposit: "2500 USD",
-    max_leverage: "1:500",
-    spreads: "1.5 Pips",
-    account_verified: true
+    min_deposit: "$100",
+    Swap_Free: "Yes",
+    spreads: "0.8",
+    Commission: false
+  },
+
+  {
+    acount_title: "ECN  <br/>  Account",
+    min_deposit: "$200",
+    Swap_Free: "NO",
+    spreads: "Raw Spread",
+    Commission: true
   },
   {
     acount_title: "Professional <br/>  Account",
-    min_deposit: "5000 USD",
-    max_leverage: "1:500",
-    spreads: "1.0 Pips",
-    account_verified: true
-  },
-  {
-    acount_title: "ECN  <br/>  Account",
-    min_deposit: "5000 USD",
-    max_leverage: "1:500",
+    min_deposit: "$500",
+    Swap_Free: "Yes",
     spreads: "Raw Spread",
-    account_verified: true
+    Commission: true
   }
 ];
 const accountinfoph = [
   {
     acount_title: "Classic <br/> Account",
-    min_deposit: "2500 USD",
-    max_leverage: "1:500",
-    spreads: "1.5 Pips",
-    account_verified: true
+    min_deposit: "$100",
+    Swap_Free: "Yes",
+    spreads: "0.8",
+    Commission: false
+  },
+
+  {
+    acount_title: "ECN  <br/>  Account",
+    min_deposit: "$200",
+    Swap_Free: "NO",
+    spreads: "Raw Spread",
+    Commission: true
   },
   {
     acount_title: "Professional <br/>  Account",
-    min_deposit: "5000 USD",
-    max_leverage: "1:500",
-    spreads: "1.0 Pips",
-    account_verified: true
-  },
-  {
-    acount_title: "ECN  <br/>  Account",
-    min_deposit: "5000 USD",
-    max_leverage: "1:500",
+    min_deposit: "$500",
+    Swap_Free: "Yes",
     spreads: "Raw Spread",
-    account_verified: true
+    Commission: true
   },
+
+  // copy for slider loop
   {
     acount_title: "Classic <br/> Account",
-    min_deposit: "2500 USD",
-    max_leverage: "1:500",
-    spreads: "1.5 Pips",
-    account_verified: true
+    min_deposit: "$100",
+    Swap_Free: "Yes",
+    spreads: "0.8",
+    Commission: false
+  },
+
+  {
+    acount_title: "ECN  <br/>  Account",
+    min_deposit: "$200",
+    Swap_Free: "NO",
+    spreads: "Raw Spread",
+    Commission: true
   },
   {
     acount_title: "Professional <br/>  Account",
-    min_deposit: "5000 USD",
-    max_leverage: "1:500",
-    spreads: "1.0 Pips",
-    account_verified: true
-  },
-  {
-    acount_title: "ECN  <br/>  Account",
-    min_deposit: "5000 USD",
-    max_leverage: "1:500",
+    min_deposit: "$500",
+    Swap_Free: "Yes",
     spreads: "Raw Spread",
-    account_verified: true
+    Commission: true
   }
 ];
 function Tradingaccounts() {
@@ -136,14 +141,7 @@ function Tradingaccounts() {
                               {data.min_deposit}
                             </span>
                           </li>
-                          <li className="list-none text-center py-2 2xl:py-4 min-w-[195px] border-b-3 border-dashed border-white ">
-                            <p className="text-base lg:text-lg 2xl:text-[22px] text-center">
-                              Max Leverage
-                            </p>
-                            <span className="text-[15px] lg:text-base 2xl:text-xl text-ternary ">
-                              {data.max_leverage}
-                            </span>
-                          </li>
+
                           <li className="list-none text-center py-2 2xl:py-4 min-w-[195px] border-b-3 border-dashed border-white ">
                             <p className="text-base lg:text-lg 2xl:text-[22px] text-center">
                               Spreads
@@ -152,12 +150,21 @@ function Tradingaccounts() {
                               {data.spreads}
                             </span>
                           </li>
-                          <li className="list-none text-center pt-3">
+
+                          <li className="list-none text-center py-2 2xl:py-4 min-w-[195px] border-b-3 border-dashed border-white ">
                             <p className="text-base lg:text-lg 2xl:text-[22px] text-center">
-                              Account Verified
+                              Swap Free
                             </p>
                             <span className="text-[15px] lg:text-base 2xl:text-xl text-ternary ">
-                              {data.account_verified ? "Yes" : "No"}
+                              {data.Swap_Free}
+                            </span>
+                          </li>
+                          <li className="list-none text-center pt-3">
+                            <p className="text-base lg:text-lg 2xl:text-[22px] text-center">
+                              Commission
+                            </p>
+                            <span className="text-[15px] lg:text-base 2xl:text-xl text-ternary ">
+                              {data.Commission ? "Yes" : "No"}
                             </span>
                           </li>
                           <div className="relative top-8">

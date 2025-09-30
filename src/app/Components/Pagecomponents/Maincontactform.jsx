@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Button from "../Uiux/Button";
 import firebtn from "../../../../public/icons/firebtnicon.svg";
+import { useRouter } from "next/navigation";
 const Maincontactform = () => {
   const [nameerror, setNameError] = useState("");
   const [emailerror, setEmailError] = useState("");
@@ -22,7 +23,7 @@ const Maincontactform = () => {
         ? setEmailError("")
         : formdata.message === "" ? setmessageError("") : null;
   };
-
+ const router = useRouter()
   const errorhandle = () => {
     if (formdata.name === "") {
       setNameError("Enter Your name First");
@@ -55,7 +56,8 @@ const Maincontactform = () => {
         const data = await res.json();
 
         if (data.ok) {
-          setthankyou(true);
+          // e.preventDefault()
+          router.push('/thank-you');
           setFormdata({
             name: "",
             email: "",
