@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./Components/Uiux/Header";
 import Fotter from "./Components/Uiux/Fotter";
+import Canonical from "./Canonical";
 const monaSans = localFont({
   src: [
     { path: "../../public/fonts/Mona-Sans-MediumWide.ttf" },
@@ -33,15 +34,15 @@ const monaSanswidenormal = localFont({
   variable: "--font-mona-sans-monaSanswidenormal",
 });
 export const metadata = {
-  title: "Flip Trade",
-  description: "Flip Trade is a leading platform for trading and investment solutions.",
-  icons: {
-    icon: "../../public/icons/favicon.ico",
-  },
+  title: "Best Forex & Multi-Asset Trading Platform | FlipTrade Group",
+  description: "Trade forex, stocks, cryptos, commodities & metals with FlipTrade — low spreads, fast execution, secure platform. Start your trading journey today.",
 };
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <Canonical />
+      </head>
       <body className={`${monaSans.variable} ${monaSansnormal.variable} ${monaSansnormallight.variable} ${monaSanswidenormal.variable} antialiased`} cz-shortcut-listen="true">
         <div className="main_outer_container">
           <div className="absolute w-full max-w-[1960px] z-[999] bg-[linear-gradient(1deg,rgba(255,255,255,0)_15%,rgb(0_0_0_/_76%)_99%)]">

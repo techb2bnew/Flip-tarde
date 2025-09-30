@@ -11,29 +11,35 @@ import realtime from "/public/icons/realtime.svg";
 import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
+import PageHead from "../Pagehead";
 const faqData = [
   {
-    question: "What is FlipTrade?",
+    question: "Which cryptocurrencies are supported?",
     answer:
-      "A secure trading platform for Forex, stocks, commodities, indices, and crypto."
+      "FlipTrade offers trading on major cryptocurrencies like Bitcoin, Ethereum, Litecoin, and various altcoins, available with secure and fast execution."
   },
   {
-    question: "How do I start trading?",
-    answer: "Sign up, verify your account, deposit funds, and begin trading."
+    question: "Is crypto trading 24/7?",
+    answer:
+      "Yes, cryptocurrency markets are open 24/7, and FlipTrade provides continuous access for traders worldwide without market closing times."
   },
   {
-    question: "What are the fees?",
-    answer: "Transparent, low trading fees with no hidden charges."
+    question: "Are there fees for crypto trading?",
+    answer:
+      "Yes, spreads and swap fees may apply, but FlipTrade ensures transparent pricing with competitive spreads on crypto trades."
   },
   {
-    question: "Is FlipTrade safe?",
-    answer: "Yes, we use strong security, 2FA, and safe fund storage."
+    question: "Does FlipTrade offer leverage on crypto?",
+    answer:
+      "Yes, leverage options are available, allowing traders to maximize exposure while managing risks responsibly within regulatory limits."
   },
   {
-    question: "How can I get support?",
-    answer: "Via live chat, email, or our Help Center guides."
+    question: "Is my crypto trading account secure?",
+    answer:
+      "Yes, FlipTrade uses advanced security measures like encryption and compliance protocols to ensure safe cryptocurrency trading."
   }
 ];
+
 const pointdata = [
   {
     id: 1,
@@ -60,9 +66,14 @@ const pointdata = [
     icon: Support
   }
 ];
+const PageMeta  = {
+  title : 'Cryptocurrency Trading Platform | Trade Bitcoin & Altcoins',
+  description : 'Trade Bitcoin, Ethereum, and altcoins 24/7 with FlipTrade. Enjoy secure accounts, low spreads, fast execution, and leverage options for crypto CFD trading.'
+}
 export default function page() {
   return (
     <div>
+      <PageHead PageMeta={PageMeta} />
       <Marketbanner
         banner_title="Cryptocurrency Trading | <br/>  Buy & Sell Digital Assets"
         banner_discription="Trade top cryptos like Bitcoin and Ethereum with <br /> low spreads and high security."

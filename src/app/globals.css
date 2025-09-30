@@ -355,3 +355,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 @theme  {
    --breakpoint-2xl: 1680px;
 } */
+ .tradingview-widget-container.min-h-\[500px\].h-full {
+    width: auto !important;
+}

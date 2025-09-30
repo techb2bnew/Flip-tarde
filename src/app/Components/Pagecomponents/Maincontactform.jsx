@@ -34,18 +34,44 @@ const Maincontactform = () => {
       setEmailError("");
       setmessageError("Enter Your Message");
     } else {
-      setthankyou(true);
+      null;
     }
   };
-  const handlesubmit = () => {
+  const handlesubmit = async () => {
     errorhandle();
+
+    if (formdata.name && formdata.email && formdata.message) {
+      try {
+        const res = await fetch("/api/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: formdata.name,
+            email: formdata.email,
+            message: formdata.message
+          })
+        });
+
+        const data = await res.json();
+
+        if (data.ok) {
+          setthankyou(true);
+          setFormdata({
+            name: "",
+            email: "",
+            message: ""
+          });
+        } else {
+          console.error("Email error:", data.error);
+        }
+      } catch (err) {
+        console.error("Fetch error:", err);
+      }
+    }
   };
+
   const handelthanku = () => {
-    setFormdata({
-      name: "",
-      email: "",
-      message: ""
-    });
+
     setthankyou(false);
   };
   return (
@@ -54,8 +80,11 @@ const Maincontactform = () => {
       <div>
         {thankyou
           ? <div className="min-h-[475px]  p-4 lg:p-10 border-2 border-[#00000033] rounded-[44px]">
-              <div className="text-5xl null  font-medium text-primary">
-                Thank You
+              <div className=" text-xl md:text-2xl lg:text-3xl xl:text-5xl leading-7 md:leading-8 lg:leading-10 xl:leading-14 null  font-medium text-primary">
+                 Your From has been submited, We will connect with you shorly.       
+                 <br />
+                 <br />
+                 <p className="font-semibold text-center  text-xl md:text-2xl lg:text-3xl xl:text-6xl leading-7 md:leading-8 lg:leading-10 xl:leading-18">Thank You !</p>          
               </div>
             </div>
           : <div className="font_ternary px-2 py-5  lg:px-10  lg:py-10 border-2 border-[#00000033] rounded-3xl lg:rounded-[44px]">

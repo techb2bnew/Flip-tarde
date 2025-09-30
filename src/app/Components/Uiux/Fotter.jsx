@@ -92,19 +92,21 @@ const Fotter = () => {
           className="h-[100vh] bg-cover bg-no-repeat"
           style={{ backgroundImage: `url(${fotterbackground.src})` }}
         >
-          <div className="inn_container relative top-[170px]">
+          <div className="inn_container relative top-[110px] md:top-[170px]">
             <div className="2xl:px-[3%]">
               <div className="hidden md:grid grid-cols-4">
                 <div>
-                  <Image
-                    src={logo}
-                    alt="Logo"
-                    width={1000}
-                    height={500}
-                    className="max-w-[190px] xl:max-w-[240px] 2xl:max-w-[295px]"
-                  />
+                  <Link href="/">
+                    <Image
+                      src={logo}
+                      alt="Logo"
+                      width={1000}
+                      height={500}
+                      className="max-w-[190px] xl:max-w-[240px] 2xl:max-w-[295px]"
+                    />
+                  </Link>
                 </div>
-                {footerdata.linkingdata.slice(0,1).map((data, index) =>
+                {footerdata.linkingdata.slice(0, 1).map((data, index) =>
                   <div
                     className={`${index === 2
                       ? null
@@ -149,13 +151,15 @@ const Fotter = () => {
                   </div> */}
                 </div>
                 <div className="flex justify-center items-center py-6">
-                  <Image
-                    src={logo}
-                    alt="Logo"
-                    width={1000}
-                    height={500}
-                    className="max-w-[180px]"
-                  />
+                  <Link href="/">
+                    <Image
+                      src={logo}
+                      alt="Logo"
+                      width={1000}
+                      height={500}
+                      className="max-w-[180px]"
+                    />
+                  </Link>
                 </div>
               </div>
 
@@ -251,7 +255,7 @@ const Fotter = () => {
                 <div className="border-t-[1px] py-6 border-solid border-[#ffffff57] font_secondary flex flex-col-reverse gap-5 lg:gap-0 lg:flex-row items-center lg:justify-between">
                   <div className="flex flex-col lg:flex-row items-center gap-1.5 lg:gap-5">
                     <p className="text-[14px] 2xl:text-base font-light text-[#AAAAAA]">
-                      © FlipTrade Group Limited 2024 | All Rights Reserved |
+                      © FlipTrade Group Limited 2025 | All Rights Reserved
                     </p>
                   </div>
 

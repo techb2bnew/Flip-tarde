@@ -36,6 +36,7 @@ function TradingViewWidget({ darkMode }) {
       belowLineFillColorGrowingBottom: "rgba(41, 98, 255, 0)",
       belowLineFillColorFallingBottom: "rgba(41, 98, 255, 0)",
       symbolActiveColor: "rgba(41, 98, 255, 0.12)",
+      autosize: true,
       height: 550
     });
 
@@ -43,8 +44,8 @@ function TradingViewWidget({ darkMode }) {
   }, [darkMode]); 
 
   return (
-    <div className="tradingview-widget-container" ref={container}>
-      <div className="tradingview-widget-container__widget"></div>
+    <div className="tradingview-widget-container !w-full" ref={container}>
+      <div className="tradingview-widget-container__widget "></div>
     </div>
   );
 }

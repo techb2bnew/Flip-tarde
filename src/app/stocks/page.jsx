@@ -11,29 +11,35 @@ import realtime from "/public/icons/realtime.svg";
 import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
+import PageHead from "../Pagehead";
 const faqData = [
   {
-    question: "What is FlipTrade?",
+    question: "Which stocks can I trade?",
     answer:
-      "A secure trading platform for Forex, stocks, commodities, indices, and crypto."
+      "FlipTrade provides access to US, European, and Asian stock CFDs, covering leading global companies."
   },
   {
-    question: "How do I start trading?",
-    answer: "Sign up, verify your account, deposit funds, and begin trading."
+    question: "What are stock trading hours?",
+    answer:
+      "Stock trading hours vary by region, and FlipTrade aligns access with respective market sessions."
   },
   {
-    question: "What are the fees?",
-    answer: "Transparent, low trading fees with no hidden charges."
+    question: "What fees apply to stock CFDs?",
+    answer:
+      "Spreads and overnight swaps apply on stock CFDs. FlipTrade offers competitive and transparent pricing."
   },
   {
-    question: "Is FlipTrade safe?",
-    answer: "Yes, we use strong security, 2FA, and safe fund storage."
+    question: "Can I trade fractional shares?",
+    answer:
+      "Yes, fractional share trading is available, making stock CFDs accessible for traders with smaller investments."
   },
   {
-    question: "How can I get support?",
-    answer: "Via live chat, email, or our Help Center guides."
+    question: "Do stock CFDs include dividends?",
+    answer:
+      "Yes, dividend adjustments are made on CFD positions to reflect corporate actions."
   }
 ];
+
 const pointdata = [
   {
     id: 1,
@@ -60,9 +66,15 @@ const pointdata = [
     icon: Support
   }
 ];
+
+const Pagemeta  = {
+  title : 'Stock Trading CFDs Online | Trade Global Equities FlipTrade',
+  description :'Trade stock CFDs on US, European, and Asian companies with FlipTrade. Access global equities with competitive spreads, fractional trading, and fast execution.'
+}
 export default function page() {
   return (
     <div>
+      <PageHead PageMeta={Pagemeta}/>
       <Marketbanner
         banner_title="Stock Trading | Global <br /> Equities"
         banner_discription="Trade global company shares with low costs, real-time <br/> data, and easy portfolio diversification."

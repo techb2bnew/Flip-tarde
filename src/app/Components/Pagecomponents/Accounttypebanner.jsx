@@ -1,5 +1,4 @@
 import React from "react";
-import accounttypebanner from "../../../../public/banners/accounttypebanner.webp";
 import Title from "../Uiux/Title";
 import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
@@ -7,16 +6,23 @@ import firebtnicon from "../../../../public/icons/firebtnicon.svg";
 import Link from "next/link";
 const Accounttypebanner = () => {
   return (
-    <div
-      className="bg-cover"
-      style={{ backgroundImage: `url(${accounttypebanner.src})` }}
-    >
-      <div className="inn_container py-42 md:py-46 lg:py-56">
-        <div className="flex flex-col gap-7 items-center lg:items-start">
+    <div className="bg-cover relative">
+      <video
+        className="absolute inset-0 h-full w-full object-cover z-0 pointer-events-none brightness-[0.2]"
+        src="/videos/accounttypebgvideo.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      />
+      <div className="inn_container py-42 md:py-46 lg:py-62">
+        <div className="flex flex-col gap-7 items-center lg:items-start relative z-[1]">
           <div className="text-center lg:text-start">
             <Title
               title={"Account Types at FlipTrade <br/> Built for All Traders"}
               color={"gradient_text"}
+              ish1={true}
             />
           </div>
           <div className="text-center lg:text-start">

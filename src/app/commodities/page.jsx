@@ -11,29 +11,35 @@ import realtime from "/public/icons/realtime.svg";
 import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
+import PageHead from "../Pagehead";
 const faqData = [
   {
-    question: "What is FlipTrade?",
+    question: "Which commodities are available?",
     answer:
-      "A secure trading platform for Forex, stocks, commodities, indices, and crypto."
+      "FlipTrade offers crude oil, natural gas, sugar, coffee, and agricultural products, giving traders exposure to diverse commodity markets."
   },
   {
-    question: "How do I start trading?",
-    answer: "Sign up, verify your account, deposit funds, and begin trading."
+    question: "How does commodity CFD trading work?",
+    answer:
+      "You trade price movements of commodities through CFDs without owning physical goods, allowing profit opportunities in rising or falling markets."
   },
   {
-    question: "What are the fees?",
-    answer: "Transparent, low trading fees with no hidden charges."
+    question: "What leverage is provided on commodities?",
+    answer:
+      "FlipTrade provides leverage tailored to commodity markets, enabling flexible position sizes with responsible risk management."
   },
   {
-    question: "Is FlipTrade safe?",
-    answer: "Yes, we use strong security, 2FA, and safe fund storage."
+    question: "What fees apply to commodity trading?",
+    answer:
+      "Spreads and overnight swaps may apply. FlipTrade ensures competitive pricing with transparent cost structures."
   },
   {
-    question: "How can I get support?",
-    answer: "Via live chat, email, or our Help Center guides."
+    question: "Are commodities good for hedging?",
+    answer:
+      "Yes, commodities like oil and agricultural products are often used for hedging against inflation or market fluctuations."
   }
 ];
+
 const pointdata = [
   {
     id: 1,
@@ -61,9 +67,14 @@ const pointdata = [
     icon: Support
   }
 ];
+const  PageMeta ={
+  title : 'Commodity Trading Platform | Oil, Gas & Agriculture CFDs',
+  description :'FlipTrade offers commodity CFD trading in oil, natural gas, coffee, sugar, and agricultural products. Access global commodity markets with leverage and transparent pricing.'
+}
 export default function page() {
   return (
     <div>
+      <PageHead PageMeta={PageMeta} />
       <Marketbanner
         banner_title="Commodities <br /> CFDs"
         banner_discription="Trade spot and futures commodities across metals, <br /> energy, and agriculture markets."

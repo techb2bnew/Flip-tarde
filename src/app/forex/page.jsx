@@ -11,27 +11,28 @@ import setp2 from "/public/icons/forexpoint2.svg";
 import setp3 from "/public/icons/forexpoint3.svg";
 import setp4 from "/public/icons/Support.svg";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
+import PageHead from "../Pagehead";
 const faqData = [
   {
-    question: "What is FlipTrade?",
+    question: "Which forex pairs are available?",
     answer:
-      "A secure trading platform for Forex, stocks, commodities, indices, and crypto."
+      "FlipTrade offers majors like EUR/USD, minors like GBP/JPY, and exotic currency pairs, covering a wide selection for diverse trading strategies."
   },
   {
-    question: "How do I start trading?",
-    answer: "Sign up, verify your account, deposit funds, and begin trading."
+    question: "What is the minimum deposit?",
+    answer: "The minimum deposit varies by account type, starting from a low amount suitable for beginners, making forex trading accessible to all traders."
   },
   {
-    question: "What are the fees?",
-    answer: "Transparent, low trading fees with no hidden charges."
+    question: "What leverage is offered?",
+    answer: "FlipTrade provides flexible leverage options, depending on account type and regulations, allowing traders to manage positions efficiently while balancing risk."
   },
   {
-    question: "Is FlipTrade safe?",
-    answer: "Yes, we use strong security, 2FA, and safe fund storage."
+    question: "Are spreads competitive?",
+    answer: "Yes, FlipTrade provides tight spreads and transparent pricing, ensuring forex traders benefit from low-cost entry and exit points across global markets."
   },
   {
-    question: "How can I get support?",
-    answer: "Via live chat, email, or our Help Center guides."
+    question: "When is forex market open?",
+    answer: "Forex markets operate 24 hours a day, five days a week, and FlipTrade provides access to live trading during all major forex sessions worldwide."
   }
 ];
 const pointdata = [
@@ -61,17 +62,23 @@ const pointdata = [
     icon: setp4
   }
 ];
+const pagehead = {
+  title: "Forex Trading Online Platform | Trade Currency Pairs FlipTrade",
+  description:
+    "Trade major, minor, and exotic forex pairs on FlipTrade. Enjoy tight spreads, fast execution, and flexible leverage to enhance your online forex trading experience securely."
+};
 export default function page() {
   return (
     <div>
+      <PageHead PageMeta={pagehead} />
       <Marketbanner
         banner_title="Forex Trading | Online <br/> FX Trading"
         banner_discription="The FX market moves over $5 trillion daily, making it the <br/> world’s largest and most liquid."
       />
-      <Graphhome 
-        title={`What is Forex?`} 
+      <Graphhome
+        title={`What is Forex?`}
         discription={`Forex (Foreign Exchange) is the global market for trading currencies. <br/> Traders buy and sell currency pairs, like EUR/USD and GBP/JPY, to <br/> profit from exchange rate movements. It is the largest financial <br/> market, operating 24 hours a day, 5 days a week.`}
-        pagepath={'/forex'} 
+        pagepath={"/forex"}
       />
       <Marketspoints pointdata={pointdata} />
       <Discovertrading

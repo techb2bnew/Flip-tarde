@@ -11,29 +11,35 @@ import Advanced from "/public/icons/Advanced.svg";
 import Secure from "/public/icons/forexpoint2.svg";
 import Support from "/public/icons/Support.svg";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
+import PageHead from "../Pagehead";
 const faqData = [
   {
-    question: "What is FlipTrade?",
+    question: "Which metals are available?",
     answer:
-      "A secure trading platform for Forex, stocks, commodities, indices, and crypto."
+      "FlipTrade supports trading in gold, silver, platinum, and palladium, offering multiple opportunities in precious metals."
   },
   {
-    question: "How do I start trading?",
-    answer: "Sign up, verify your account, deposit funds, and begin trading."
+    question: "What spreads apply to metals?",
+    answer:
+      "FlipTrade offers competitive, low spreads for metals trading with transparent costs."
   },
   {
-    question: "What are the fees?",
-    answer: "Transparent, low trading fees with no hidden charges."
+    question: "Can I use leverage for metals?",
+    answer:
+      "Yes, leverage is available depending on account type, giving traders flexible exposure to global metal markets."
   },
   {
-    question: "Is FlipTrade safe?",
-    answer: "Yes, we use strong security, 2FA, and safe fund storage."
+    question: "What are metal trading hours?",
+    answer:
+      "Metals like gold and silver trade nearly 24 hours during weekdays. FlipTrade aligns with global sessions."
   },
   {
-    question: "How can I get support?",
-    answer: "Via live chat, email, or our Help Center guides."
+    question: "Can metals be used for hedging?",
+    answer:
+      "Yes, metals are traditional safe-haven assets, often used to hedge against inflation and economic uncertainty."
   }
 ];
+
 const pointdata = [
   {
     id: 1,
@@ -60,9 +66,14 @@ const pointdata = [
     icon: Support
   }
 ];
+const Pagemeta  = {
+  title : 'Precious Metals Trading Platform | Gold, Silver, Platinum',
+  description :'Trade gold, silver, and platinum CFDs with FlipTrade. Benefit from secure trading accounts, tight spreads, leverage, and near 24-hour market access on metals.'
+}
 export default function page() {
   return (
     <div>
+      <PageHead PageMeta={Pagemeta} />
       <Marketbanner
         banner_title="Precious Metals Trading <br/> Gold & Silver"
         banner_discription="Trade Gold, Silver, and Platinum with tight <br/> spreads and high liquidity."

@@ -1,6 +1,4 @@
 import React from "react";
-import banner from "../../../../public/banners/Homebanner.webp";
-import bannerph from "../../../../public/banners/Homebannerph.webp";
 import Discription from "../Uiux/Discription";
 import Button from "../Uiux/Button";
 import firebtnicon from "../../../../public/icons/firebtnicon.svg";

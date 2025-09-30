@@ -11,29 +11,35 @@ import Support from "/public/icons/Support.svg";
 import indicescoverleft from "/public/images/indicescoverleft.webp";
 import indicescoverright from "/public/images/indicescoverright.webp";
 import Graphhome from "../Components/Pagecomponents/Markets/Graphhome";
+import PageHead from "../Pagehead";
 const faqData = [
   {
-    question: "What is FlipTrade?",
+    question: "Which indices can I trade?",
     answer:
-      "A secure trading platform for Forex, stocks, commodities, indices, and crypto."
+      "FlipTrade supports global indices such as the S&P 500, Nasdaq, Dow Jones, FTSE 100, DAX, and more, offering exposure to worldwide markets."
   },
   {
-    question: "How do I start trading?",
-    answer: "Sign up, verify your account, deposit funds, and begin trading."
+    question: "How does index CFD trading work?",
+    answer:
+      "You trade price movements of indices without owning the underlying assets, using CFDs to profit from both rising and falling market conditions."
   },
   {
-    question: "What are the fees?",
-    answer: "Transparent, low trading fees with no hidden charges."
+    question: "What leverage is available on indices?",
+    answer:
+      "FlipTrade offers flexible leverage levels on indices, depending on account type and regulations, helping traders manage risk and exposure effectively."
   },
   {
-    question: "Is FlipTrade safe?",
-    answer: "Yes, we use strong security, 2FA, and safe fund storage."
+    question: "What are trading hours for indices?",
+    answer:
+      "Global indices follow specific market sessions, and FlipTrade provides access to major index trading hours aligned with each region."
   },
   {
-    question: "How can I get support?",
-    answer: "Via live chat, email, or our Help Center guides."
+    question: "Are there fees for index trading?",
+    answer:
+      "Yes, spreads and overnight swap fees may apply on index CFDs, ensuring transparent costs for traders engaging in global indices."
   }
 ];
+
 const pointdata = [
   {
     id: 1,
@@ -60,9 +66,14 @@ const pointdata = [
     icon: Support
   }
 ];
+const pagemeta = {
+  title : 'Global Indices Trading Platform | Trade Index CFDs FlipTrade' ,
+  description : 'FlipTrade lets you trade leading global indices like S&P 500, Nasdaq, FTSE, and DAX. Access CFDs with leverage, tight spreads, and transparent trading conditions.'
+}
 export default function page() {
   return (
-    <div>
+    <div> 
+      <PageHead PageMeta={pagemeta} />
       <Marketbanner
         banner_title="For Difference (CFD) <br /> Trading  on Indices"
         banner_discription="FlipTrade offers global cash and futures index <br/> trading with low costs."

@@ -17,7 +17,7 @@ function Conractusbanner() {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="flex items-center">
             <div className="text-center lg:text-start">
-              <Title title={"Contact Us"} color={"gradient_text"} />
+                <Title title={"Contact Us"} color={"gradient_text"} ish1={true} />
               <div className="pt-4">
                 <Discription
                   dispription={

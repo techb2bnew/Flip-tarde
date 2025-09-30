@@ -39,16 +39,24 @@ export default function Header() {
   const [isMarket , setisMarket] = useState(false);
   const containerRef = useRef(null);
    
-  useEffect(() => {
-    const active = containerRef.current?.querySelector(
-      `a[data-link="${pathname}"]`
-    );
-    if (active && containerRef.current) {
-      const rect = active.getBoundingClientRect();
-      const parentRect = containerRef.current.getBoundingClientRect();
-      setActivePos({ left: rect.left - parentRect.left, width: rect.width });
-    }
-  }, [pathname]);
+useEffect(() => {
+  if (!containerRef.current) return;
+  const marketsDropdown =
+    navlistdata.find((n) => n.nav_name === "Markets")?.dropdown || [];
+  const marketsLinks = new Set(marketsDropdown.map((d) => d.link));
+  const isMarketsPath = marketsLinks.has(pathname);
+  const selector = isMarketsPath
+    ? '[data-link="/forex"]'
+    : `[data-link="${pathname}"]`;
+
+  const target = containerRef.current.querySelector(selector);
+  if (!target) return;
+
+  const rect = target.getBoundingClientRect();
+  const parentRect = containerRef.current.getBoundingClientRect();
+  setActivePos({ left: rect.left - parentRect.left, width: rect.width });
+}, [pathname]);
+
 
   const showPos = hoverPos.width ? hoverPos : activePos;
 
@@ -92,7 +100,7 @@ export default function Header() {
                   key={data.id}
                   className="relative group"
                   onMouseEnter={(e) => {
-                    const anchor = e.currentTarget.querySelector("a[data-link]");
+                    const anchor = e.currentTarget.querySelector("[data-link]");
                     moveHighlightTo(anchor);
                     if (isMarkets) setIsMarketsOpen(true); 
                   }}
@@ -101,6 +109,15 @@ export default function Header() {
                     if (isMarkets) setIsMarketsOpen(false); 
                   }}
                 >
+                {
+                  data.id == 2 ?
+                  <p
+                    data-link={data.nav_link}
+                    className="relative z-10 text-white list_text font-medium py-2 px-3 block cursor-pointer"
+                  >
+                    {data.nav_name}
+                  </p>
+                  :
                   <Link
                     data-link={data.nav_link}
                     href={data.nav_link}
@@ -108,6 +125,7 @@ export default function Header() {
                   >
                     {data.nav_name}
                   </Link>
+                }
                 </div>
               );
             })}
@@ -116,7 +134,7 @@ export default function Header() {
         
         <div className="hidden xl:flex items-center gap-6">
           <Link href={'https://client.fliptradegroup.com/trader'} >
-          <button className="text-white list_text font-medium px-8 cursor-pointer">
+          <button className="text-white list_text font-medium px-8 cursor-pointer hover:underline  duration-500 transition-all  ">
             Login
           </button>
           </Link>
@@ -132,7 +150,7 @@ export default function Header() {
         <div className="flex xl:hidden gap-6">
           <div className="hidden lg:flex items-center gap-8">
             <Link href={'https://client.fliptradegroup.com/trader'} >
-          <button className="text-white list_text font-medium px-8 cursor-pointer">
+          <button className="text-white list_text font-medium px-8 cursor-pointer  hover:underline  duration-500 transition-all  ">
             Login
           </button>
           </Link>
@@ -226,7 +244,7 @@ export default function Header() {
                     />
                  </Link>
              <Link href={'https://client.fliptradegroup.com/trader'} >
-               <button className="text-primary text-base font-medium px-8 cursor-pointer">
+               <button className="text-primary text-base font-medium px-8 cursor-pointer  hover:underline  duration-500 transition-all  ">
                  Login
                </button>
              </Link>      
@@ -238,7 +256,7 @@ export default function Header() {
         className={
           `
           absolute left-0 top-[100px] z-20 origin-top
-          transition-all duration-500 ease-in-out w-full 
+          transition-all duration-300 ease-in-out w-full 
           ` +
           (isMarketsOpen
             ? " scale-100 opacity-100 pointer-events-auto"
@@ -268,13 +286,6 @@ export default function Header() {
                   shadow={true}
                 />
                 </Link>
-                {/* <Button
-                  icon={giftbtnicon.src}
-                  btn_name="Try Demo"
-                  btn_bg="bg-lightsecondry"
-                  text_color="text-white"
-                  border_color="border-ternary"
-                /> */}
               </div>
                </div>
              </div>
@@ -286,7 +297,7 @@ export default function Header() {
                 <div key={item.id} className="text-start">
                   <Link
                     href={item.link}
-                    className="relative z-10 text-black font_secondary py-2 px-3 block  rounded-lg text-base 2xl:text-xl pt-8  font-medium hover:text-primary" 
+                    className="relative z-10 text-black hover:text-[var(--primary)] font_secondary  hover:underline py-2 px-3 block  rounded-lg text-base 2xl:text-xl pt-8  font-medium hover:text-primary transition-all duration-500" 
                     onMouseEnter={(e) =>
                       moveHighlightTo(
                         document.querySelector('a[data-link="/forex"]') 
