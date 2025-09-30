@@ -11,7 +11,7 @@ import Link from "next/link";
 function Worldbroker() {
   return (
     <div className="bg-white">
-      <div className="inn_container py-24">
+      <div className="inn_container py-24 overflow-hidden">
         <div className="grid grid-cols-[2fr_5fr_2fr] relative h-[340px] md:h-[280px] xl:h-[390px] z-[5px]">
           <div className="bg-[#EAE3FF] rounded-br-[60px]" />
           <div className="bg-[#EAE3FF] rounded-bl-[60px] rounded-tr-[60px] relative z-20" />
