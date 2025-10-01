@@ -44,8 +44,8 @@ export default function page() {
       <PageHead PageMeta={Pagemeta} />
       <Accounttypebanner />
       <Tradingaccounts />
-      {/* <Accountstep />
-      <Accountupgrade /> */}
+      <Accountstep />
+      <Accountupgrade />
       <div className="bg-white pb-12 md:pb-18 lg:py-24">
         <div className="inn_container text-center">
           <Title
