@@ -4,6 +4,8 @@ import Tradingaccounts from "../Components/Pagecomponents/Tradingaccounts";
 import PageHead from "../Pagehead";
 import Title from "../Components/Uiux/Title";
 import Faq from "../Components/Pagecomponents/Faq";
+import Accountstep from "../Components/Pagecomponents/Accountstep";
+import Accountupgrade from "../Components/Pagecomponents/Accountupgrade";
 const faqData = [
   {
     question: "What account types are available?",
@@ -42,7 +44,9 @@ export default function page() {
       <PageHead PageMeta={Pagemeta} />
       <Accounttypebanner />
       <Tradingaccounts />
-      <div className="bg-white py-12 md:py-18 lg:py-24">
+      {/* <Accountstep />
+      <Accountupgrade /> */}
+      <div className="bg-white pb-12 md:pb-18 lg:py-24">
         <div className="inn_container text-center">
           <Title
             title={"Frequently Asked <br/> Questions"}

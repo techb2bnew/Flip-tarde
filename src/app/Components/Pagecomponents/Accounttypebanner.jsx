@@ -16,7 +16,7 @@ const Accounttypebanner = () => {
         playsInline
         preload="metadata"
       />
-      <div className="inn_container py-42 md:py-46 lg:py-62">
+      <div className="inn_container py-42 md:py-46 xl:py-48 2xl:py-62">
         <div className="flex flex-col gap-7 items-center lg:items-start relative z-[1]">
           <div className="text-center lg:text-start">
             <Title

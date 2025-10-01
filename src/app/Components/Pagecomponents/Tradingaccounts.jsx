@@ -13,6 +13,13 @@ import Bitcoin from "../../../../public/icons/Bitcoin.svg";
 import Tradingaccountsph from "./Tradingaccountsph";
 import Link from "next/link";
 const accountinfo = [
+    {
+    acount_title: "Standard <br/>  Account",
+    min_deposit: "$25",
+    Swap_Free: "No",
+    spreads: "1.2",
+    Commission: false
+  },
   {
     acount_title: "Classic <br/> Account",
     min_deposit: "$100",
@@ -107,7 +114,7 @@ function Tradingaccounts() {
             </div>
           </div>
 
-          <div className="relative hidden md:block overflow-hidden pt-20 h-[750px] xl:h-auto">
+          <div className="relative hidden xl:block overflow-hidden pt-20 h-[750px] xl:h-auto">
             <Image
               src={accountsserface.src}
               alt="Banner"
@@ -116,15 +123,15 @@ function Tradingaccounts() {
               className="relative left-[-10%] h-full xl:h-auto"
             />
             <div className="absolute top-0 h-full w-full flex items-center">
-              <div className="max-w-[1300px] px-[3%] xl:px-[unset] m-auto relative bottom-[20%]">
-                <div className="grid grid-cols-3 gap-5">
+              <div className="max-w-[1440px] px-[3%] xl:px-[unset] m-auto relative bottom-[20%]">
+                <div className="grid grid-cols-4 gap-5">
                   {accountinfo.map((data, index) =>
                     <div
                       key={index}
                       className="max-w-[300px] xl:max-w-[350px] 2xl:max-w-[400px] border-[12px] rounded-3xl border-[#DCD0FFCC] relative z-[2]"
                     >
                       <div>
-                        <div className="py-1 xl:py-3 2xl:py-5 px-16 lg:px-14 2xl:px-18 text-center bg-white rounded-tl-[18px] rounded-tr-[18px]">
+                        <div className="py-1 xl:py-3 2xl:py-5 px-16 lg:px-10 2xl:px-12 text-center bg-white rounded-tl-[18px] rounded-tr-[18px]">
                           <h5
                             className="text-xl lg:text-2xl xl:text-3xl min-h-16 2xl:text-4xl lg:leading-[35px]  font-medium text-primary lg:max-w-[250px] text-center"
                             dangerouslySetInnerHTML={{
@@ -168,7 +175,7 @@ function Tradingaccounts() {
                             </span>
                           </li>
                           <div className="relative top-8">
-                            {index === 1
+                            {index % 2 === 0
                               ? <Link
                                   href={
                                     "https://client.fliptradegroup.com/trader/registration"
@@ -233,7 +240,9 @@ function Tradingaccounts() {
               />
             </div>
           </div>
-          <Tradingaccountsph accountinfo={accountinfoph} />
+          <div className="block xl:hidden">
+           <Tradingaccountsph accountinfo={accountinfoph} />
+          </div>
         </div>
       </div>
     </div>

@@ -42,7 +42,7 @@ const Tradingaccountsph = ({ accountinfo }) => {
   }, []);
   return (
     <div className="pb-16 md:pb-0 relative">
-      <div className="block md:hidden">
+      <div className="">
         <Swiper
           effect={"coverflow"}
           loop={true}
