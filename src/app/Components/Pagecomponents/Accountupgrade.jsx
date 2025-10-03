@@ -86,7 +86,7 @@ const upgradepointsph = [
   },
   {
     title: "Deposit funds",
-    classname: "top-[36%] left-[-8.2%] rotate-[355deg]"
+    classname: "top-[36%] left-[-2.2% rotate-[355deg]"
   },
   {
     title: "Upgrade <br/> activated.",

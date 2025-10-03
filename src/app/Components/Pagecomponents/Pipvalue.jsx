@@ -16,10 +16,10 @@ const Pipvalue = () => {
               alt="side image"
               width={1500}
               height={500}
-              className="max-w-[650px] w-full"
+              className="max-w-[650px] w-full m-auto"
             />
           </div>
-          <div className="flex items-center pt-12 lg:pt-0 text-center lg:text-start">
+          <div className="flex items-center justify-center lg:justify-start pt-12 lg:pt-0 text-center lg:text-start">
             <div>
               <Title
                 title="Calculate Your <br/> Pip Values Instantly"

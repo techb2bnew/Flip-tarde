@@ -89,7 +89,7 @@ const Pipcalculator = () => {
 
   return (
     <div className="bg-cover relative overflow-hidden" style={{ backgroundImage: `url(${pipcalculator.src})` }}>
-      <div className="absolute hidden 2xl:block right-[-2%] top-[-1%]">
+      <div className="absolute hidden 2xl:block right-[-2%] top-[-1%] z-[1]">
         <Image
           src={piphandupper}
           alt="hand image"
@@ -98,7 +98,7 @@ const Pipcalculator = () => {
           className="max-w-[926px] w-full"
         />
       </div>
-      <div className="inn_container  py-18 lg:py-24 2xl:py-40">
+      <div className="inn_container  py-18 lg:py-24 2xl:py-40 relative z-[3]">
         <div className="max-w-[800px] bg-white w-full m-auto lg:p-6 rounded-[38px] lg:rounded-[58px] ">
           <div className="border-2 border-[#00000033] p-6 rounded-[22px] lg:rounded-[42px]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-6 max-w-[670px] m-auto">
@@ -242,7 +242,7 @@ const Pipcalculator = () => {
           </div>
         </div>
       </div>
-      <div className="absolute hidden 2xl:block bottom-[-7%] left-[-3%]">
+      <div className="absolute hidden 2xl:block bottom-[-7%] left-[-3%] z-[1]">
         <Image
           src={piphanddown}
           alt="hand image"

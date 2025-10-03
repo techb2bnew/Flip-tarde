@@ -52,7 +52,7 @@ const Pipuse = () => {
                   0{index + 1}
                 </div>
                 <div
-                  className={`absolute z-[20] top-[-9px] xl:top-[-20px] bg-[#E2E2FF] py-3 min-h-[94px] justify-center md:py-6 px-8 md:px-16 max-w-[300px] md:max-w-[400px] xl:max-w-[500px] w-full text-[40px] font_ternary text-end rounded-[90px] text-white transition-all duration-700 cursor-pointer ${index %
+                  className={`absolute z-[20] top-[-9px] xl:top-[-20px] bg-[#E2E2FF] py-3 min-h-[94px] md:min-h-[123px] lg:min-h-[unset] justify-center md:py-6 px-8 md:px-16 max-w-[300px] md:max-w-[400px] xl:max-w-[500px] w-full text-[40px] font_ternary text-end rounded-[90px] text-white transition-all duration-700 cursor-pointer ${index %
                     2 ===
                   0
                     ? "right-[15%] md:right-[19%] hover:right-0"
