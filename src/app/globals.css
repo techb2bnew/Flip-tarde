@@ -19,7 +19,7 @@
 }
 
 .border-primary {
-  border: var(--primary);
+  border-color: var(--primary);
 }
 
 /* Sub Primary */
@@ -32,7 +32,7 @@
 }
 
 .border-subprimary {
-  border: var(--subprimary);
+  border-color: var(--subprimary);
 }
 
 /* Secondary */
@@ -45,7 +45,7 @@
 }
 
 .border-secondary {
-  border: var(--secondary);
+  border-color: var(--secondary);
 }
 
 /* ternary */
@@ -357,4 +357,15 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 } */
  .tradingview-widget-container.min-h-\[500px\].h-full {
     width: auto !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

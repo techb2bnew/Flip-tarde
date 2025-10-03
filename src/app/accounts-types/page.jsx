@@ -44,14 +44,16 @@ export default function page() {
       <PageHead PageMeta={Pagemeta} />
       <Accounttypebanner />
       <Tradingaccounts />
-      {/* <Accountstep />
-      <Accountupgrade /> */}
+      <Accountstep />
+      <Accountupgrade />
       <div className="bg-white pb-12 md:pb-18 lg:py-24">
-        <div className="inn_container text-center">
-          <Title
-            title={"Frequently Asked <br/> Questions"}
-            color="text-secondary"
-          />
+        <div className="inn_container">
+          <div className="text-center">
+            <Title
+              title={"Frequently Asked <br/> Questions"}
+              color="text-secondary"
+            />
+          </div>
           <div>
             <Faq faqData={faqData} />
           </div>
