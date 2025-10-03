@@ -18,9 +18,9 @@ const workstep = [
 ];
 export default function Pipworkstep() {
   return (
-    <div className="bg-white py-32">
+    <div className="bg-white py-12 md:py-18 lg:py-32">
       <div className="inn_container">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 text-center lg:text-start">
           <div>
             <Title
               title="What Is a Pip? & <br/> How it works"

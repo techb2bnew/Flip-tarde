@@ -9,8 +9,8 @@ import Image from "next/image";
 export default function Pipbanner() {
   return (
     <div className="bg-cover bg-no-repeat" style={{ backgroundImage: `url(${pipbanner.src})` }}>
-      <div className="grid grid-cols-[2fr_3fr] inn_container pt-60 pb-12">
-        <div className="pt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] inn_container pt-28 md:pt-40 xl:pt-60 pb-12">
+        <div className="pt-10 text-center lg:text-start max-w-[700px] lg:max-w-[unset] m-auto h-full">
           <div>
             <Title title="Pip Calculator" color="gradient_text" />
           </div>
@@ -29,7 +29,7 @@ export default function Pipbanner() {
             btn_bg="bg-primary"
           />
         </div>
-        <div>
+        <div className="pt-16 lg:pt-0">
           <Image
            src={pipcalculatersidebanner}  
            alt="side banner"

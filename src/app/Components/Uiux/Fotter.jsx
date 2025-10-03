@@ -27,8 +27,8 @@ const footerdata = {
     {
       title: "Tools",
       pagelinks: [
-        { pagelink: "/", pagename: "Economic Calendar" },
-        { pagelink: "/", pagename: "PIP Calculator" }
+        // { pagelink: "/", pagename: "Economic Calendar" },
+        { pagelink: "/pip-calculator", pagename: "PIP Calculator" }
       ]
     },
     {
@@ -106,7 +106,7 @@ const Fotter = () => {
                     />
                   </Link>
                 </div>
-                {footerdata.linkingdata.slice(0, 1).map((data, index) =>
+                {footerdata.linkingdata.slice(0, 2).map((data, index) =>
                   <div
                     className={`${index === 2
                       ? null
@@ -119,8 +119,8 @@ const Fotter = () => {
               </div>
 
               <div className="flex md:hidden flex-col-reverse">
-                <div className="grid grid-cols-1 py-6">
-                  {footerdata.linkingdata.slice(0, 1).map((data, index) =>
+                <div className="grid grid-cols-2 lg:grid-cols-1 py-6">
+                  {footerdata.linkingdata.slice(0, 2).map((data, index) =>
                     <div
                       className={`${index === 2
                         ? null

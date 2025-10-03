@@ -10,7 +10,7 @@ function page() {
     <div>
       <Pipbanner />
       <Pipworkstep />
-      {/* <Pipcalculator /> */}
+      <Pipcalculator />
       <Pipuse />
       <Pipvalue/>
     </div>

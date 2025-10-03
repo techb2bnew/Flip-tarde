@@ -8,18 +8,18 @@ import fireicon from "../../../../public/icons/firebtnicon.svg";
 const Pipvalue = () => {
   return (
     <div className="bg-white">
-      <div className="inn_container py-24">
-        <div className="grid grid-cols-2">
+      <div className="inn_container py-12 md:py-18 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
           <div>
             <Image
               src={pipvaluebanner}
               alt="side image"
               width={1500}
               height={500}
-              className="max-w-[650px]"
+              className="max-w-[650px] w-full"
             />
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center pt-12 lg:pt-0 text-center lg:text-start">
             <div>
               <Title
                 title="Calculate Your <br/> Pip Values Instantly"
